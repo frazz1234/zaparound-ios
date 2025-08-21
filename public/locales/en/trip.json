@@ -1,0 +1,510 @@
+{
+  "yes": "Yes",
+  "no": "No",
+  "loading": {
+    "title": "Loading Your Trip",
+    "returnToDashboard": "Return to ZapBoard",
+    "pleaseWait": "Please wait while we prepare your trip details",
+    "tips": {
+      "title": "Travel Tip",
+      "zapTitle": "ZapAround Tip"
+    },
+    "preview": {
+      "title": "Latest Travel Stories",
+      "sections": [
+        {
+          "title": "The Hidden Cafes of Paris",
+          "description": "Discover charming local spots away from tourist crowds",
+          "readTime": "5 min read",
+          "category": "Food & Culture"
+        },
+        {
+          "title": "Sustainable Travel in Norway",
+          "description": "Eco-friendly tips for exploring the fjords",
+          "readTime": "4 min read",
+          "category": "Eco Travel"
+        },
+        {
+          "title": "Tokyo's Secret Gardens",
+          "description": "Finding peace in the heart of the city",
+          "readTime": "6 min read",
+          "category": "Urban Exploration"
+        },
+        {
+          "title": "Road Trip Through Tuscany",
+          "description": "A journey through Italy's most scenic routes",
+          "readTime": "7 min read",
+          "category": "Road Trips"
+        },
+        {
+          "title": "Street Food Adventures in Bangkok",
+          "description": "A culinary journey through Thailand's capital",
+          "readTime": "5 min read",
+          "category": "Food & Culture"
+        }
+      ],
+      "blogSnippets": [
+        "✈️ From Hidden Alleys to Mountain Peaks",
+        "🌅 Chasing Sunsets Around the World",
+        "🍜 A Taste of Local Flavors",
+        "📸 Capturing Moments That Last Forever",
+        "🎨 Colors and Culture: A Visual Journey",
+        "🌿 Eco-Adventures and Sustainable Travel",
+        "🏰 Stories Behind Ancient Walls",
+        "🌊 Ocean Tales and Beach Discoveries",
+        "🚶‍♂️ Walking Through History",
+        "🎭 Festival Vibes and Local Celebrations",
+        "⛰️ Mountain Stories and Alpine Adventures",
+        "🏺 Artisan Crafts and Local Markets"
+      ]
+    },
+    "waitMessages": [
+      "Gathering local insights...",
+      "Crafting your perfect itinerary...",
+      "Finding hidden gems...",
+      "Checking local recommendations...",
+      "Personalizing your experience...",
+      "Planning your adventure...",
+      "Exploring unique opportunities...",
+      "Curating special moments..."
+    ],
+    "travelTips": [
+      "🌍 Remember to respect local customs and traditions",
+      "🎒 Pack light, but pack smart",
+      "📸 Document your memories, but don't forget to live in the moment",
+      "🗺️ Sometimes getting lost leads to the best adventures",
+      "🌅 Wake up early to catch the sunrise at least once",
+      "🍴 Try at least one local dish you've never heard of",
+      "👋 Learn to say 'thank you' in the local language",
+      "📱 Download offline maps before your journey",
+      "💳 Always carry multiple payment methods",
+      "🔋 Bring a portable charger for your devices",
+      "🎭 Visit local markets for authentic experiences",
+      "📝 Keep a travel journal to remember the details",
+      "🚶‍♂️ Explore neighborhoods on foot when possible",
+      "🎟️ Book popular attractions in advance",
+      "🌦️ Check the weather forecast before packing",
+      "💊 Pack basic medicines and first aid supplies",
+      "📞 Save emergency numbers for your destination",
+      "🏷️ Learn basic bargaining phrases for markets",
+      "🚰 Check if tap water is safe to drink",
+      "⏰ Adjust to local time zones gradually"
+    ],
+    "zapTips": [
+      "💡 Use ZapAround's AI to get personalized recommendations",
+      "🗺️ Save your favorite spots for future trips",
+      "📍 Create custom markers for hidden gems you discover",
+      "🤝 Share your experiences with the ZapAround community",
+      "🌟 Rate places to help other travelers",
+      "📱 Use the mobile app for offline access",
+      "🔄 Keep your trip details updated for better recommendations",
+      "🎯 Set travel goals and let ZapAround help you achieve them",
+      "📅 Use the trip timeline feature for better planning",
+      "🔍 Explore local events during your stay",
+      "💰 Track your expenses with our budget tool",
+      "🌐 Connect with local guides through ZapAround",
+      "📸 Share your travel photos with the community",
+      "🎨 Create custom travel collections",
+      "🔔 Set reminders for booking deadlines",
+      "🌍 Discover eco-friendly travel options",
+      "👥 Join local meetups through our platform",
+      "📊 Use travel statistics to optimize your trip",
+      "🎁 Earn rewards for contributing to the community",
+      "🔐 Keep your travel documents secure in our vault"
+    ]
+  },
+  "form": {
+    "next": "Next",
+    "cancel": "Cancel",
+    "createZap": "Create Zap",
+    "title": "Create Trip",
+    "destination": "Destination",
+    "back": "Back",
+    "details": "Details",
+    "date": "Date",
+    "destinationPlaceholder": "Where are you going?",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "description": "Description",
+    "descriptionPlaceholder": "Tell us about your trip...",
+    "budget": "Budget",
+    "budgetPlaceholder": "Enter your budget",
+    "currency": "Currency",
+    "travelers": "Number of Travelers",
+    "travelStyle": "Travel Style",
+    "tripName": "Trip Name",
+    "tripNamePlaceholder": "Enter your trip name",
+    "adults": "Adults",
+    "adultsPlaceholder": "Enter the number of adults",
+    "kids": "Kids",
+    "kidsPlaceholder": "Enter the number of kids",
+    "pickDate": "Pick a date",
+    "selectStartDate": "Select start date",
+    "selectEndDate": "Select end date",
+    "minDaysError": "Minimum stay is {{days}} days",
+    "maxDaysError": "Maximum stay is {{days}} days",
+    "minimumStay": "Minimum stay: {{days}} days",
+    "basicInfo": "Basic Information",
+    "required": "Required Field",
+    "create": "Create",
+    "creating": "Creating...",
+    "buttons": {
+      "save": "Save Trip",
+      "update": "Update Trip",
+      "cancel": "Cancel",
+      "next": "Next",
+      "back": "Back",
+      "create": "Create"
+    },
+    "next": "Next",
+    "activityTime": {
+      "title": "When would you like to do these activities?",
+      "subtitle": "Select your preferred time slots for your activities. You can choose multiple options."
+    },
+    "validation": {
+      "destinationRequired": "Destination is required",
+      "startDateRequired": "Start date is required",
+      "endDateRequired": "End date is required",
+      "invalidDateRange": "End date must be after start date",
+      "budgetRequired": "Budget is required",
+      "invalidBudget": "Please enter a valid budget amount"
+    },
+    "titleDescription": {
+      "title": "Trip Title",
+      "titlePlaceholder": "Enter a title for your trip",
+      "description": "Personal Description",
+      "descriptionPlaceholder": "Add a personal description for your trip",
+      "titleRequired": "Please enter a title for your trip",
+      "createTrip": "Create Trip"
+    }
+  },
+  "details": {
+    "notes": "Notes & Checklist",
+    "title": "Trip Details",
+    "category": "Category",
+    "selectCategory": "Select a category",
+    "budget": "Budget",
+    "enterBudget": "Enter your budget",
+    "transportationMode": "Transportation Mode",
+    "transportationPlaceholder": "How will you travel?",
+    "transportationDetails": "Transportation Details",
+    "accommodationType": "Accommodation Type",
+    "accommodationPlaceholder": "Where will you stay?",
+    "accommodationDetails": "Accommodation Details",
+    "backToDashboard": "Back to ZapBoard",
+    "travelTips": "Your Adventure",
+    "stopsAndPoints": "Stops and Points",
+    "printTrip": "Print Trip",
+    "mapView": "ZapMap",
+    "addNote": "Add Note",
+    "close": "Close",
+    "community": "Community",
+    "subscriptionRequired": "Subscription Required",
+    "upgradeForDashboard": "Please upgrade your subscription to access the dashboard",
+    "total": "Total",
+    "saveChanges": "Save Changes",
+    "editDetails": "Edit Details",
+    "locationNotSpecified": "Location not specified",
+    "notesInPage": "Notes",
+    "noNotes": "No notes yet",
+    "notesPlaceholder": "Add notes about your trip...",
+    "shareTrip": "Share Trip",
+    "shareToCommunity": "Share to Community",
+    "zapRoadDetails": "ZapRoad Details",
+    "removeFromCommunity": "Shared with Community ✓",
+    "showAllStops": "Show all stops",
+    "notesPlaceholder": "Add notes about your trip...",
+    "checklist": {
+      "title": "Travel Checklist",
+      "newItem": "New checklist item...",
+      "newSubItem": "New sub-item...",
+      "addItem": "Add Item",
+      "addSubItem": "Add Sub-item",
+      "deleteItem": "Delete Item",
+      "deleteSubItem": "Delete Sub-item",
+      "itemCreated": "Checklist item created successfully",
+      "subItemCreated": "Sub-item created successfully",
+      "itemDeleted": "Checklist item deleted successfully",
+      "subItemDeleted": "Sub-item deleted successfully",
+      "error": {
+        "load": "Failed to load checklist items",
+        "createItem": "Failed to create checklist item",
+        "createSubItem": "Failed to create sub-item",
+        "updateItem": "Failed to update checklist item",
+        "updateSubItem": "Failed to update sub-item",
+        "deleteItem": "Failed to delete checklist item",
+        "deleteSubItem": "Failed to delete sub-item"
+      }
+    }
+  },
+  "passwordChange": {
+    "updatePassword": "Update Password"
+  },
+  "emailChange": {
+    "updateEmail": "Update Email"
+  },
+  "blog": {
+    "title": "Travel Blog",
+    "description": "Explore travel insights, tips, and stories from around the world",
+    "subtitle": "Discover travel stories, tips, and inspiration",
+    "readMore": "Read More",
+    "loading": "Loading blog posts...",
+    "error": "Error loading blog",
+    "errorDescription": "We couldn't load the blog posts. Please try again later.",
+    "noBlogs": "No blog posts found",
+    "noBlogsDescription": "Check back later for new travel stories and tips!",
+    "notFound": "Blog post not found",
+    "notFoundDescription": "The blog post you're looking for doesn't exist or has been removed.",
+    "backToList": "Back to Blog",
+    "publishedOn": "Published on",
+    "createdOn": "Created on",
+    "minRead": "min read",
+    "imageNotAvailable": "Image not available",
+    "retry": "Try Again",
+    "retrying": "Retrying...",
+    "refresh": "Refresh"
+  },
+  "howItWorks": {
+    "step1": {
+      "title": "Choose Your Trip Type",
+      "description": "Select from ZapOut day trips, ZapRoad journeys, or ZapTrip adventures based on your travel needs"
+    },
+    "step2": {
+      "title": "Enter Your Details",
+      "description": "Tell us about your destination, dates, preferences, and any special requirements"
+    },
+    "step3": {
+      "title": "Personalized Planning",
+      "description": "Our AI creates a tailored itinerary based on your preferences, with local insights and recommendations"
+    },
+    "step4": {
+      "title": "Enjoy Your Journey",
+      "description": "Access your trip details anytime, make adjustments as needed, and enjoy your personalized travel experience"
+    },
+    "getStarted": "Get Started"
+  },
+  "categories": {
+    "leisure": "Leisure",
+    "business": "Business",
+    "family": "Family",
+    "adventure": "Adventure",
+    "city": "City Break",
+    "beach": "Beach",
+    "nature": "Nature",
+    "culture": "Cultural"
+  },
+  "travelStyles": {
+    "luxury": "Luxury",
+    "budget": "Budget-friendly",
+    "adventure": "Adventure",
+    "cultural": "Cultural",
+    "relaxation": "Relaxation",
+    "family": "Family"
+  },
+  "preferences": {
+    "title": "Preferences",
+    "accommodation": "Accommodation Type",
+    "transportation": "Transportation",
+    "activities": "Activities",
+    "dining": "Dining Preferences"
+  },
+  "types": {
+    "zapOutHeading": "Create Your ZapOut Experience",
+    "zapOutSubheading": "Perfect for day trips and short adventures at your destination",
+    "zapout": "ZapOut",
+    "zaproad": "ZapRoad",
+    "zaptrip": "ZapTrip",
+    "zapOut": {
+      "title": "ZapOut",
+      "description": "ZapOut is focused on a single destination",
+      "heading": "Create Your ZapOut Experience",
+      "subheading": "Perfect for day trips and short adventures at your destination",
+      "when": "When?",
+      "personDateTitle": "When and Who?",
+      "details": {
+        "title": "ZapOut Details",
+        "viewOnMap": "View on Map",
+        "activityTypes": "Activity Types",
+        "activityTime": "Activity Time",
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening",
+        "nightlife": "Nightlife",
+        "allDay": "All Day",
+        "lunch": "Include Lunch",
+        "lunchBefore": "Before Activities",
+        "lunchAfter": "After Activities",
+        "restaurant": "Restaurant",
+        "family": "Family-friendly",
+        "outdoorNature": "Outdoor/Nature",
+        "sightseeing": "Sightseeing",
+        "culturalExploration": "Cultural Exploration",
+        "romanticDate": "Romantic Date",
+        "budgetPerPerson": "Set Budget per Person",
+        "yourBudget": "Your Budget",
+        "notes": "Notes & Checklist",
+        "additionalNeedsPlaceholder": "Special requests, dietary restrictions, accessibility needs...",
+        "additionalNeedsHint": "Tell us about any special needs or preferences for your trip",
+        "personDateSubtitle": "Tell us about your trip date and group",
+        "budget": "Budget",
+        "currency": "Currency",
+        "travelers": "Travelers",
+        "travelStyle": "Travel Style",
+        "preferences": "Preferences",
+        "description": "Description",
+        "noDataAvailable": "No data available for this ZapOut trip.",
+        "timeOfActivities": "Time of Activities",
+        "before": "Before Activities",
+        "after": "After Activities",
+        "noBudgetSpecified": "No budget specified",
+        "noAdditionalNeeds": "No additional needs specified",
+        "noTimeSelected": "No time selected",
+        "noActivitiesSelected": "No activities selected",
+        "noRequestedActivities": "No specific activities requested",
+        "lunchIncluded": "Lunch Included",
+        "requestedActivities": "Requested Activities",
+        "groupComposition": "Group Composition",
+        "accessibilityNeeds": "Accessibility Needs",
+        "specialRequirements": "Special Requirements",
+        "singleDayActivity": "Single day activity"
+      }
+    },
+    "zapRoad": {
+      "title": "ZapRoad",
+      "description": "ZapRoad trip focused on a road trip",
+      "setupTitle": "Setup your ZapRoad",
+      "setupSubtitle": "Experience the ultimate road trip like never before!",
+      "titlePlaceholder": "My Road Trip Adventure",
+      "useDuration": "Select Duration",
+      "useDates": "Select Dates",
+      "durationLabel": "How long is the road trip? (days)",
+      "maxDuration": "Maximum duration: 7 days",
+      "startDateLabel": "Start Date",
+      "dateDurationInfo": "Your road trip will be",
+      "days": "days",
+      "maxDurationWarning": "Maximum road trip duration is 7 days.",
+      "citySelectionTitle": "Plan Your Route",
+      "citySelectionSubtitle": "Tell us about your road trip route",
+      "startingCity": "Starting City",
+      "stopoverCities": "Do you need to stop by a city?",
+      "addStopover": "Add",
+      "endCity": "End City",
+      "detailsTitle": "Tell us more",
+      "detailsSubtitle": "Additional information for your road trip",
+      "numberOfPeople": "Number of people",
+      "hasElectricCar": "I have an Electric car",
+      "specialRequirements": "Do you need or want to see something special?",
+      "specialRequirementsPlaceholder": "Tell us about any special requirements or places you'd like to visit",
+      "roadTripDetails": "Road Trip Details",
+      "route": "Route",
+      "vehicleType": "Vehicle Type",
+      "electricCar": "Electric Car",
+      "regularCar": "Regular Car",
+      "dates": "Dates"
+    },
+    "zapTrip": {
+      "title": "ZapTrip",
+      "description": "ZapTrip trip focused on a trip"
+    }
+  },
+  "zapOut.details.title" : "ZapOut Details",
+  "zapRoad.details.title" : "ZapRoad Details",
+  "zapTrip.details.title" : "ZapTrip Details",
+  "selection": {
+    "title": "Trip Type",
+    "basicInfo": "Basic Info",
+    "whenAndWho": "When and Who?",
+    "details": "Details",
+    "required": "Required",
+    "featureNotAvailable": "Please select a trip type to continue",
+    "upgradeRequired": "Upgrade required",
+    "zapTripDesc": "The best way to planificate your travel",
+    "zapOut": "ZapOut",
+    "zapOutDesc": "A day trip focused on activities at a destination",
+    "zapRoad": "ZapRoad",
+    "zapRoadDesc": "A road trip with multiple stops along your journey"
+  },
+  "aiContent": {
+    "zapTripAdventure": "Your Adventure {{day}}",
+    "zapTripDay": "Day {{day}}",
+    "zapTripEnd": "Our Tips and more !",
+    "travelTips": "Travel Tips",
+    "emailNotification": "We'll send you an email when your adventure is ready! ✨",
+    "waitingMessage": "While you're waiting, visit the <a href=\"/map-dashboard\" class=\"text-blue-300 hover:text-blue-100 underline\">ZapMap</a>, <a href=\"/blog\" class=\"text-blue-300 hover:text-blue-100 underline\">travel blogs</a> or the <a href=\"/community\" class=\"text-blue-300 hover:text-blue-100 underline\">Community</a>!",
+    "waitMessages": [
+      "Packing your virtual suitcase with amazing recommendations...",
+      "Teaching our AI to pronounce local delicacies correctly...",
+      "Consulting with digital nomads for the best hidden gems...",
+      "Bribing local pixels for insider information...",
+      "Calculating the perfect selfie spots for your journey...",
+      "Convincing the clouds to behave during your trip...",
+      "Negotiating with time zones to give you extra vacation hours...",
+      "Scanning the universe for the most epic adventures...",
+      "Brewing the perfect travel recipe just for you...",
+      "Sending our digital scouts to explore ahead of you..."
+    ]
+  },
+  "community": {
+    "title": "Community Discussion",
+    "writeComment": "Write a comment...",
+    "post": "Post",
+    "loginToComment": "Please log in to comment",
+    "loginToLike": "Please log in to like comments",
+    "loadingComments": "Loading comments...",
+    "noComments": "No comments yet. Be the first to comment!",
+    "errorLoading": "Failed to load comments",
+    "errorPosting": "Failed to post comment",
+    "errorLiking": "Failed to update like"
+  },
+  "navigation": {
+    "startNavigation": "Navigate with Google Maps",
+    "viewOnGoogleMaps": "View on Google Maps"
+  },
+  "zaparound": {
+    "recommendations": "Recommanded by Us"
+  },
+  "share": {
+    "modalTitle": "Share this trip",
+    "modalDescription": "Copy the link below and share it with your friends! Only ZapAround users can view the trip details.",
+    "copyButton": "Copy Link",
+    "copied": "Link copied! Now share it with your friends 🚀",
+    "imageAlt": "Share your trip illustration",
+    "shareLinkLabel": "Shareable Link",
+    "shareSuccess": "Trip link copied!",
+    "shareError": "Could not copy the link. Please try again.",
+    "noAccessTitle": "Oh no! You need an account to access this trip.",
+    "noAccessDescription": "Your friend wants to share their adventure, but you need to log in or sign up to see the details. Join ZapAround and never miss a trip!",
+    "cta": "Sign up or Log in"
+  },
+  "transport": {
+    "plane": "Plane",
+    "train": "Train",
+    "bus": "Bus",
+    "car": "Car"
+  },
+  "accommodation": {
+    "hotel": "Hotel",
+    "airbnb": "Airbnb",
+    "hostel": "Hostel",
+    "camping": "Camping",
+    "resort": "Resort",
+    "bnb": "B&B"
+  },
+  "events": {
+    "nearbyEvents": "Nearby Events"
+  },
+  "stepIndicator": {
+    "step": "Step",
+    "of": "of"
+  },
+  "freeTrip": {
+    "status": "Free Trip Status",
+    "allUsed": "You've used all your free {{type}} trips for this month.",
+    "nextReset": "Your next 3 free trips will be available on {{date}}.",
+    "remaining": "You have {{count}} free {{type}} trips remaining this month.",
+    "resetDate": "Your free trips will reset on {{date}}.",
+    "upgrade": "Upgrade to Unlimited {{type}}",
+    "maybeLater": "Maybe Later",
+    "continue": "Continue"
+  }
+} 

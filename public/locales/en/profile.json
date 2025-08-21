@@ -1,0 +1,439 @@
+{
+  "title": "Your Profile",
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": {
+      "title": "Notifications",
+      "email": "Email Notifications",
+      "push": "Push Notifications",
+      "marketing": "Subscribe to newsletter and receive updates about new features",
+      "updates": "Trip Updates",
+      "offers": "Special Offers"
+    },
+    "privacy": "Privacy",
+    "preferences": "Preferences"
+  },
+  "personal": {
+    "title": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Residence Address",
+    "birthdate": "Birth Date",
+    "gender": "Gender",
+    "nationality": "Nationality",
+    "languages": "Languages",
+    "medicalConditions": "Medical Conditions",
+    "medicalConditionsPlaceholder": "Enter your medical conditions, separated by commas",
+    "disabilities": "Disabilities",
+    "disabilitiesPlaceholder": "Enter your disabilities, separated by commas",
+    "allergies": "Allergies",
+    "allergiesPlaceholder": "Enter your allergies, separated by commas",
+    "dietaryPreferences": "Dietary Preferences",
+    "dietaryPreferencesPlaceholder": "Enter your dietary preferences, separated by commas",
+    "lgbtqStatus": "LGBTQ+ Status",
+    "passportInformation": "Passport Information",
+    "passportNumber": "Passport Number",
+    "passportNumberPlaceholder": "Enter your passport number",
+    "passportCountry": "Passport Country",
+    "selectPassportCountry": "Select passport country",
+    "passportExpiry": "Passport Expiry Date",
+    "selectPassportExpiry": "Select passport expiry date"
+  },
+  "countries": {
+    "unitedStates": "United States",
+    "france": "France",
+    "spain": "Spain",
+    "unitedKingdom": "United Kingdom",
+    "canada": "Canada",
+    "germany": "Germany",
+    "italy": "Italy",
+    "japan": "Japan",
+    "australia": "Australia"
+  },
+  "passport": {
+    "title": "Passport Information",
+    "description": "Manage your passport information for travel bookings.",
+    "confirmEdit": "Confirm Access",
+    "confirmEditDescription": "You are about to view and edit sensitive passport information. Please confirm to proceed."
+  },
+  "subscription": {
+    "title": "Subscription",
+    "status": "Status",
+    "billedMonthly": "Billed Monthly",
+    "billedYearly": "Billed Yearly",
+    "plan": "Current Plan",
+    "billing": "Billing Information",
+    "nextPayment": "Next Payment",
+    "history": "Payment History",
+    "upgrade": "Upgrade Plan",
+    "cancel": "Cancel Subscription",
+    "plans": {
+      "free": "Free",
+      "traveler": "Traveler",
+      "explorer": "Explorer",
+      "group": "Group Voyager"
+    },
+    "description": "Manage your subscription plan and billing information."
+  },
+  "preferences": {
+    "title": "Your Preferences",
+    "description": "Customize your app experience and notification preferences.",
+    "loading": "Loading...",
+    "notificationSettings": "Notification Settings",
+    "emailNotifications": "Email Notifications",
+    "emailNotificationsDescription": "Receive notifications about your account via email",
+    "marketingEmails": "Marketing Emails",
+    "marketingEmailsDescription": "Receive emails about new features and special offers",
+    "tripUpdates": "Trip Updates",
+    "tripUpdatesDescription": "Get notified about changes to your trips",
+    "saveButton": "Save Preferences",
+    "saving": "Saving..."
+  },
+  "security": {
+    "title": "Security",
+    "password": {
+      "change": "Change Password",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm Password"
+    }
+  },
+  "passwordVerification": {
+    "title": "Verify Your Password",
+    "description": "Please enter your account password to view or edit sensitive information.",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordRequired": "Password is required",
+    "incorrectPassword": "Incorrect password. Please try again.",
+    "userNotFound": "User not found. Please sign in again.",
+    "error": "An error occurred. Please try again.",
+    "verify": "Verify",
+    "verifying": "Verifying...",
+    "success": "Password Verified",
+    "verified": "Your password has been verified successfully."
+  },
+  "actions": {
+    "edit": "Edit Profile",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "upload": "Upload Photo",
+    "change": "Change Photo",
+    "confirm": "Confirm"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email",
+    "invalidPhone": "Please enter a valid phone number",
+    "passwordMismatch": "Passwords do not match",
+    "weakPassword": "Password is too weak",
+    "invalidDate": "Select a date"
+  },
+  "languageSelector": {
+    "english": "English",
+    "french": "French",
+    "spanish": "Spanish",
+    "changing": "Changing language",
+    "pleaseWait": "Please wait...",
+    "changed": "Language changed",
+    "changedDescription": "The language has been changed successfully",
+    "error": "Error changing language",
+    "errorDescription": "Could not change the language. Please try again."
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "lgbtq": {
+    "indifferent": "Prefer not to say",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "subscriptionManagement": {
+    "title": "Subscription Management",
+    "description": "Manage your subscription, payment methods, and billing information.",
+    "button": "Manage Subscription"
+  },
+  "emailChange": {
+    "title": "Change Email",
+    "currentEmail": "Current Email",
+    "newEmail": "New Email",
+    "confirmNewEmail": "Confirm New Email",
+    "verificationText": "A verification email will be sent to your new email address",
+    "updating": "Updating email...",
+    "updateEmail": "Update Email"
+  },
+  
+  "passwordChange": {
+    "title": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "updatePassword": "Update Password",
+    "updating": "Updating password...",
+    "passwordUpdated": "Password updated successfully",
+    "passwordUpdateSuccess": "Password updated successfully",
+    "confirmPassword": "Confirm Password"
+  },
+  "deleteAccount": {
+    "title": "Delete Account",
+    "description": "Once you delete your account, there is no going back. Please be certain.",
+    "button": "Delete Account",
+    "confirmTitle": "Are you sure?",
+    "confirmDescription": "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
+    "cancel": "Cancel",
+    "confirm": "Yes, delete my account",
+    "deleting": "Deleting account...",
+    "delete": "Delete Account",
+    "confirm": "The account will be deleted"
+  },
+  "toasts": {
+    "success": "Success",
+    "error": "Error",
+    "updated": "Profile Updated",
+    "profileUpdated": "Your profile has been successfully updated.",
+    "passportUpdated": "Your passport information has been updated successfully.",
+    "errorSaving": "There was an error saving your changes. Please try again.",
+    "avatarUpdated": "Profile picture updated successfully",
+    "errorUploadingAvatar": "Error uploading profile picture",
+    "preferencesUpdated": "Your preferences have been updated."
+  },
+  "errors": {
+    "updateFailed": "Update Failed",
+    "tryAgain": "Please try again later."
+  },
+  "auth": {
+    "error": "Error",
+    "invalidResetLink": "Invalid or expired password reset link",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "verifyingLink": "Verifying reset link...",
+    "passwordUpdated": "Password Updated",
+    "passwordUpdateSuccess": "Your password has been updated successfully",
+    "updating": "Updating password...",
+    "updatePassword": "Update Password",
+    "confirmPassword": "Confirm Password",
+    "newPassword": "New Password",
+    "enterNewPassword": "Enter New Password",
+    "resetYourPassword": "Reset Your Password"
+  },
+  "sidebar": {
+    "title": "Profile Settings",
+    "subtitle": "Manage your profile and preferences",
+    "personalInfo": "Personal Information",
+    "passport": "Passport Information",
+    "security": "Security",
+    "email": "Email Settings",
+    "subscription": "Subscription",
+    "preferences": "Preferences",
+    "account": "Account Management"
+  },
+  "personalInfo": {
+    "description": "Update your personal information and profile details."
+  },
+  "email": {
+    "description": "Update your email address and notification preferences."
+  },
+  "account": {
+    "description": "Manage your account settings, including account deletion."
+  },
+  "subscriptionManager": {
+    "title": "Subscription Management",
+    "changePlanSuccess": "Plan changed successfully",
+    "description": "Manage your subscription, billing, and plan details.",
+    "billedMonthly": "Billed Monthly",
+    "billedYearly": "Billed Yearly",
+    "plans": {
+      "traveler": {
+        "name": "Traveler",
+        "features": [
+          "Unlimited trips",
+          "Basic travel recommendations",
+          "Standard trip templates"
+        ]
+      },
+      "explorer": {
+        "name": "Explorer",
+        "features": [
+          "Everything in the Traveler plan",
+          "Unlimited ZapTrips, ZapOut & ZapRoad",
+          "Advanced personalized recommendations",
+          "Priority customer support",
+          "Custom trip templates",
+          "Offline access",
+          "Real-time travel alerts"
+        ]
+      },
+      "group": {
+        "name": "Group Voyager",
+        "features": [
+          "Unlimited trips",
+          "All Explorer features",
+          "Group travel coordination",
+          "Custom branding",
+          "Dedicated account manager",
+          "API access",
+          "Analytics dashboard",
+          "Team collaboration tools"
+        ]
+      }
+    },
+    "status": {
+      "active": "Active",
+      "canceled": "Canceled",
+      "cancelled": "Canceled",
+      "past_due": "Past Due",
+      "incomplete": "Incomplete",
+      "trialing": "Trial",
+      "unpaid": "Unpaid"
+    },
+    "currentPlan": "Current Plan",
+    "nextBillingDate": "Next Billing Date",
+    "paymentMethod": "Payment Method",
+    "billingHistory": {
+      "title": "Billing History",
+      "noHistory": "No billing history available",
+      "refresh": "Refresh History",
+      "fetchError": "Failed to fetch billing history",
+      "viewInvoice": "View Invoice",
+      "downloadPdf": "Download PDF",
+      "invoice": {
+        "number": "Invoice #",
+        "date": "Date",
+        "amount": "Amount",
+        "status": {
+          "paid": "Paid",
+          "open": "Open",
+          "void": "Void",
+          "uncollectible": "Uncollectible"
+        }
+      },
+      "currency": {
+        "usd": "USD",
+        "eur": "EUR",
+        "gbp": "GBP"
+      },
+      "period": {
+        "from": "From",
+        "to": "To"
+      }
+    },
+    "viewBillingHistory": "View Billing History",
+    "noBillingHistory": "No billing history available.",
+    "refreshBillingHistory": "Refresh Billing History",
+    "fetchBillingHistoryError": "Failed to fetch billing history.",
+    "viewInvoice": "View Invoice",
+    "planDetails": "Plan Details",
+    "planOptions": "Available Plans",
+    "currentPlanLabel": "Current Plan",
+    "changePlan": "Change Plan",
+    "viewUsage": "View Usage",
+    "managePayment": "Update Payment",
+    "cancelSubscription": "Cancel Subscription",
+    "reactivateSubscription": "Reactivate",
+    "monthlyBilling": "Monthly",
+    "yearlyBilling": "Yearly",
+    "month": "month",
+    "year": "year",
+    "perMonth": "/month",
+    "perMonthYearly": "/month (billed yearly)",
+    "yearlyDiscount": "Save 10% with yearly billing",
+    "selectPlan": "Select Plan",
+    "updatePayment": "Update Payment Method",
+    "notLoggedIn": "You must be logged in to manage your subscription.",
+    "noActiveSubscription": "You do not have an active subscription.",
+    "downloadPdf": "Download PDF",
+    "viewPlans": "View All Plans",
+    "statusLabel": "Status",
+    "cancelsAtEnd": "Cancels at end of billing period",
+    "renewalDate": "Renewal Date",
+    "currentPrice": "Current Price",
+    "recommended": "Recommended",
+    "currentPlanBadge": "Current Plan",
+    "includes": "Includes",
+    "confirmCancel": {
+      "title": "Cancel Subscription?",
+      "description": "Are you sure you want to cancel your subscription? You'll continue to have access until the end of your current billing period.",
+      "cancel": "No, Keep My Plan",
+      "confirm": "Yes, Cancel Plan"
+    },
+    "changePlanTitle": "Change Subscription Plan",
+    "changePlanDescription": "Review the details of your new plan below. Your card will be charged the new amount at your next billing date.",
+    "billingCycle": "Billing Cycle",
+    "selected": "Selected",
+    "confirmChangePlan": "Confirm Change",
+    "processing": "Processing...",
+    "success": "Success",
+    "error": "Error",
+    "alreadyOnPlan": "Already on this plan",
+    "alreadyOnPlanDescription": "You are already subscribed to this plan.",
+    "subscribe": "Subscribe",
+    "noSubscription": "No Active Subscription",
+    "subscribe": "Subscribe Now",
+    "restorePurchases": "Restore Purchases",
+    "needHelp": "Need help with your subscription?",
+    "canceledTitle": "Subscription Canceled",
+    "canceledDescription": "Your subscription has been canceled and will end at the end of your current billing period. You can reactivate your subscription at any time before the end of the period."
+  },
+  "common": {
+    "cancel": "Cancel",
+    "processing": "Processing..."
+  },
+  "zaproad": {
+      "title": "ZapRoad",
+      "description": "Make the most of every road trip",
+      "price": "$4.99",
+      "yearlyPrice": "$4.99",
+      "billing": "per month",
+      "features": "Route planning|ecommended stops|RV, motorcycle, bike or car|Must-see highlights",
+      "action": "Start for Free",
+     "badge": "Perfect for road trips"
+    },
+    "zapout": {
+      "title": "ZapOut",
+      "description": "Get inspired for day-out ideas",
+      "price": "$4,99",
+      "yearlyPrice": "$4,99",
+      "billing": "per month",
+      "features": "3 activity suggestions|Solo, duo or group outings|Location-based activities|Adapted to your budget",
+      "action": "Start for Free",
+      "badge": "Ideal for spontaneous plans"
+    },
+    "zaptrip": {
+      "title": "ZapTrip",
+      "description": "Simplify your travel planning",
+      "price": "$4,99",
+      "yearlyPrice": "$4,99",
+      "billing": "per month",
+      "features": "Personalized for your travels|Travel all-in-one|Custom itineraries|Tailored to your style",
+      "action": "Start for Free",
+      "badge": "Perfect for travel"
+    },
+    "zappro": {
+      "title": "ZapPro",
+      "description": "Unlock the full ZapAround experience",
+      "price": "$9,99",
+      "yearlyPrice": "$8,99",
+      "features": "All ZapAround features|Unlimited trips|Unlimited hangouts|Unlimited ZapTrips, ZapOut & ZapRoad",
+      "billing": "per month",
+      "specialOffer": "All Included",
+      "badge": "All in ONE!",
+      "pricePeriod": "per month",
+      "action": "Start Now"
+    }
+} 

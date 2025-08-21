@@ -1,0 +1,603 @@
+{
+  "home": {
+    "title": "ZapAround – Votre compagnon de voyage intelligent",
+    "description": "Planifiez des escapades uniques, trouvez des trésors cachés et organisez des expériences mémorables en un seul endroit.",
+    "flightSearch": {
+      "title": "Trouvez le Vol Parfait",
+      "description": "Recherchez et comparez des vols de centaines de compagnies aériennes dans le monde"
+    },
+    "featuredDestinationsDesc": "Explorez nos destinations sélectionnées que les voyageurs adorent",
+    "latestTripsDesc": "Inspirez-vous des voyages récents créés par notre communauté",
+    "travelCategoriesDesc": "Des vols aux activités, nous couvrons tout votre voyage",
+    "whyChooseUs": "Pourquoi Choisir ZapAround ?",
+    "whyChooseUsDesc": "Découvrez l'avenir de la planification de voyage avec nos fonctionnalités innovantes",
+    "features": {
+      "aiPlanning": "Planification IA",
+      "aiPlanningDesc": "Notre IA intelligente crée des itinéraires personnalisés basés sur vos préférences, budget et style de voyage.",
+      "localInsights": "Conseils Locaux",
+      "localInsightsDesc": "Découvrez des trésors cachés et des expériences authentiques sélectionnés par les locaux et experts de voyage.",
+      "flexibleBooking": "Réservation Transparente",
+      "flexibleBookingDesc": "Réservez des vols, hôtels, activités et plus avec annulation flexible et support 24/7.",
+      "smartPlanning": {
+        "title": "Planification Intelligente",
+        "description": "Recommandations alimentées par l'IA pour des expériences de voyage personnalisées"
+      },
+      "globalDestinations": {
+        "title": "Destinations Mondiales",
+        "description": "Explorez des milliers de destinations dans le monde avec des conseils locaux"
+      },
+      "secureBooking": {
+        "title": "Réservation Sécurisée",
+        "description": "Réservation sûre et sécurisée avec support client 24/7"
+      }
+    },
+    "latestBlogsDesc": "Découvrez des destinations incroyables, des conseils de voyage et des histoires du monde entier",
+    "featuredDestinations": "Destinations Vedettes",
+    "latestTrips": "Dernières Aventures",
+    "travelCategories": "Tout ce dont vous avez besoin",
+    "travelCategoryLabels": {
+      "flights": "Vols",
+      "hotels": "Hôtels",
+      "activities": "Activités",
+      "localEvents": "Événements Locaux",
+      "romanticGetaways": "Escapades Romantiques"
+    },
+    "testimonials": {
+      "paris": "L'IA de ZapAround a suggéré le café parfait près du Louvre qui n'était dans aucun guide. Les conseils locaux sont incroyables !",
+      "tokyo": "Trouvé le meilleur spot de ramen dans une petite ruelle grâce à ZapAround. Les recommandations IA sont parfaites !",
+      "newyork": "Économisé des heures de recherche ! ZapAround a planifié tout notre weekend à NYC avec les meilleurs restaurants et bars rooftop cachés.",
+      "sydney": "Les promenades côtières suggérées par ZapAround étaient époustouflantes. On a découvert des plages que même les locaux ne connaissaient pas !",
+      "capetown": "Les recommandations de route des vins de ZapAround étaient parfaites. On a visité des vignobles qu'on n'aurait jamais trouvés seuls !",
+      "barcelona": "Les bars à tapas recommandés par ZapAround étaient incroyables ! On a évité tous les pièges touristiques et trouvé des spots locaux authentiques.",
+      "bangkok": "Les suggestions de tour gastronomique de ZapAround étaient époustouflantes. On a goûté des plats qu'on n'avait jamais entendus avant !",
+      "rio": "Les clubs de samba trouvés par ZapAround étaient incroyables ! On a vécu la vraie vie nocturne de Rio, pas la version touristique.",
+      "vancouver": "Les recommandations de sentiers de randonnée de ZapAround étaient parfaites. On a trouvé des sentiers avec des vues époustouflantes qui n'étaient pas du tout bondés !"
+    },
+    "latestBlogs": "Inspiration de Voyage",
+    "communitySneakPeek": {
+      "title": "Rejoignez Notre Communauté de Voyage",
+      "subtitle": "Découvrez des endroits incroyables et partagez vos aventures avec d'autres voyageurs",
+      "ctaTitle": "Prêt à Partager Votre Histoire ?",
+      "ctaSubtitle": "Rejoignez des milliers de voyageurs qui partagent leurs expériences, découvrent de nouveaux endroits et se connectent avec des aventuriers partageant les mêmes idées.",
+      "ctaButton": "Explorer la Communauté",
+      "postImage": "Image du post",
+      "anonymous": "Anonyme",
+      "justNow": "À l'instant",
+      "hoursAgo": "il y a {{hours}}h",
+      "daysAgo": "il y a {{days}}j",
+      "clickToViewPost": "Cliquez pour voir le post complet",
+      "viewPost": "Voir le Post"
+    },
+    "stats": {
+      "title": "Approuvé par les Voyageurs du Monde Entier",
+      "subtitle": "Rejoignez des millions de voyageurs qui font confiance à ZapAround pour leurs aventures",
+      "activeTravelers": "Voyageurs Actifs",
+      "activeTravelersDesc": "Voyageurs planifiant des aventures dans le monde entier",
+      "globalDestinations": "Destinations Mondiales",
+      "globalDestinationsDesc": "Destinations sélectionnées sur tous les continents",
+      "countriesCovered": "Pays Couverts",
+      "countriesCoveredDesc": "Support de planification de voyage international",
+      "industryAwards": "Aventures créées",
+      "industryAwardsDesc": "Aventures créées dans le monde entier"
+    }
+  },
+  "hero": {
+    "title": "Votre Voyage, Votre Histoire, Votre Aventure",
+    "subtitle": "Connectez-vous avec d'autres voyageurs, partagez vos expériences et découvrez des trésors cachés à travers le monde",
+    "cta": "Commencez Votre Voyage",
+    "howItWorks": "Comment Ça Fonctionne",
+    "learnMore": "En Savoir Plus",
+    "back": "Retour",
+    "badge": "Planification de Voyage IA",
+    "heading": "Découvrez Votre Prochaine",
+    "heading2": "Aventure",
+    "subheading": "Planifiez, réservez et vivez des voyages inoubliables avec des recommandations alimentées par l'IA et une réservation transparente.",
+    "trustIndicators": {
+      "secureBooking": "Réservation Sécurisée",
+      "insaneTravelPlanning": "Planification de Voyage Intelligente",
+      "bestPrices": "Meilleurs Prix"
+    }
+  },
+  "common": {
+    "back": "Revenir"
+  },
+  "features": {
+    "tagline": "Pourquoi Nous Choisir",
+    "title": "Tout Ce Dont Vous Avez Besoin pour Votre Voyage",
+    "subtitle": "Découvrez ce qui nous rend différents",
+    "milliontrips": "Possibilités",
+    "hoursSaved": "Heures Gagnées",
+    "userRating": "Note des Utilisateurs",
+    "countriesCovered": "Pays Couverts",
+    "smartLocation": {
+      "title": "Localisation Intelligente",
+      "description": "Trouvez les meilleurs endroits grâce à nos recommandations intelligentes"
+    },
+    "interactiveMaps": {
+      "title": "Cartes Interactives",
+      "description": "Naviguez facilement avec nos outils de cartographie interactifs"
+    },
+    "realTimeUpdates": {
+      "title": "Mises à Jour en Temps Réel",
+      "description": "Restez informé avec les mises à jour en direct des autres voyageurs"
+    },
+    "globalCoverage": {
+      "title": "Couverture Mondiale",
+      "description": "Accédez aux informations de voyage du monde entier"
+    },
+    "smartPlanning": {
+      "title": "Planification Intelligente",
+      "description": "Planifiez vos voyages efficacement avec nos outils intelligents"
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "Connectez-vous et planifiez avec d'autres voyageurs en temps réel"
+    }
+  },
+  "howItWorks": {
+    "tagline": "Pour Commencer",
+    "title": "Comment Fonctionne ZapAround",
+    "subtitle": "Votre guide pour commencer",
+    "steps": {
+      "1": {
+        "title": "Créez Votre Profil",
+        "description": "Inscrivez-vous et parlez-nous de votre style de voyage"
+      },
+      "2": {
+        "title": "Planifiez Votre Voyage",
+        "description": "Utilisez nos outils pour planifier votre voyage parfait"
+      },
+      "3": {
+        "title": "Connectez-vous avec d'Autres",
+        "description": "Trouvez des voyageurs ayant des intérêts similaires"
+      },
+      "4": {
+        "title": "Partagez et Explorez",
+        "description": "Partagez vos expériences et découvrez de nouveaux endroits"
+      }
+    }
+  },
+  "videoShowcase": {
+    "tagline": "Voyez en Action",
+    "title": "Découvrez ZapAround",
+    "subtitle": "Regardez comment nos fonctionnalités vous aident à planifier et partager vos voyages",
+    "video1": {
+      "title": "Créez le voyage parfait",
+      "description": "Créez le voyage parfait pour une date tinder, une activité avec amis ou famille!"
+    },
+    "video2": {
+      "title": "Créez le meilleur road trip de ta vie",
+      "description": "Créez le meilleur road trip de ta vie pour voyager autour du monde avec des arrêts et des retours selon ton rythme!"
+    },
+    "video3": {
+      "title": "Créez le voyage parfait",
+      "description": "Créez le voyage parfait pour un groupe d'amis ou de famille! en peu de temps!"
+    },
+    "more": "Et Bien Plus à Explorer"
+  },
+  "testimonials": {
+    "title": "Ce que Disent Nos Voyageurs",
+    "subtitle": "Des histoires réelles de la communauté ZapAround",
+    "testimonial1": {
+      "text": "ZapAround a complètement transformé ma façon de planifier mes voyages. Les recommandations intelligentes et les conseils de la communauté sont inestimables !",
+      "author": "Sarah Johnson",
+      "location": "New York, États-Unis"
+    },
+    "testimonial2": {
+      "text": "J'adore la facilité avec laquelle on peut se connecter avec d'autres voyageurs et partager des expériences. La fonction des cartes interactives change vraiment la donne !",
+      "author": "Michael Chen",
+      "location": "Vancouver, Canada"
+    },
+    "testimonial3": {
+      "text": "Les mises à jour en temps réel et les recommandations locales m'ont aidé à découvrir des trésors cachés que je n'aurais jamais trouvés autrement.",
+      "author": "Emma Thompson",
+      "location": "Londres, Royaume-Uni"
+    }
+  },
+  "cta": {
+    "title": "Prêt à Commencer Votre Voyage ?",
+    "subtitle": "Rejoignez des milliers de voyageurs qui utilisent déjà ZapAround",
+    "button": "Commencez Maintenant",
+    "badge": "Explorer les Destinations",
+    "description": "Rejoignez des millions de voyageurs qui font confiance à ZapAround pour leurs aventures. Découvrez des destinations incroyables et planifiez votre prochain voyage avec nos recommandations alimentées par l'IA.",
+    "primaryButton": "Commencer à Planifier",
+    "secondaryButton": "En Savoir Plus"
+  },
+  "activity": {
+    "freeAdventure": "Obtenez votre Aventure Gratuite Maintenant !",
+    "title": "Choisissez votre Zap !",
+    "subtitle": "Sélectionnez l'activité parfaite pour votre prochaine aventure",
+    "planTrip": "Planifier un voyage",
+    "tinderDate": "Rendez-vous Romantique",
+    "friendsActivity": "Activité entre amis",
+    "roadTrip": "Faire un road trip",
+    "description": {
+      "plan-trip": "Créez un itinéraire de voyage personnalisé avec des recommandations intelligentes",
+      "tinder-date": "Trouvez les endroits parfaits pour un rendez-vous inoubliable",
+      "friends": "Découvrez des activités,des lieux et des expériences qui vous plairont",
+      "roadtrip": "Planifiez un voyage incroyable avec les meilleurs arrêts en cours de route"
+    },
+    "accessDenied": "Abonnement Requis",
+    "tier1Required": "Abonnement Requis",
+    "tier2Required": "Abonnement Requis",
+    "continue": "Continuer",
+    "petsQuestion": {
+      "trip": "Des amis à quatre pattes vous accompagneront-ils pendant votre voyage ?",
+      "activity": "Des amis à quatre pattes vous accompagneront-ils pendant votre activité ?",
+      "roadTrip": "Des amis à quatre pattes vous accompagneront-ils pendant votre road trip ?",
+      "description": "Nous nous assurons que votre chien peut participer à vos activités"
+    },
+    "petsOptions": {
+      "yes": "Oui, avec des animaux",
+      "no": "Sans animaux"
+    },
+    "next": "Suivant"
+  },
+  "location": {
+    "title": "Où souhaitez-vous aller ?",
+    "choose": "Choisir un lieu"
+  },
+  "calendar": {
+    "locateMe": "Me localiser",
+    "locating": "Localisation en cours...",
+    "title": {
+      "tinderDate": "Quand souhaitez-vous avoir votre rendez-vous ?",
+      "friends": "Qu'est-ce que vous voulez faire?",
+      "trip": "Quand souhaitez-vous voyager ?"
+    },
+    "selectDate": {
+      "tinderDate": "Sélectionnez une date pour votre rendez-vous parfait",
+      "friends": "Sélectionnez une date pour rencontrer vos amis",
+      "trip": "Sélectionnez vos dates de voyage pour continuer la planification.",
+      "placeholder": "Choisir une date"
+    },
+    "today": "Aujourd'hui",
+    "maxDaysExceeded": {
+      "zapTripLimit": "ZapTrip est limité à un maximum de 10 jours.",
+      "title": "Nombre maximum de jours dépassé",
+      "description": "ZapTrip est limité à un maximum de 10 jours."
+    },
+    "zapTripLimit": "ZapTrip est limité à un maximum de 10 jours."
+  },
+  "interests": {  
+    "interest": "Intérêt",
+    "interests": "Intérêts",
+    "title": "Qu'est-ce qui vous intéresse ?",
+    "maxSelection": "Choisissez jusqu'à {{max}} centres d'intérêt ({{selected}} sélectionnés)",
+    "continue": "Continuer avec {{count}} {{pluralKey}}",
+    "scenicRoutes": "Routes panoramiques",
+    "photoSpots": "Lieux pour photos",
+    "localFoodStops": "Arrêts gastronomiques",
+    "campingSites": "Sites de camping",
+    "landmarks": "Monuments",
+    "natureSpots": "Sites naturels",
+    "beaches": "Plages",
+    "smallTowns": "Petites villes",
+    "museums": "Musées",
+    "nationalParks": "Parcs nationaux",
+    "shoppingAreas": "Zones commerciales",
+    "entertainment": "Divertissement",
+    "addOtherInterest": "Ajouter un autre centre d'intérêt",
+    "maxSelection": "Maximum {{max}} centres d'intérêt",
+    "description": "Choisissez les activités et attractions qui vous intéressent pour votre road trip"
+  },
+  "currency": {
+    "search": "Rechercher une devise...",
+    "notFound": "Aucune devise trouvée."
+  },
+  "addActivity": {
+    "title": "Ajouter une activité personnalisée",
+    "description": "Saisissez votre idée d'activité ci-dessous",
+    "activity": "Activité",
+    "enterActivity": "Entrez votre idée d'activité...",
+    "addActivity": "Ajouter l'activité"
+  },
+  "creating": {
+    "trip": "Création de votre voyage parfait",
+    "date": "Création de votre rendez-vous parfait",
+    "groupActivity": "Création de votre activité de groupe",
+    "description": "Nous préparons une expérience incroyable rien que pour vous...",
+    "profile": "Création de votre profil",
+    "profileDescription": "Configuration de votre compte et préparation de votre voyage..."
+  },
+  "cancel": "Annuler",
+  "travel": {
+    "title": "Comment voulez-vous y aller ?",
+    "departureFromPlaceholder": "D'où partez-vous ?",
+    "from": "D'où partez-vous ?",
+    "locating": "Localisation en cours...",
+    "locateMe": "Me localiser",
+    "selected": "Départ sélectionné : {{location}}",
+    "mode": "Choisissez votre mode de transport",
+    "departureFrom": "Départ de",
+    "transportation": "Transportation",
+    "transport": "Transport",
+    "description": "Choisissez votre mode de transport pour votre voyage",
+    "carOptions": "Options de voiture",
+    "electricCar": "Voiture électrique",
+    "carpool": "Carpool"
+  },
+  "car": {
+    "title": "Détails du véhicule",
+    "electric": "Est-ce une voiture électrique ?",
+    "impact": "Aidez-nous à calculer votre impact environnemental",
+    "yes": "Oui",
+    "no": "Non",
+    "carpool": "Faites-vous du covoiturage ?",
+    "reduceEmissions": "Partagez votre trajet pour réduire les émissions"
+  },
+  "accommodation": {
+    "title": "Où souhaitez-vous séjourner ?",
+    "hotel": "Hôtel",
+    "hotelDesc": "Séjours confortables et pratiques en hôtel",
+    "airbnb": "Airbnb",
+    "airbnbDesc": "Hébergements comme à la maison",
+    "hostel": "Auberge de jeunesse",
+    "hostelDesc": "Espaces partagés économiques",
+    "camping": "Camping",
+    "campingDesc": "Séjours en plein air",
+    "resort": "Resort",
+    "resortDesc": "Expériences de luxe en resort",
+    "bnb": "Chambre d'hôtes",
+    "bnbDesc": "Séjours confortables en chambre d'hôtes"
+  },
+  "group": {
+    "title": "Parlez-nous de votre groupe",
+    "travelers": "Combien de voyageurs ?",
+    "adults": "Adultes",
+    "children": "Enfants",
+    "age": "Âge {{age}}+"
+  },
+  "budget": {
+    "currency": "Devise",
+    "title": "Quel est votre budget maximum ?",
+    "max": "Budget maximum /personne",
+    "enter": "Entrez le montant maximum que vous êtes prêt à dépenser",
+    "enterAmount": "Entrez le montant",
+    "perPerson": "Budget par personne",
+    "min": "Budget minimum /personne",
+    "enterMin": "Entrez le minimum",
+    "enterMax": "Entrez le maximum",
+    "maxPerActivity": "Budget pour le road trip",
+    "perPersonTitle": "Budget",
+    "addBudget": "Ajouter un budget?"
+  },
+  "create": {
+    "trip": "Créer mon voyage",
+    "groupActivity": "Créer l'activité de groupe",
+    "date": "Créer le rendez-vous",
+    "roadTrip": "Créer mon Road Trip"
+  },
+  "roadTrip": {
+    "title": "D'où partez-vous et où se termine votre road trip?",
+    "start": "D'où partez-vous?",
+    "locating": "Localisation en cours...",
+    "locateMe": "Me localiser",
+    "stops": "Arrêts intermédiaires",
+    "addStop": "Ajouter un arrêt",
+    "optional": "Facultatif: Ajoutez les arrêts que vous souhaitez faire en chemin",
+    "end": "Destination finale?",
+    "locations": {
+      "title": "Planifiez Votre Itinéraire",
+      "description": "Indiquez votre point de départ, votre destination et vos arrêts intermédiaires",
+      "start": "Point de départ",
+      "stops": "Arrêts en chemin",
+      "addStop": "Ajouter un arrêt",
+      "end": "Destination",
+      "startPlaceholder": "D'où partez-vous?",
+      "stopsPlaceholder": "Dites-nous si vous souhaitez faire des arrêts dans une ville",
+      "endPlaceholder": "Où se termine votre road trip?"
+    },
+    "vehicle": {
+      "title": "Choisissez Votre Véhicule",
+      "description": "Sélectionnez le type de véhicule que vous utiliserez pour votre road trip",
+      "selectType": "Type de véhicule",
+      "car": "Voiture",
+      "motorcycle": "Moto",
+      "rv": "Camping-car",
+      "electricCar": "C'est un véhicule électrique",
+      "bicycle": "Vélo"
+    },
+    "details": {
+      "title": "Dites-nous plus",
+      "description": "Ajoutez les derniers détails pour votre road trip"
+    },
+    "interests": {
+      "title": "Qu'est-ce qui vous intéresse?",
+      "description": "Choisissez les activités et attractions qui vous intéressent pour votre road trip",
+      "scenic": "Routes panoramiques",
+      "photo": "Spots photographiques",
+      "landmarks": "Monuments & Sites",
+      "nature": "Attractions naturelles",
+      "beaches": "Plages & Côtes",
+      "towns": "Petites villes",
+      "food": "Cuisine locale",
+      "camping": "Camping & Plein air",
+      "parks": "Parcs nationaux & régionaux",
+      "museums": "Musées & Histoire",
+      "shopping": "Shopping & Marchés",
+      "entertainment": "Divertissement & Vie nocturne",
+      "maxSelection": "Choisissez jusqu'à 5 centres d'intérêt ({{selected}} sélectionnés)",
+      "category": {
+        "scenicNature": "Paysages & Nature",
+        "places": "Lieux à visiter",
+        "activities": "Activités & Expériences"
+      }
+    }
+  },
+  "createZapRoad": "Créer un Road Trip",
+  "createZapTrip": "Créer un Voyage",
+  "createZapOut": "Créer une Sortie",
+
+  "people": {
+    "title": "Nombre de Voyageurs",
+    "adults": "Adultes",
+    "children": "Enfants"
+  },
+  
+  "peopleBudget": {
+    "title": "Voyageurs & Budget",
+    "description": "Indiquez le nombre de personnes qui voyagent et votre budget"
+  },
+  
+  "tinderLocation": {
+    "title": {
+      "date": "Où est votre rendez-vous?",
+      "friends": "Où est votre activité?"
+    },
+    "description": "Dites-nous où vous vous rencontrez et votre budget pour l'activité",
+    "placeholder": "Où est votre activité?"
+  },
+  "vehicle": {
+    "title": "Comment souhaitez-vous voyager ?",
+    "travelers": "Combien de voyageurs ?",
+    "adults": "Adultes",
+    "children": "Enfants",
+    "age": "Âge {{age}}+",
+    "choose": "Choisissez votre véhicule",
+    "car": "Voiture",
+    "electricCar": "Voiture électrique",
+    "optimizedRoute": "Itinéraire optimisé",
+    "motorcycle": "Moto",
+    "rv": "Camping-car",
+    "recreationalVehicle": "Véhicule de loisirs"
+  },
+  "letsgofora": "Faisons un",
+  "tinderOptions": {
+    "mustSee": "Incontournables",
+    "food": "Gastronomie",
+    "hiddenGems": "Trésors Cachés",
+    "tours": "Visites Guidées",
+    "historic": "Historique",
+    "photographySpots": "Lieux pour photos",
+    "nightlife": "NightLife",
+    "music": "Musique",
+    "wellness": "Bien-être",
+    "art": "Art",
+    "outdoor": "Plein Air",
+    "seasonalActivities": "Activités saisonnières",
+    "breweries": "Brasseries",
+    "shopping": "Shopping",
+    "adventure": "Aventure",
+    "other": "Autre"
+  },
+  "tripInterests": {
+    "breweries": "Brasseries",
+    "local-experiences": "Expériences Locales",
+    "water-sports": "Sports Nautiques",
+    "waterSports": "Sports Nautiques",
+    "activities": "Activités",
+    "foodDrink": "Gastronomie & Boissons",
+    "fineDining": "Restaurants Gastronomiques",
+    "streetFood": "Street Food",
+    "cafes": "Cafés",
+    "wineTasting": "Dégustation de Vins",
+    "localCuisine": "Cuisine Locale",
+    "foodTours": "Tours Gastronomiques",
+    "ecoTourism": "Écotourisme",
+    "localMarkets": "Marchés Locaux",
+    "streetArt": "Art de Rue",
+    "localExp": "Expériences Locales",
+    "cookingClasses": "Cours de Cuisine",
+    "workshops": "Ateliers Locaux",
+    "guidedTours": "Visites Guidées",
+    "beachesRelax": "Détente à la Plage",
+    "thermalSprings": "Sources Thermales",
+    "culture": "Culture",
+    "museums": "Musées",
+    "historicalSites": "Sites Historiques",
+    "religiousSites": "Sites Religieux",
+    "localTraditions": "Traditions Locales",
+    "nature": "Nature",
+    "hiking": "Randonnée",
+    "forests": "Forêts",
+    "gardens": "Jardins",
+    "wildlife": "Faune",
+    "festivals": "Festivals",
+    "fashion": "Mode",
+    "souvenirs": "Souvenirs",
+    "relaxation": "Détente",
+    "arts": "Arts",
+    "photography": "Photographie",
+    "cycling": "Cyclisme",
+    "nightlife": "Vie Nocturne",
+    "food": "Gastronomie",
+    "food-drink": "Gastronomie & Boissons",
+    "fine-dining": "Restaurants Gastronomiques",
+    "street-food": "Street Food",
+    "wine-tasting": "Dégustation de Vins",
+    "local-cuisine": "Cuisine Locale",
+    "food-tours": "Tours Gastronomiques",
+    "historical-sites": "Sites Historiques",
+    "religious-sites": "Sites Religieux",
+    "local-traditions": "Traditions Locales",
+    "eco-tourism": "Écotourisme",
+    "local-markets": "Marchés Locaux",
+    "street-art": "Art de Rue",
+    "thermal-springs": "Sources Thermales",
+    "beaches-relax": "Détente à la Plage",
+    "local-exp": "Expériences Locales",
+    "cooking-classes": "Cours de Cuisine",
+    "guided-tours": "Visites Guidées",
+    "localExperiences": "Expériences Locales"
+  },
+  "continue": "Continuer",
+  "back": "Retour",
+  "continueOnly": "Continuer",
+  "transport": {
+    "plane": "Avion",
+    "train": "Train",
+    "bus": "Bus",
+    "car": "Voiture"
+  },
+  "authModal": {
+    "title": "Connectez-vous pour continuer",
+    "description": "Connectez-vous ou créez un compte pour créer votre voyage",
+    "createTitle": "Rejoignez la famille",
+    "createDescription": "Créez un compte pour sauvegarder et accéder à votre voyage"
+  },
+  "form": {
+    "titleDescription": {
+      "title": "Donnez un Nom à Votre Aventure",
+      "subtitle": "Personnalisez votre voyage en lui donnant un titre et une description",
+      "titleLabel": "Donnez un nom à votre aventure*",
+      "titlePlaceholder": "Entrez un titre mémorable pour votre aventure...",
+      "descriptionLabel": "Décrivez votre aventure",
+      "descriptionPlaceholder": "Dites-nous ce qui rend votre aventure spéciale pour que nous puissions vous aider à la planifier",
+      "titleRequired": "Veuillez entrer un titre pour votre aventure"
+    },
+    "back": "Retour",
+    "next": "Suivant"
+  },
+  "freetripdescription": "Votre Aventure Gratuite !",
+  "noTripsYet": "Aucun voyage créé pour le moment. Soyez le premier à en créer un !",
+  "travelers": "voyageurs",
+  "categories": {
+    "zapout": "ZapOut",
+    "zaproad": "ZapRoad",
+    "zaptrip": "ZapTrip"
+  },
+  "cityTrips": "Destinations Populaires",
+  "cityTripsDesc": "Explorez les villes tendance et trouvez votre prochaine aventure",
+  "cityImage": "Photo de {{city}}",
+  "totalTrips": "{{count}} voyages",
+  "featuredDestinations": {
+    "explore": "Explorer",
+    "searchFlights": "Prêt à Voler ? C'est Parti ! ✈️"
+  },
+  "latestTrips": {
+    "createAdventure": "Créez Votre Aventure"
+  },
+  "travelCategories": {
+    "startPlanning": "Commencer à Planifier"
+  },
+  "whyChooseUs": {
+    "letsGetStarted": "C'est Parti pour l'Aventure ! 🚀"
+  },
+  "stats": {
+    "joinAdventure": "Rejoignez l'Aventure ! 🌍✨"
+  },
+  "latestBlogs": {
+    "readyToExplore": "Prêt à Explorer ? C'est Parti ! 🎯"
+  }
+} 

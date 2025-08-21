@@ -1,0 +1,28 @@
+{
+  "title": "Conversor de Monedas",
+  "subtitle": "Convierte monedas con tasas de cambio en tiempo real",
+  "amount": "Cantidad",
+  "from": "De",
+  "to": "A",
+  "convert": "Convertir",
+  "quickAmounts": "Cantidades Rápidas",
+  "lastUpdated": "Última actualización",
+  "disclaimer": "Utilizamos la tasa de mercado para nuestro Conversor. Esto es solo informativo. No recibirás esta tasa al enviar dinero.",
+  "error": {
+    "fetchRates": "Error al obtener las últimas tasas de cambio. Por favor, inténtalo de nuevo más tarde."
+  },
+  "currencies": {
+    "USD": "Dólar estadounidense",
+    "EUR": "Euro",
+    "GBP": "Libra esterlina",
+    "JPY": "Yen japonés",
+    "AUD": "Dólar australiano",
+    "CAD": "Dólar canadiense",
+    "CHF": "Franco suizo",
+    "CNY": "Yuan chino",
+    "INR": "Rupia india",
+    "BRL": "Real brasileño",
+    "RUB": "Rublo ruso",
+    "ZAR": "Rand sudafricano"
+  }
+} 

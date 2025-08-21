@@ -1,0 +1,27 @@
+{
+  "noRecommendations": {
+    "title": "Aún no hay recomendaciones de Zaparound en esta área :(",
+    "subtitle": "¡Vuelve más tarde para ver sugerencias emocionantes!"
+  },
+  "viewWebsite": "Ver sitio web",
+  "types": {
+    "all": "Todos",
+    "hotel": "Hoteles",
+    "restaurant": "Restaurantes",
+    "bar": "Bares",
+    "event": "Eventos",
+    "activity": "Actividades",
+    "other": "Otros"
+  },
+  "tags": {
+    "hotel": "Hotel",
+    "restaurant": "Restaurante",
+    "bar": "Bar",
+    "event": "Evento",
+    "activity": "Actividad",
+    "other": "Otro"
+  },
+  "zaparound": {
+    "recommendations": "Recomendado por nosotros"
+  }
+} 

@@ -1,0 +1,199 @@
+{
+  "navigation": {
+    "title": "Comunidad"
+  },
+  "metaDescription": "Únete a la comunidad ZapAround para conectar con otros viajeros, compartir experiencias y descubrir destinos increíbles.",
+  "title": "Bienvenido a la Comunidad ZapAround",
+  "subtitle": "Un lugar donde los viajeros se conectan, comparten experiencias e inspiran los viajes de los demás.",
+  "comingSoonTitle": "Próximamente para Miembros Explorer",
+  "comingSoonDescription": "Estamos construyendo un espacio comunitario increíble donde podrás conectar con otros viajeros, compartir consejos y planificar aventuras juntos.",
+  "notifyMe": "Notifícame Cuando Esté Disponible",
+  "features": {
+    "connect": {
+      "title": "Conéctate con Viajeros",
+      "description": "Conoce aventureros afines de todo el mundo"
+    },
+    "share": {
+      "title": "Comparte Experiencias",
+      "description": "Comparte tus historias de viaje, consejos y joyas ocultas"
+    },
+    "discover": {
+      "title": "Descubre Lugares",
+      "description": "Encuentra nuevos destinos a través de recomendaciones de la comunidad"
+    },
+    "events": {
+      "title": "Únete a Eventos",
+      "description": "Participa en encuentros de viaje virtuales y locales"
+    }
+  },
+  "stayTuned": "Mantente Atento",
+  "betaAccess": "¡Únete a nuestra lista de espera para obtener acceso anticipado cuando lancemos!",
+  "emailPlaceholder": "Ingresa tu email",
+  "joinWaitlist": "Unirse a la Lista de Espera",
+  "yourLocation": "Tu Ubicación",
+  "detectingLocation": "Detectando tu ubicación...",
+  "locationError": "No se pudo detectar tu ubicación",
+  "locationPermissionError": "Por favor permite el acceso a la ubicación para ver eventos cercanos",
+  "locationNotSupported": "La detección de ubicación no es compatible con tu navegador",
+  "retryLocation": "Reintentar",
+  "updateLocation": "Actualizar Ubicación",
+  "nearbyEvents": "Eventos Cercanos",
+  "searchLocation": "Buscar una ubicación...",
+  "openNow": "Abierto Ahora",
+  "closed": "Cerrado",
+  "events": {
+    "loadingEvents": "Cargando eventos...",
+    "noEventsFound": "No se encontraron eventos en tu área",
+    "viewEvent": "Ver Evento",
+    "free": "Gratis",
+    "paid": "De Pago"
+  },
+  "postCreation": {
+    "title": "Crear una Publicación",
+    "activityPlaceholder": "Comparte tu experiencia de actividad...",
+    "destinationPlaceholder": "Comparte tu historia de destino...",
+    "locationPlaceholder": "Agrega tu ubicación (opcional)",
+    "postButton": "Publicar",
+    "posting": "Publicando...",
+    "postSuccess": "¡Publicación creada exitosamente!",
+    "postError": "Error al crear la publicación. Por favor intenta de nuevo.",
+    "contentRequired": "Por favor agrega contenido a tu publicación.",
+    "loginRequired": "Debes iniciar sesión para crear una publicación."
+  },
+  "postTypes": {
+    "activity": "Actividad",
+    "destination": "Destino",
+    "feed": "Feed",
+    "activities": "Actividades",
+    "destinations": "Destinos"
+  },
+  "rating": {
+    "rateExperience": "Evalúa tu experiencia:",
+    "ratePost": "Evalúa esta publicación:",
+    "star": "estrella",
+    "stars": "estrellas"
+  },
+  "nearbyPlaces": {
+    "title": "Actividades Cercanas",
+    "loading": "Cargando lugares cercanos...",
+    "noPlaces": "No se encontraron actividades en un radio de 50km",
+    "enableLocation": "Habilitar Ubicación",
+    "distance": "km de distancia",
+    "checkBackLater": "Vuelve más tarde para nuevas actividades"
+  },
+  "aroundTheWorld": "🌍 Alrededor del Mundo",
+  "travelStories": "Historias de Viaje",
+  "postActions": {
+    "share": "Compartir publicación",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "blockUser": "Bloquear Usuario",
+    "unblockUser": "Desbloquear Usuario",
+    "report": "Reportar",
+    "deleteConfirm": "¿Estás seguro de que quieres eliminar esta publicación?",
+    "blockConfirm": "¿Estás seguro de que quieres bloquear a este usuario?",
+    "unblockConfirm": "¿Estás seguro de que quieres desbloquear a este usuario?",
+    "reportConfirm": "¿Estás seguro de que quieres reportar esta publicación?"
+  },
+  "replies": {
+    "title": "Respuestas",
+    "placeholder": "Escribe una respuesta...",
+    "replyButton": "Responder",
+    "posting": "Publicando...",
+    "noReplies": "Aún no hay respuestas. ¡Sé el primero en responder!",
+    "viewAll": "Ver Todos los Comentarios",
+    "deleteReply": "Eliminar Respuesta",
+    "deleteReplyConfirm": "¿Estás seguro de que quieres eliminar esta respuesta?",
+    "replySuccess": "¡Respuesta publicada exitosamente!",
+    "replyError": "Error al publicar la respuesta. Por favor intenta de nuevo.",
+    "contentRequired": "Por favor agrega contenido a tu respuesta.",
+    "loginRequired": "Debes iniciar sesión para responder."
+  },
+  "loading": {
+    "posts": "Cargando publicaciones...",
+    "morePosts": "Cargando más publicaciones...",
+    "replies": "Cargando respuestas..."
+  },
+  "errors": {
+    "general": "Algo salió mal. Por favor intenta de nuevo.",
+    "network": "Error de red. Por favor verifica tu conexión.",
+    "unauthorized": "No estás autorizado para realizar esta acción.",
+    "notFound": "Publicación no encontrada.",
+    "fetchBlockedUsers": "Error al obtener la lista de usuarios bloqueados.",
+    "fetchPosts": "Error al obtener las publicaciones. Por favor intenta de nuevo.",
+    "fetchReplies": "Error al obtener las respuestas. Por favor intenta de nuevo.",
+    "postFailed": "Error al publicar. Por favor intenta de nuevo.",
+    "deletePostFailed": "Error al eliminar la publicación. Por favor intenta de nuevo.",
+    "postReplyFailed": "Error al publicar la respuesta. Por favor intenta de nuevo.",
+    "deleteReplyFailed": "Error al eliminar la respuesta. Por favor intenta de nuevo."
+  },
+  "toast": {
+    "error": "Error",
+    "success": "Éxito",
+    "uploadMediaFailed": "Error al subir el medio. Por favor intenta de nuevo.",
+    "postContentEmpty": "El contenido del post no puede estar vacío.",
+    "loginRequired": "Debes iniciar sesión para publicar.",
+    "postPublished": "Tu publicación ha sido publicada.",
+    "loginRequiredLike": "Debes iniciar sesión para dar like a las publicaciones.",
+    "updateLikeFailed": "Error al actualizar el like. Por favor intenta de nuevo.",
+    "postUpdated": "Publicación actualizada exitosamente.",
+    "updatePostFailed": "Error al actualizar la publicación. Por favor intenta de nuevo.",
+    "postDeleted": "Publicación eliminada exitosamente.",
+    "userBlocked": "Usuario bloqueado exitosamente.",
+    "blockUserFailed": "Error al bloquear al usuario. Por favor intenta de nuevo.",
+    "userUnblocked": "Usuario desbloqueado exitosamente.",
+    "unblockUserFailed": "Error al desbloquear al usuario. Por favor intenta de nuevo.",
+    "replyPosted": "Tu respuesta ha sido publicada.",
+    "replyDeleted": "Respuesta eliminada exitosamente.",
+    "replyContentEmpty": "El contenido de la respuesta no puede estar vacío.",
+    "loginRequiredReply": "Debes iniciar sesión para responder.",
+    "postTextLinkCopied": "El texto y enlace de la publicación han sido copiados a tu portapapeles.",
+    "postLinkCopied": "El enlace de la publicación ha sido copiado a tu portapapeles.",
+    "linkCopied": "¡Enlace Copiado!",
+    "newPost": "Nueva Publicación",
+    "editPost": "Editar Publicación"
+  },
+  "user": {
+    "anonymous": "Usuario Anónimo",
+    "blocked": "Usuario Bloqueado",
+    "admin": "Administrador"
+  },
+  "media": {
+    "uploadError": "Error al subir el medio. Por favor intenta de nuevo.",
+    "invalidFile": "Tipo de archivo inválido. Por favor selecciona una imagen o video.",
+    "fileTooLarge": "El archivo es demasiado grande. Por favor selecciona un archivo más pequeño.",
+    "addPhotosVideos": "Agregar Fotos y Videos",
+    "image": "IMAGEN",
+    "video": "VIDEO",
+    "moreFiles": "+{{count}} más",
+    "filesSelected": "{{count}} de {{max}} archivos seleccionados",
+    "maxFilesExceeded": "Solo puedes subir hasta {{max}} archivos.",
+    "invalidFileType": "{{filename}} no es un archivo de imagen o video válido.",
+    "fileTooLargeImage": "{{filename}} es demasiado grande. El tamaño máximo es 10MB.",
+    "fileTooLargeVideo": "{{filename}} es demasiado grande. El tamaño máximo es 50MB."
+  },
+  "share": {
+    "title": "Compartir Publicación",
+    "copied": "¡Enlace copiado al portapapeles!",
+    "error": "Error al compartir la publicación. Por favor intenta de nuevo.",
+    "checkFound": "Revisa lo que encontré en ZapAround"
+  },
+  "infiniteScroll": {
+    "loadingMore": "Cargando más publicaciones...",
+    "noMorePosts": "No hay más publicaciones para cargar"
+  },
+  "postBlur": {
+    "title": "Conéctate para Crear Publicaciones",
+    "description": "Únete a nuestra comunidad para compartir tus historias de viaje, conectar con otros viajeros y crear publicaciones increíbles.",
+    "connect": "Conectar",
+    "signup": "Registrarse"
+  },
+  "communityShare": {
+    "readyToExplore": "¿Listo para explorar {{location}}?",
+    "readyToJoin": "¿Listo para unirte a la comunidad?",
+    "discoverMore": "¡Descubre más lugares increíbles y conéctate con viajeros en ZapAround!",
+    "shareStories": "¡Comparte tus propias historias de viaje y conéctate con otros viajeros!",
+    "exploreCommunity": "Explorar Comunidad",
+    "startPlanning": "Comenzar Planificación"
+  }
+}
