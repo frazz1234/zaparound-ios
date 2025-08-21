@@ -28,6 +28,7 @@
     "@capacitor/core": "^7.4.3",
     "@capacitor/geolocation": "^7.1.5",
     "@capacitor/ios": "^7.4.3",
+    "@capacitor/splash-screen": "^7.0.2",
     "@duffel/components": "^3.10.0",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
     "@hookform/resolvers": "^3.10.0",
