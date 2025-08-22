@@ -9,8 +9,9 @@ const config: CapacitorConfig = {
     scheme: 'zaparound',
     contentInset: 'always',
     backgroundColor: '#fcfcfc',
+    hostname: 'zaparound.com', // For universal links 
     // Enable native iOS features
-    limitsNavigationsToAppBoundDomains: true,
+    limitsNavigationsToAppBoundDomains: false,
     // Enable autofill capabilities
     webContentsDebuggingEnabled: false
   },
@@ -23,8 +24,14 @@ const config: CapacitorConfig = {
     // Autofill configuration
     SplashScreen: {
       launchShowDuration: 3000,
-      backgroundColor: '#fcfcfc',
-      showSpinner: false
+      launchAutoHide: true,
+      backgroundColor: "#fcfcfc",
+      androidSplashResourceName: "splash",
+      androidScaleType: "CENTER_CROP",
+      showSpinner: false,
+      androidSpinnerStyle: "large",
+      iosSpinnerStyle: "small",
+      spinnerColor: "#61936f",
     },
     // Geolocation configuration
     Geolocation: {
