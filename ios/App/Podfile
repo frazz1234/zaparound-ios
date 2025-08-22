@@ -46,4 +46,24 @@ post_install do |installer|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
     end
   end
+  
+  # Fix XCFrameworks copy script phase warning by adding output files
+  installer.pods_project.targets.each do |target|
+    target.build_phases.each do |build_phase|
+      if build_phase.respond_to?(:name) && build_phase.name == '[CP] Copy XCFrameworks'
+        # Add output files to prevent the warning
+        if build_phase.respond_to?(:output_paths)
+          build_phase.output_paths ||= []
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Capacitor.framework'
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CapacitorCordova.framework'
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CapacitorBackgroundRunner.framework'
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CapacitorBrowser.framework'
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CapacitorCamera.framework'
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CapacitorGeolocation.framework'
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CapacitorSplashScreen.framework'
+          build_phase.output_paths << '$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RevenuecatPurchasesCapacitor.framework'
+        end
+      end
+    end
+  end
 end
