@@ -1,4 +1,4 @@
-import { CookieConsentState } from '@/hooks/useCookieConsent';
+
 import { cookieMonitor } from './cookieMonitor';
 
 interface CookieOptions {
@@ -13,13 +13,6 @@ interface CookieOptions {
  * Set a cookie with the given name, value, and options
  */
 export function setCookie(name: string, value: string, options: CookieOptions = {}) {
-  const cookieConsent = getConsentState();
-  
-  // Check if we have consent to set this cookie based on its name
-  if (!shouldSetCookie(name, cookieConsent)) {
-    console.warn(`Cookie "${name}" not set due to user consent preferences`);
-    return;
-  }
   
   let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
   
@@ -71,13 +64,6 @@ export function setCookie(name: string, value: string, options: CookieOptions = 
  * Get a cookie by name
  */
 export function getCookie(name: string): string | null {
-  const cookieConsent = getConsentState();
-  
-  // Check if we have consent to read this cookie based on its name
-  if (!shouldSetCookie(name, cookieConsent)) {
-    console.warn(`Cookie "${name}" not read due to user consent preferences`);
-    return null;
-  }
   
   const cookies = document.cookie.split(';');
   const encodedName = encodeURIComponent(name);
@@ -103,121 +89,8 @@ export function deleteCookie(name: string, options: Omit<CookieOptions, 'expires
   setCookie(name, '', { ...options, expires: new Date(0) });
 }
 
-/**
- * Get the current consent state from the document
- */
-function getConsentState(): CookieConsentState {
-  try {
-    const consentAttr = document.documentElement.getAttribute('data-cookie-consent');
-    if (consentAttr) {
-      return JSON.parse(consentAttr) as CookieConsentState;
-    }
-  } catch (error) {
-    console.error('Error parsing cookie consent state:', error);
-  }
-  
-  // Default to only necessary cookies if consent state is not available
-  return {
-    necessary: true,
-    functional: false,
-    analytics: false,
-    marketing: false,
-    hasInteracted: false
-  };
-}
 
-/**
- * Determine if a cookie should be set based on its name and the consent state
- */
-function shouldSetCookie(name: string, consentState: CookieConsentState): boolean {
-  // Always allow necessary cookies
-  if (isNecessaryCookie(name)) {
-    return true;
-  }
-  
-  // Always allow GA4 cookies specifically
-  if (isGoogleAnalyticsCookie(name)) {
-    return true;
-  }
-  
-  // Check other analytics cookies (non-GA4)
-  if (isAnalyticsCookie(name) && !consentState.analytics) {
-    return false;
-  }
-  
-  // Check other categories
-  if (isFunctionalCookie(name) && !consentState.functional) {
-    return false;
-  }
-  
-  if (isMarketingCookie(name) && !consentState.marketing) {
-    return false;
-  }
-  
-  // Default to allowing if not categorized (though this should be avoided)
-  return true;
-}
 
-/**
- * Check if a cookie is a necessary cookie
- */
-function isNecessaryCookie(name: string): boolean {
-  const necessaryCookies = [
-    'zaparound-cookie-consent',
-    'session',
-    'csrf',
-    'auth',
-    'sb-',  // Supabase cookies
-  ];
-  
-  return necessaryCookies.some(prefix => name.startsWith(prefix));
-}
 
-/**
- * Check if a cookie is specifically from Google Analytics
- */
-function isGoogleAnalyticsCookie(name: string): boolean {
-  return name.startsWith('_ga'); // This covers _ga, _gid, _gat
-}
 
-/**
- * Check if a cookie is an analytics cookie
- */
-function isAnalyticsCookie(name: string): boolean {
-  const analyticsCookies = [
-    'plausible_',
-    'amplitude_',
-    'mixpanel_',
-  ];
-  
-  return analyticsCookies.some(prefix => name.startsWith(prefix)) || isGoogleAnalyticsCookie(name);
-}
-
-/**
- * Check if a cookie is a functional cookie
- */
-function isFunctionalCookie(name: string): boolean {
-  const functionalCookies = [
-    'theme',
-    'language',
-    'app-language',
-    'preferences',
-    'ui-',
-  ];
-  
-  return functionalCookies.some(prefix => name.startsWith(prefix));
-}
-
-/**
- * Check if a cookie is a marketing cookie
- */
-function isMarketingCookie(name: string): boolean {
-  const marketingCookies = [
-    '_fbp',
-    '_gcl',
-    'ads_',
-    'marketing_',
-  ];
-  
-  return marketingCookies.some(prefix => name.startsWith(prefix));
-} 
+ 

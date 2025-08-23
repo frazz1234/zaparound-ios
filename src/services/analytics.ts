@@ -18,10 +18,13 @@ class AnalyticsService {
   init(consentState?: { analytics: boolean; marketing: boolean }) {
     if (!this.isInitialized) return;
     
-    // Always enable GA4 but respect marketing consent
+    // Always enable all consent for best user experience
     window.gtag('consent', 'update', {
-      analytics_storage: 'granted', // Always enable GA4
-      ad_storage: consentState?.marketing ? 'granted' : 'denied',
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      functionality_storage: 'granted',
+      personalization_storage: 'granted',
+      security_storage: 'granted',
     });
   }
 
@@ -31,10 +34,13 @@ class AnalyticsService {
   updateConsent(consentState: { analytics: boolean; marketing: boolean }) {
     if (!this.isInitialized) return;
 
-    // Always keep GA4 enabled but respect marketing consent
+    // Always enable all consent for best user experience
     window.gtag('consent', 'update', {
-      analytics_storage: 'granted', // Always enable GA4
-      ad_storage: consentState.marketing ? 'granted' : 'denied',
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      functionality_storage: 'granted',
+      personalization_storage: 'granted',
+      security_storage: 'granted',
     });
   }
 

@@ -1,6 +1,6 @@
 import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
 import { useTranslation } from 'react-i18next';
-import { CookieSettingsButton } from "@/components/cookie/CookieSettingsButton";
+
 import { CookieStats } from "@/components/cookie/CookieStats";
 
 export default function CookiePolicy() {
@@ -131,22 +131,10 @@ export default function CookiePolicy() {
         </section>
         
         <section>
-          <h2>Consent to Use Cookies</h2>
+          <h2>Cookie Consent</h2>
           <p>
-            When you first visit our website, you will be presented with a cookie banner that allows you to accept or reject cookies. You can change your cookie preferences at any time by clicking on the Cookie Settings link in the footer of our website.
+            All cookies are automatically enabled on our website to ensure the best user experience. We use cookies to enhance functionality, analyze site usage, and provide personalized content. By using our website, you consent to the use of all cookies.
           </p>
-          
-          <div className="my-6 flex flex-col items-center space-y-4">
-            <p className="text-center text-muted-foreground">
-              {tCookies('managingDesc')}
-            </p>
-            <CookieSettingsButton 
-              variant="default" 
-              size="lg"
-              className="min-w-[200px]"
-              showIcon={true}
-            />
-          </div>
         </section>
         
         <section>

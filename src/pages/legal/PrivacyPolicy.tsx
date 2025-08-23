@@ -1,6 +1,6 @@
 import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
 import { useTranslation } from 'react-i18next';
-import { CookieSettingsButton } from "@/components/cookie/CookieSettingsButton";
+
 
 export default function PrivacyPolicy() {
   const { t: tCommon } = useTranslation('common');
@@ -76,14 +76,7 @@ export default function PrivacyPolicy() {
         We use cookies and similar tracking technologies to collect information about your browsing activities. You can manage your cookie preferences through your browser settings. For more details, please see our <a href="/cookie-policy" className="text-blue-600 hover:underline">Cookie Policy</a>.
       </p>
       
-      <div className="my-4 flex">
-        <CookieSettingsButton 
-          variant="outline" 
-          size="sm"
-          className="ml-0"
-          showIcon={true}
-        />
-      </div>
+
       
       <h2>Changes to This Privacy Policy</h2>
       <p>

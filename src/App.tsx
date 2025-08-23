@@ -15,7 +15,7 @@ import { HomePageAccessControl } from "./components/HomePageAccessControl";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { UpdateNotification } from "./components/UpdateNotification";
-import { CookieConsentProvider } from "./providers/CookieConsentProvider";
+
 import { ThemeProvider } from "./components/theme-provider";
 import { analytics } from "./services/analytics";
 import i18next from 'i18next';
@@ -360,8 +360,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="zaparounds-theme">
       <HelmetProvider>
-        <CookieConsentProvider>
-          <TooltipProvider>
+        <TooltipProvider>
             <Toaster />
             <UpdateNotification />
             <WebVitalsReporter enabled={true} debug={false} />
@@ -505,7 +504,6 @@ function App() {
             <Analytics />
             <SpeedInsights />
           </TooltipProvider>
-        </CookieConsentProvider>
       </HelmetProvider>
     </ThemeProvider>
   );

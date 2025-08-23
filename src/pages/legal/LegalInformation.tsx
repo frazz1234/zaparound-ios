@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, FileText, Scale, Shield, Cookie } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { CookieSettingsButton } from "@/components/cookie/CookieSettingsButton";
+
 
 export default function LegalInformation() {
   const { t: tCommon } = useTranslation('common');
@@ -66,13 +66,7 @@ export default function LegalInformation() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {tLegal('legalInfoDesc')}
           </p>
-          <div className="mt-4">
-            <CookieSettingsButton 
-              variant="outline" 
-              size="sm"
-              className="mx-auto"
-            />
-          </div>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">

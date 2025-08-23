@@ -7,7 +7,7 @@ import { LanguageSelector } from "./LanguageSelector";
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/components/ui/use-toast";
-import { CookieSettingsButton } from "./cookie/CookieSettingsButton";
+
 import { useUserRole } from "@/hooks/useUserRole";
 import { setupCrossDomainAuth } from '@/integrations/supabase/crossDomainAuth';
 
