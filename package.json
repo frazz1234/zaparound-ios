@@ -20,10 +20,18 @@
     "test:coverage": "vitest run --coverage",
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui",
-    "e2e:install": "playwright install --with-deps"
+    "e2e:install": "playwright install --with-deps",
+    "cap:sync": "npx cap sync",
+    "cap:ios": "npx cap open ios",
+    "cap:run:ios": "npx cap run ios"
   },
   "dependencies": {
+    "@capacitor/app": "^7.0.2",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/haptics": "^7.0.2",
     "@capacitor/ios": "^7.4.3",
+    "@capacitor/keyboard": "^7.0.2",
+    "@capacitor/status-bar": "^7.0.2",
     "@duffel/components": "^3.10.0",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
     "@hookform/resolvers": "^3.10.0",
