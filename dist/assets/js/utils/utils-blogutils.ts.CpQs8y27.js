@@ -1,2 +1,0 @@
-const e=36e5,t=3e5,n=e=>null==e?"":"string"==typeof e?e:String(e),c=(e,t)=>{const c=t||"en",l=e[`title_${c}`]||e.title_en,r=e[`content_${c}`]||e.content_en,o=e[`excerpt_${c}`]||e.excerpt_en;return{title:n(l),content:n(r),excerpt:null!=o?n(o):null}},l=e=>e.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");export{e as C,t as S,l as c,c as g};
-//# sourceMappingURL=utils-blogutils.ts.CpQs8y27.js.map

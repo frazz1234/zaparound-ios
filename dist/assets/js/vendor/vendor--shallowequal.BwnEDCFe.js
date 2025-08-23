@@ -1,2 +1,0 @@
-import{g as r}from"./vendor--cookie.D-6orQ43.js";const e=r((function(r,e,t,o){var n=t?t.call(o,r,e):void 0;if(void 0!==n)return!!n;if(r===e)return!0;if("object"!=typeof r||!r||"object"!=typeof e||!e)return!1;var i=Object.keys(r),f=Object.keys(e);if(i.length!==f.length)return!1;for(var a=Object.prototype.hasOwnProperty.bind(e),c=0;c<i.length;c++){var v=i[c];if(!a(v))return!1;var s=r[v],u=e[v];if(!1===(n=t?t.call(o,s,u,v):void 0)||void 0===n&&s!==u)return!1}return!0}));export{e as s};
-//# sourceMappingURL=vendor--shallowequal.BwnEDCFe.js.map

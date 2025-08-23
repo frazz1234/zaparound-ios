@@ -1,2 +1,0 @@
-function e(){if(!("serviceWorker"in navigator))return;const e=()=>{window.dispatchEvent(new CustomEvent("appUpdateAvailable"))};navigator.serviceWorker.ready.then((t=>{t.waiting&&e(),t.addEventListener("updatefound",(()=>{const n=t.installing;n&&n.addEventListener("statechange",(()=>{"installed"===n.state&&navigator.serviceWorker.controller&&e()}))}))})).catch((e=>{}))}export{e as i};
-//# sourceMappingURL=utils-sw-update.ts.DmqU5Wq2.js.map
