@@ -1,2 +1,0 @@
-import { Chat } from '../types';
-export declare function useChat(): Chat;
