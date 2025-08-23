@@ -29,7 +29,6 @@ import { Bookings } from './pages/bookings/Bookings';
 import { BookingDetail } from './pages/bookings/BookingDetail';
 import { LanguageRouter } from './components/LanguageRouter';
 import ZapPlaces from '@/pages/ZapPlaces';
-import WebVitalsReporter from '@/components/WebVitalsReporter';
 
 // Lazy load non-critical routes
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -361,7 +360,6 @@ function App() {
         <TooltipProvider>
             <Toaster />
             <UpdateNotification />
-            <WebVitalsReporter enabled={true} debug={false} />
             <Router>
               <RouteChangeTracker />
               <LanguageRouter>

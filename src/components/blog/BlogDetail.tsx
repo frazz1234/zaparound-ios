@@ -8,7 +8,6 @@ import { BlogHeader } from './BlogHeader';
 import { BlogContent } from './BlogContent';
 import { BlogMetaTags } from './BlogMetaTags';
 import { Button } from '@/components/ui/button';
-import { onCLS, onFID, onLCP } from 'web-vitals';
 
 export function BlogDetail() {
   const { blogSlug = '' } = useParams();
@@ -16,15 +15,6 @@ export function BlogDetail() {
   const language = i18n.language;
   const { data: blog, isLoading, error } = useBlogById(blogSlug);
   const navigate = useNavigate();
-
-  // Monitor Core Web Vitals
-  useEffect(() => {
-    // Report Core Web Vitals
-    onCLS(console.log);
-    onFID(console.log);
-    onLCP(console.log);
-  }, []);
-
 
 
   if (isLoading) {

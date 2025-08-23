@@ -29,6 +29,11 @@ const config: CapacitorConfig = {
       ios: {
         presentationStyle: 'popover'
       }
+    },
+    Keyboard: {
+      resize: 'body',
+      style: 'DEFAULT',
+      resizeOnFullScreen: true
     }
   }
 };
