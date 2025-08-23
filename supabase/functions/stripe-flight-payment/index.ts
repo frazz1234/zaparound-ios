@@ -204,7 +204,7 @@ serve(async (req) => {
     const isDevMode = origin.includes('localhost') || 
                      origin.includes('127.0.0.1') || 
                      origin.includes('ngrok') ||
-                     (origin.includes('vercel.app') && origin.includes('dev'));
+                     origin.includes('dev');
     
     if (isDevMode) {
       console.log(`🔧 DEV MODE: Applying 100% discount to flight booking. Original amount: ${amountInCents} cents (${requestData.currency})`);

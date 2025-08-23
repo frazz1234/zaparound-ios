@@ -28,7 +28,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => ({
       'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'geolocation=(self), microphone=(self), camera=(self)',
       'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://js.hcaptcha.com https://hcaptcha.com https://api.mapbox.com https://events.mapbox.com https://*.emrldtp.com https://emrldtp.com https://www.google.com https://www.gstatic.com https://va.vercel-scripts.com https://sentry.avs.io https://cdn.jsdelivr.net https://widgets.aviasales.com https://*.aviasales.com https://www.aviasales.ru https://*.aviasales.ru https://tpwgts.com https://*.avsplow.com https://avsplow.com http://*.avsplow.com http://avsplow.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.mapbox.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https: wss: https://ynvnzmkpifwteyuxondc.supabase.co https://api.mapbox.com https://events.mapbox.com https://open.er-api.com https://www.google.com https://www.gstatic.com https://*.emrldtp.com https://emrldtp.com https://va.vercel-scripts.com https://sentry.avs.io https://zaparound.app.n8n.cloud https://widgets.aviasales.com https://*.aviasales.com https://www.aviasales.ru https://*.aviasales.ru https://tpwgts.com https://*.avsplow.com https://avsplow.com http://*.avsplow.com http://avsplow.com; frame-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://www.google.com https://widgets.aviasales.com https://*.aviasales.com https://www.aviasales.ru https://*.aviasales.ru https://tpwgts.com https://*.avsplow.com https://avsplow.com http://*.avsplow.com http://avsplow.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';"
+      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://js.hcaptcha.com https://hcaptcha.com https://api.mapbox.com https://events.mapbox.com https://*.emrldtp.com https://emrldtp.com https://www.google.com https://www.gstatic.com https://sentry.avs.io https://cdn.jsdelivr.net https://widgets.aviasales.com https://*.aviasales.com https://www.aviasales.ru https://*.aviasales.ru https://tpwgts.com https://*.avsplow.com https://avsplow.com http://*.avsplow.com http://avsplow.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.mapbox.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https: wss: https://ynvnzmkpifwteyuxondc.supabase.co https://api.mapbox.com https://events.mapbox.com https://open.er-api.com https://www.google.com https://www.gstatic.com https://*.emrldtp.com https://emrldtp.com https://sentry.avs.io https://zaparound.app.n8n.cloud https://widgets.aviasales.com https://*.aviasales.com https://www.aviasales.ru https://*.aviasales.ru https://tpwgts.com https://*.avsplow.com https://avsplow.com http://*.avsplow.com http://avsplow.com; frame-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://www.google.com https://widgets.aviasales.com https://*.aviasales.com https://www.aviasales.ru https://*.aviasales.ru https://tpwgts.com https://*.avsplow.com https://avsplow.com http://*.avsplow.com http://avsplow.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';"
     },
   },
   build: {
@@ -122,13 +122,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => ({
             return 'vendor-supabase-other';
           }
           
-          // Handle Analytics
-          if (id.includes('node_modules/@vercel/analytics')) {
-            return 'vendor-analytics';
-          }
-          if (id.includes('node_modules/@vercel/speed-insights')) {
-            return 'vendor-speed-insights';
-          }
+
           
           // Group remaining node_modules by first level package name
           if (id.includes('node_modules/')) {

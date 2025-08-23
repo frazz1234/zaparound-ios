@@ -13,8 +13,7 @@ import { InAppBrowserProvider } from "@/components/ui/InAppBrowserProvider";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import { HomePageAccessControl } from "./components/HomePageAccessControl";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
+
 import { UpdateNotification } from "./components/UpdateNotification";
 
 import { ThemeProvider } from "./components/theme-provider";
@@ -504,8 +503,7 @@ function App() {
                 </Layout>
               </LanguageRouter>
             </Router>
-            <Analytics />
-            <SpeedInsights />
+
           </TooltipProvider>
       </HelmetProvider>
     </ThemeProvider>

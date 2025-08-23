@@ -15,7 +15,7 @@ export const isDevelopmentMode = (): boolean => {
     return hostname === 'localhost' || 
            hostname === '127.0.0.1' || 
            hostname.includes('ngrok') ||
-           hostname.includes('vercel.app') && hostname.includes('dev');
+           hostname.includes('dev');
   }
   
   // Check for NODE_ENV in server environment

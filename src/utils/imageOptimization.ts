@@ -33,49 +33,15 @@ export interface ImageOptimizationOptions {
 }
 
 /**
- * Generate optimized image URL using Vercel's Image Optimization
+ * Generate optimized image URL for mobile app
  */
 export const getOptimizedImageUrl = (
   src: string,
   options: ImageOptimizationOptions = {}
 ): string => {
-  // If it's already a Vercel optimized URL, return as is
-  if (src.includes('vercel.app') || src.includes('zaparound.com')) {
-    return src;
-  }
-
-  // For external images, use Vercel's image optimization
-  const params = new URLSearchParams();
-  
-  if (options.width) params.append('w', options.width.toString());
-  if (options.height) params.append('h', options.height.toString());
-  if (options.quality) params.append('q', options.quality.toString());
-  if (options.format) params.append('f', options.format);
-  if (options.fit) params.append('fit', options.fit);
-  if (options.position) params.append('p', options.position);
-  if (options.background) params.append('bg', options.background);
-  if (options.blur) params.append('blur', options.blur.toString());
-  if (options.sharpen) params.append('sharpen', options.sharpen.toString());
-  if (options.saturation) params.append('sat', options.saturation.toString());
-  if (options.brightness) params.append('brightness', options.brightness.toString());
-  if (options.contrast) params.append('contrast', options.contrast.toString());
-  if (options.gamma) params.append('gamma', options.gamma.toString());
-  if (options.grayscale) params.append('grayscale', 'true');
-  if (options.flip) params.append('flip', options.flip);
-  if (options.flop) params.append('flop', 'true');
-  if (options.rotate) params.append('rotate', options.rotate.toString());
-  if (options.tint) params.append('tint', options.tint);
-  if (options.negate) params.append('negate', 'true');
-  if (options.normalise) params.append('normalise', 'true');
-  if (options.median) params.append('median', options.median.toString());
-  if (options.modulate) {
-    if (options.modulate.brightness) params.append('modulate-b', options.modulate.brightness.toString());
-    if (options.modulate.saturation) params.append('modulate-s', options.modulate.saturation.toString());
-    if (options.modulate.hue) params.append('modulate-h', options.modulate.hue.toString());
-  }
-
-  const queryString = params.toString();
-  return queryString ? `${src}?${queryString}` : src;
+  // For mobile apps, return the original source
+  // Image optimization can be handled by the native image components
+  return src;
 };
 
 /**
