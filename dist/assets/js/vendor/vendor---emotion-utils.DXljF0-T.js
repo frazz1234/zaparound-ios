@@ -1,0 +1,2 @@
+function e(e,i,r){var n="";return r.split(" ").forEach((function(r){void 0!==e[r]?i.push(e[r]+";"):r&&(n+=r+" ")})),n}var i=function(e,i,r){var n=e.key+"-"+i.name;!1===r&&void 0===e.registered[n]&&(e.registered[n]=i.styles)},r=function(e,r,n){i(e,r,n);var t=e.key+"-"+r.name;if(void 0===e.inserted[r.name]){var a=r;do{e.insert(r===a?"."+t:"",a,e.sheet,!0),a=a.next}while(void 0!==a)}};export{e as g,r as i,i as r};
+//# sourceMappingURL=vendor---emotion-utils.DXljF0-T.js.map

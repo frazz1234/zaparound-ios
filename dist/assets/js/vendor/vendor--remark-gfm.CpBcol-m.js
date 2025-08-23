@@ -1,0 +1,2 @@
+import{g as o}from"./vendor--micromark-extension-gfm.Dl_vc4ln.js";import{g as s,a as n}from"./vendor--mdast-util-gfm.Bmj8_opG.js";const r={};function t(t){const a=t||r,i=this.data(),m=i.micromarkExtensions||(i.micromarkExtensions=[]),e=i.fromMarkdownExtensions||(i.fromMarkdownExtensions=[]),d=i.toMarkdownExtensions||(i.toMarkdownExtensions=[]);m.push(o(a)),e.push(s()),d.push(n(a))}export{t as r};
+//# sourceMappingURL=vendor--remark-gfm.CpBcol-m.js.map

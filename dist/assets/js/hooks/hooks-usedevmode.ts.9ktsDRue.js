@@ -1,0 +1,2 @@
+import{r as e}from"../vendor/vendor-react-core.D1hcyiwY.js";import{g as o,i as s,a as r,b as n}from"../utils/utils-devmode.ts.TUNQ1yXE.js";function t(){const t=e.useMemo((()=>o()),[]),u=e.useMemo((()=>s()),[]),a=e.useMemo((()=>r),[]),d=e.useMemo((()=>n),[]);return{isDev:u,devInfo:t,applyDiscount:a,applyDiscountCents:d,getDevModeBadge:()=>u?"🔧 DEV MODE":null,renderIfDev:e=>u?e:null,renderIfProd:e=>u?null:e}}export{t as u};
+//# sourceMappingURL=hooks-usedevmode.ts.9ktsDRue.js.map

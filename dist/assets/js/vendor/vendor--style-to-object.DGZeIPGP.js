@@ -1,0 +1,2 @@
+import{c as e}from"./vendor--cookie.D-6orQ43.js";import{i as r}from"./vendor--inline-style-parser.BFz9PO4J.js";var t={},o=e&&e.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e,r){var t=null;if(!e||"string"!=typeof e)return t;var o=(0,n.default)(e),a="function"==typeof r;return o.forEach((function(e){if("declaration"===e.type){var o=e.property,n=e.value;a?r(o,n,e):n&&((t=t||{})[o]=n)}})),t};var n=o(r);export{t as c};
+//# sourceMappingURL=vendor--style-to-object.DGZeIPGP.js.map

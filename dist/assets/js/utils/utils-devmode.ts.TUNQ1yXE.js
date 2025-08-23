@@ -1,0 +1,2 @@
+const n=()=>{if("undefined"!=typeof window){const n=window.location.hostname;return"localhost"===n||"127.0.0.1"===n||n.includes("ngrok")||n.includes("vercel.app")&&n.includes("dev")}return!1},e=(e,o="USD")=>n()?0:e,o=(e,o="USD")=>n()?0:e,d=()=>({isDev:n(),env:"production",hostname:"undefined"!=typeof window?window.location.hostname:"server",nodeEnv:"undefined"!=typeof process?"production":"unknown"});export{e as a,o as b,d as g,n as i};
+//# sourceMappingURL=utils-devmode.ts.TUNQ1yXE.js.map

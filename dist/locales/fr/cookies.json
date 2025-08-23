@@ -1,0 +1,60 @@
+{
+  "managingDesc": "Vous pouvez gérer vos préférences de cookies à tout moment en cliquant sur le bouton ci-dessous.",
+  "settings": "Paramètres des Cookies",
+  "essential": "Essentiels",
+  "analytics": "Analytiques",
+  "marketing": "Marketing",
+  "preferences": "Préférences",
+  "statsTitle": "Utilisation des Cookies sur ZapAround",
+  "statsIntro": "Ce graphique montre les types de cookies utilisés sur notre site :",
+  "statsEssential": "Cookies Essentiels",
+  "statsAnalytics": "Cookies Analytiques",
+  "statsMarketing": "Cookies Marketing",
+  "statsPreferences": "Cookies de Préférences",
+  "stats": {
+    "totalSize": "Taille Totale",
+    "cookieCount": "Nombre de Cookies",
+    "categories": "Catégories",
+    "category": {
+      "necessary": "Nécessaires",
+      "functional": "Fonctionnels",
+      "analytics": "Analytiques",
+      "marketing": "Marketing"
+    }
+  },
+  "title": "Paramètres des Cookies",
+  "summary": "Information",
+  "settings": "Paramètres",
+  "summaryText": "Nous utilisons des cookies pour améliorer votre expérience de navigation, personnaliser le contenu et les annonces, et analyser notre trafic. En cliquant sur 'Tout Accepter', vous consentez à notre utilisation des cookies.",
+  "privacyLink": "Pour plus d'informations, veuillez consulter notre",
+  "privacyPolicy": "Politique de Confidentialité",
+  "and": "et",
+  "cookiePolicy": "Politique des Cookies",
+  "close": "Fermer",
+  "acceptAll": "Tout Accepter",
+  "acceptNecessary": "Accepter Uniquement les Nécessaires",
+  "savePreferences": "Enregistrer les Préférences",
+  "necessary": {
+    "title": "Nécessaires",
+    "description": "Les cookies essentiels permettent les fonctionnalités de base. Le site ne peut pas fonctionner correctement sans ces cookies, et ils ne peuvent être désactivés qu'en modifiant les préférences de votre navigateur."
+  },
+  "functional": {
+    "title": "Fonctionnels",
+    "description": "Les cookies fonctionnels aident à exécuter certaines fonctionnalités comme le partage du contenu du site sur les plateformes de médias sociaux, la collecte de commentaires et d'autres fonctionnalités tierces."
+  },
+  "analytics": {
+    "title": "Analytiques",
+    "description": "Les cookies analytiques nous aident à comprendre comment les visiteurs interagissent avec le site, nous aidant à améliorer l'expérience utilisateur et les fonctionnalités du site.",
+    "ga4Notice": "Note : Google Analytics 4 reste actif pour fournir des analyses essentielles du site web et améliorer notre service."
+  },
+  "marketing": {
+    "title": "Marketing",
+    "description": "Les cookies marketing sont utilisés pour suivre les visiteurs sur les sites web afin d'afficher des publicités pertinentes qui sont intéressantes et utiles pour les visiteurs."
+  },
+  "error": {
+    "acceptAll": "Échec de l'acceptation de tous les cookies. Veuillez réessayer.",
+    "acceptNecessary": "Échec de l'acceptation des cookies nécessaires. Veuillez réessayer.",
+    "savePreferences": "Échec de l'enregistrement des préférences. Veuillez réessayer.",
+    "updateCategory": "Échec de la mise à jour de la catégorie. Veuillez réessayer."
+  }
+} 
