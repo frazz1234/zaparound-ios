@@ -2,7 +2,7 @@ import { defineConfig, type ConfigEnv, type UserConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
-import { VitePWA } from 'vite-plugin-pwa';
+
 import { visualizer } from 'rollup-plugin-visualizer';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import viteCompression from 'vite-plugin-compression';
@@ -312,121 +312,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => ({
     //   ],
     // }),
     
-    VitePWA({
-      injectRegister: 'inline', // inline SW registration to remove additional network request
-      registerType: 'autoUpdate',
-              includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
-      manifest: {
-        name: 'ZapAround',
-        short_name: 'ZapAround',
-        description: 'ZapAround - Your Smart Travel Companion. Plan your trips with recommendations and discover the best places to visit or hangout with your friends.',
-        theme_color: '#61936f',
-        background_color: '#fcfcfc',
-        display: 'standalone',
-        orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
-        icons: [
-          {
-            src: '/favicon.ico',
-            sizes: '16x16 32x32',
-            type: 'image/x-icon'
-          },
-          {
-            src: '/apple-touch-icon.png',
-            sizes: '180x180',
-            type: 'image/png'
-          },
-          {
-            src: '/zaparound-uploads/transparentnoliner.webp',
-            sizes: '512x512',
-            type: 'image/webp',
-            purpose: 'any maskable'
-          }
-        ],
-        categories: ['travel', 'lifestyle', 'productivity'],
-        lang: 'en',
-        dir: 'ltr',
-        prefer_related_applications: false,
-        related_applications: [],
-        screenshots: [
-          {
-            src: '/zaparound-uploads/create-trip1.webp',
-            sizes: '1280x720',
-            type: 'image/webp',
-            form_factor: 'wide',
-            label: 'Trip Planning Interface'
-          },
-          {
-            src: '/zaparound-uploads/create-trip2.webp',
-            sizes: '750x1334',
-            type: 'image/webp',
-            form_factor: 'narrow',
-            label: 'Mobile Trip Planning'
-          }
-        ]
-      },
-      workbox: {
-        globPatterns: [
-          '**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp,woff,woff2,ttf,eot}',
-          '**/*.gif'
-        ],
-        globIgnores: [
-          '**/roundabout.gif' // Exclude large GIF from PWA cache
-        ],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB limit
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
-              }
-            }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
-              }
-            }
-          },
-          {
-            urlPattern: /^https:\/\/ynvnzmkpifwteyuxondc\.supabase\.co\/.*/i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'supabase-cache',
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 // 1 day
-              }
-            }
-          },
-          {
-            urlPattern: /^https:\/\/api\.mapbox\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'mapbox-cache',
-              expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24 * 7 // 1 week
-              }
-            }
-          }
-        ],
-        skipWaiting: true,
-        clientsClaim: true,
-        cleanupOutdatedCaches: true,
-        sourcemap: false
-      }
-    }),
+
     
     // Bundle analyzer for development
     mode === 'development' && visualizer({
