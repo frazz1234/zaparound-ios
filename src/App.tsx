@@ -8,6 +8,7 @@ import { Navigation } from "./components/Navigation";
 import { HelmetProvider } from 'react-helmet-async';
 import { cn } from "@/lib/utils";
 import { useTranslation } from 'react-i18next';
+import { InAppBrowserProvider } from "@/components/ui/InAppBrowserProvider";
 
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
@@ -118,16 +119,18 @@ function Layout({ children, session }: LayoutProps) {
   const isCreateTripPage = location.pathname.endsWith('/create-trip');
   
   return (
-    <div className={cn(
-      "min-h-screen flex flex-col pb-16 md:pb-0",
-      !isCreateTripPage && "bg-background text-foreground"
-    )}>
-      {!shouldHideNav && <Navigation session={session} />}
-      <div className="flex-grow">
-        {children}
+    <InAppBrowserProvider>
+      <div className={cn(
+        "min-h-screen flex flex-col pb-16 md:pb-0",
+        !isCreateTripPage && "bg-background text-foreground"
+      )}>
+        {!shouldHideNav && <Navigation session={session} />}
+        <div className="flex-grow">
+          {children}
+        </div>
+        {!shouldHideFooter && <Footer />}
       </div>
-      {!shouldHideFooter && <Footer />}
-    </div>
+    </InAppBrowserProvider>
   );
 }
 

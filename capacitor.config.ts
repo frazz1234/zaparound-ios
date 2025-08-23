@@ -24,6 +24,11 @@ const config: CapacitorConfig = {
       splashImmersive: true,
       layoutName: "launch_screen",
       useDialog: true
+    },
+    Browser: {
+      ios: {
+        presentationStyle: 'popover'
+      }
     }
   }
 };
