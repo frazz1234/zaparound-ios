@@ -34,7 +34,16 @@
     "cap:dev": "./scripts/capacitor-dev.sh dev",
     "cap:full": "./scripts/capacitor-dev.sh full",
     "ios:dev": "npm run build && npm run cap:sync:ios && npm run cap:open:ios",
-    "ios:run": "npm run build && npm run cap:sync:ios && npm run cap:run:ios"
+    "ios:run": "npm run build && npm run cap:sync:ios && npm run cap:run:ios",
+    "ionic:serve": "ionic serve",
+    "ionic:build": "ionic build",
+    "ionic:sync:ios": "ionic capacitor sync ios",
+    "ionic:open:ios": "ionic capacitor open ios",
+    "ionic:run:ios": "ionic capacitor run ios",
+    "ionic:copy:ios": "ionic capacitor copy ios",
+    "ionic:update": "ionic capacitor update",
+    "ionic:ios:dev": "npm run build && npm run ionic:sync:ios && npm run ionic:open:ios",
+    "ionic:ios:run": "npm run build && npm run ionic:sync:ios && npm run ionic:run:ios"
   },
   "dependencies": {
     "@capacitor/app": "^7.0.2",

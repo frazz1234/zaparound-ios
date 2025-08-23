@@ -45,5 +45,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ZapAround needs access to your location to show nearby places, suggest travel destinations, and provide location-based services.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>ZapAround needs access to your location to show nearby places, suggest travel destinations, and provide location-based services.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>ZapAround needs access to your location to show nearby places, suggest travel destinations, and provide location-based services.</string>
 </dict>
 </plist>

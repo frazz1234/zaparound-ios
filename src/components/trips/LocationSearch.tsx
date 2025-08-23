@@ -4,6 +4,7 @@ import { MapPinIcon, Crosshair, Search, Loader2, Globe, Building2, Landmark, Hom
 import { useTranslation } from 'react-i18next';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { geolocationService } from "@/services/geolocationService";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface LocationSuggestion {
@@ -176,64 +177,53 @@ export const LocationSearch: React.FC<LocationSearchProps> = ({ value, onChange,
     }
   };
 
-  const handleGetCurrentLocation = () => {
+  const handleGetCurrentLocation = async () => {
     if (disabled) return;
     
     setIsGettingLocation(true);
     
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          try {
-            // First get the city-level location
-            const cityResponse = await fetch(
-              `https://api.mapbox.com/geocoding/v5/mapbox.places/${position.coords.longitude},${position.coords.latitude}.json?access_token=pk.eyJ1IjoibWlzdGVyZnJhenoiLCJhIjoiY203M2ZnM3BoMDhpMTJqcTNiYWpkamIzNyJ9.2SlcuEPIL2yCJw5TIPunVQ&types=place`
-            );
-            const cityData = await cityResponse.json();
-            
-            // Then get the exact address
-            const addressResponse = await fetch(
-              `https://api.mapbox.com/geocoding/v5/mapbox.places/${position.coords.longitude},${position.coords.latitude}.json?access_token=pk.eyJ1IjoibWlzdGVyZnJhenoiLCJhIjoiY203M2ZnM3BoMDhpMTJqcTNiYWpkamIzNyJ9.2SlcuEPIL2yCJw5TIPunVQ&types=address`
-            );
-            const addressData = await addressResponse.json();
-
-            if (cityData.features && cityData.features[0] && addressData.features && addressData.features[0]) {
-              const cityName = cityData.features[0].place_name;
-              const exactAddress = addressData.features[0].place_name;
-              
-              // Show only city in suggestions
-              setLocationSuggestions([
-                {
-                  place_name: cityName,
-                  center: [position.coords.longitude, position.coords.latitude],
-                  isCity: true,
-                  type: 'place'
-                }
-              ]);
-              setShowSuggestions(true);
-              setSelectedValue(cityName);
-              onChange(cityName, [position.coords.longitude, position.coords.latitude]);
-
-              // Store exact address for the question section
-              setExactAddress({
-                place_name: exactAddress,
-                center: [position.coords.longitude, position.coords.latitude],
-                type: 'address'
-              });
-            }
-          } catch (error) {
-            console.error('Error getting location:', error);
-          } finally {
-            setIsGettingLocation(false);
-          }
-        },
-        (error) => {
-          console.error('Geolocation error:', error);
-          setIsGettingLocation(false);
-        }
+    try {
+      const position = await geolocationService.getCurrentPosition();
+      
+      // First get the city-level location
+      const cityResponse = await fetch(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${position.longitude},${position.latitude}.json?access_token=pk.eyJ1IjoibWlzdGVyZnJhenoiLCJhIjoiY203M2ZnM3BoMDhpMTJqcTNiYWpkamIzNyJ9.2SlcuEPIL2yCJw5TIPunVQ&types=place`
       );
-    } else {
-      console.error("Geolocation is not supported");
+      const cityData = await cityResponse.json();
+      
+      // Then get the exact address
+      const addressResponse = await fetch(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${position.longitude},${position.latitude}.json?access_token=pk.eyJ1IjoibWlzdGVyZnJhenoiLCJhIjoiY203M2ZnM3BoMDhpMTJqcTNiYWpkamIzNyJ9.2SlcuEPIL2yCJw5TIPunVQ&types=address`
+      );
+      const addressData = await addressResponse.json();
+
+      if (cityData.features && cityData.features[0] && addressData.features && addressData.features[0]) {
+        const cityName = cityData.features[0].place_name;
+        const exactAddress = addressData.features[0].place_name;
+        
+        // Show only city in suggestions
+        setLocationSuggestions([
+          {
+            place_name: cityName,
+            center: [position.longitude, position.latitude],
+            isCity: true,
+            type: 'place'
+          }
+        ]);
+        setShowSuggestions(true);
+        setSelectedValue(cityName);
+        onChange(cityName, [position.longitude, position.latitude]);
+
+        // Store exact address for the question section
+        setExactAddress({
+          place_name: exactAddress,
+          center: [position.longitude, position.latitude],
+          type: 'address'
+        });
+      }
+    } catch (error) {
+      console.error('Error getting location:', error);
+    } finally {
       setIsGettingLocation(false);
     }
   };
