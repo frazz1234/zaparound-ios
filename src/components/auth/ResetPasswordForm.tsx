@@ -85,10 +85,15 @@ export function ResetPasswordForm({ onSuccess }: ResetPasswordFormProps) {
         <Input
           id="reset-email"
           type="email"
+          name="username"
+          autoComplete="username"
           value={resetEmail}
           onChange={(e) => setResetEmail(e.target.value)}
           placeholder={t('resetPassword.emailPlaceholder')}
           required
+          spellCheck={false}
+          autoCapitalize="none"
+          autoCorrect="off"
         />
       </div>
       

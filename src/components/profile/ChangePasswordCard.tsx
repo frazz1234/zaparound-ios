@@ -112,9 +112,14 @@ export function ChangePasswordCard() {
             <Input
               id="current-password"
               type="password"
+              name="current-password"
+              autoComplete="current-password"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
               placeholder="••••••••"
+              spellCheck={false}
+              autoCapitalize="none"
+              autoCorrect="off"
             />
           </div>
 
@@ -123,10 +128,15 @@ export function ChangePasswordCard() {
             <Input
               id="new-password"
               type="password"
+              name="new-password"
+              autoComplete="new-password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
               placeholder="••••••••"
               required
+              spellCheck={false}
+              autoCapitalize="none"
+              autoCorrect="off"
             />
           </div>
 
@@ -135,10 +145,15 @@ export function ChangePasswordCard() {
             <Input
               id="confirm-password"
               type="password"
+              name="confirm-new-password"
+              autoComplete="new-password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="••••••••"
               required
+              spellCheck={false}
+              autoCapitalize="none"
+              autoCorrect="off"
             />
           </div>
 

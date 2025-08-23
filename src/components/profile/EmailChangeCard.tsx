@@ -158,11 +158,16 @@ export function EmailChangeCard() {
             <Input
               id="newEmail"
               type="email"
+              name="new-email"
+              autoComplete="email"
               value={newEmail}
               onChange={(e) => setNewEmail(e.target.value)}
               placeholder={t('personal.email')}
               required
               disabled={loading || emailChangeInProgress}
+              spellCheck={false}
+              autoCapitalize="none"
+              autoCorrect="off"
             />
           </div>
           
@@ -171,11 +176,16 @@ export function EmailChangeCard() {
             <Input
               id="confirmNewEmail"
               type="email"
+              name="confirm-new-email"
+              autoComplete="email"
               value={confirmNewEmail}
               onChange={(e) => setConfirmNewEmail(e.target.value)}
               placeholder={t('personal.email')}
               required
               disabled={loading || emailChangeInProgress}
+              spellCheck={false}
+              autoCapitalize="none"
+              autoCorrect="off"
             />
           </div>
           

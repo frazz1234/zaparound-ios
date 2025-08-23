@@ -336,6 +336,9 @@ export function SignupForm({
                   onBlur={() => markFieldAsTouched('email')}
                   required
                   className={shouldShowError('email') ? 'border-red-500' : ''}
+                  spellCheck={false}
+                  autoCapitalize="none"
+                  autoCorrect="off"
                 />
                 {shouldShowError('email') && (
                   <p className="text-sm text-red-500">{formErrors.email}</p>
@@ -348,12 +351,16 @@ export function SignupForm({
                   id="confirmEmail"
                   type="email"
                   name="confirm-email"
+                  autoComplete="email"
                   placeholder={t('signUp.confirmEmailPlaceholder')}
                   value={confirmEmail}
                   onChange={(e) => setConfirmEmail(e.target.value)}
                   onBlur={() => markFieldAsTouched('confirmEmail')}
                   required
                   className={shouldShowError('confirmEmail') ? 'border-red-500' : ''}
+                  spellCheck={false}
+                  autoCapitalize="none"
+                  autoCorrect="off"
                 />
                 {shouldShowError('confirmEmail') && (
                   <p className="text-sm text-red-500">{formErrors.confirmEmail}</p>
@@ -373,6 +380,9 @@ export function SignupForm({
                   onBlur={() => markFieldAsTouched('password')}
                   required
                   className={shouldShowError('password') ? 'border-red-500' : ''}
+                  spellCheck={false}
+                  autoCapitalize="none"
+                  autoCorrect="off"
                 />
                 {shouldShowError('password') && (
                   <p className="text-sm text-red-500">{formErrors.password}</p>
@@ -392,6 +402,9 @@ export function SignupForm({
                   onBlur={() => markFieldAsTouched('confirmPassword')}
                   required
                   className={shouldShowError('confirmPassword') ? 'border-red-500' : ''}
+                  spellCheck={false}
+                  autoCapitalize="none"
+                  autoCorrect="off"
                 />
                 {shouldShowError('confirmPassword') && (
                   <p className="text-sm text-red-500">{formErrors.confirmPassword}</p>

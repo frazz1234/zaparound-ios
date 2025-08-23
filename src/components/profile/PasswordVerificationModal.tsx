@@ -120,11 +120,16 @@ export function PasswordVerificationModal({
               <Input
                 id="password"
                 type={showPassword ? "text" : "password"}
+                name="current-password"
+                autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder={t('passwordVerification.passwordPlaceholder')}
                 className={cn(error && "border-red-500")}
                 disabled={loading}
+                spellCheck={false}
+                autoCapitalize="none"
+                autoCorrect="off"
               />
               <Button
                 type="button"
