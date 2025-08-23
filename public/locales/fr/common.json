@@ -1,0 +1,37 @@
+{
+  "back": "Retour",
+  "loading": "Chargement...",
+  "error": "Erreur",
+  "useCurrentLocation": "Utiliser ma position actuelle",
+  "exactAddress": "Adresse Exacte",
+  "useExactAddress": "Utiliser l'adresse exacte à la place ?",
+  "local": "Local",
+  "country": "Pays",
+  "region": "Région/État",
+  "city": "Ville",
+  "footer": {
+    "subscribeSuccess": "Inscription réussie !",
+    "subscribeSuccessDesc": "Merci de vous être inscrit à notre newsletter.",
+    "subscribeError": "Échec de l'inscription. Veuillez réessayer plus tard."
+  },
+  "upgrade": {
+    "oopsTitle": "Oups ! Territoire Exclusif Devant ! 🌟",
+    "funMessage": "On dirait que vous avez découvert notre salon VIP ! Bien que votre forfait Voyageur soit génial, cette zone est réservée à nos membres Explorateur. Prêt à rejoindre le club des cool ? 😎",
+    "unlockTitle": "Débloquez des Fonctionnalités Incroyables",
+    "unlockMessage": "Rejoignez notre forfait Explorateur pour accéder à la communauté et à de nombreuses autres fonctionnalités exclusives !",
+    "buttonText": "Passer à Explorateur"
+  },
+  "home": {
+    "title": "Assistant Intelligent de Planification de Voyage",
+    "description": "Planifiez vos voyages de rêve avec des recommandations intelligentes et des mises à jour en temps réel. ZapAround vous aide à créer des expériences de voyage inoubliables avec des suggestions alimentées par l'IA.",
+    "imageAlt": "ZapAround - Plateforme Intelligente de Planification de Voyage"
+  },
+  "share": {
+    "facebook": "Partager sur Facebook",
+    "twitter": "Partager sur Twitter",
+    "linkedin": "Partager sur LinkedIn"
+  },
+  "form": {
+    "destinationPlaceholder": "Où est votre aventure?"
+  }
+}

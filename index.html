@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Ensure correct language attribute before first paint to avoid CLS -->
+    <script>
+      (function() {
+        const segment = location.pathname.split('/')[1];
+        const supported = ['en', 'fr', 'es'];
+        const lang = supported.includes(segment) ? segment : 'en';
+        document.documentElement.setAttribute('lang', lang);
+      })();
+    </script>
+    <meta name="description" content="ZapAround - Plan your trips with smart travel companion recommendations and real-time updates. ZapAround helps you create unforgettable travel experiences with AI-powered suggestions." />
+    <meta name="keywords" content="ZapAround, zaparound, ZapAround travel, ZapAround app, travel, travel app, travel planner, AI travel, AI travel planner, AI trip planner, vacation planner, road trip, road trip planner, itinerary, itinerary planner, group travel, group trip planner, travel guide, travel recommendations, travel inspiration, trip ideas, trip planning, travel with friends, collaborative travel, travel community, travel social network, travel technology, travel booking, travel deals, travel activities, travel experiences, travel adventure, travel discovery, travel map, interactive maps, travel collaboration, travel suggestions, travel tips, travel tools, travel platform, travel software, travel SaaS, smart travel, travel assistant, travel AI, travel automation, travel organization, travel management, trip management, trip organizer, trip assistant, trip automation, trip collaboration, trip sharing, trip discovery, trip booking, trip deals, trip activities, trip experiences, trip adventure, trip map, trip tools, trip platform, trip software, trip SaaS, vacation, vacation app, vacation ideas, vacation planning, vacation inspiration, vacation trip, vacation with friends, vacation group, vacation technology, vacation booking, vacation deals, vacation activities, vacation experiences, vacation adventure, vacation discovery, vacation map, vacation tools, vacation platform, vacation software, vacation SaaS, hangout planner, hangout app, hangout ideas, hangout planning, hangout inspiration, hangout trip, hangout with friends, hangout group, hangout technology, hangout booking, hangout deals, hangout activities, hangout experiences, hangout adventure, hangout discovery, hangout map, hangout tools, hangout platform, hangout software, hangout SaaS, best travel app, best trip planner, best vacation planner, best road trip app, best itinerary planner, best group travel app, best travel technology, best travel platform, best travel software, best travel SaaS, best travel assistant, best travel AI, best travel automation, best travel organization, best travel management, best trip management, best trip organizer, best trip assistant, best trip automation, best trip collaboration, best trip sharing, best trip discovery, best trip booking, best trip deals, best trip activities, best trip experiences, best trip adventure, best trip map, best trip tools, best trip platform, best trip software, best trip SaaS, best vacation app, best vacation ideas, best vacation planning, best vacation inspiration, best vacation trip, best vacation with friends, best vacation group, best vacation technology, best vacation booking, best vacation deals, best vacation activities, best vacation experiences, best vacation adventure, best vacation discovery, best vacation map, best vacation tools, best vacation platform, best vacation software, best vacation SaaS, best hangout planner, best hangout app, best hangout ideas, best hangout planning, best hangout inspiration, best hangout trip, best hangout with friends, best hangout group, best hangout technology, best hangout booking, best hangout deals, best hangout activities, best hangout experiences, best hangout adventure, best hangout discovery, best hangout map, best hangout tools, best hangout platform, best hangout software, best hangout SaaS" />
+    <meta name="theme-color" content="#61936f" />
+    
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="ZapAround" />
+    <meta name="language" content="English" />
+    <meta name="generator" content="ZapAround" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="geo.region" content="CA" />
+    <meta name="geo.placename" content="Quebec" />
+    <meta name="geo.position" content="46.8128;71.2354" />
+    <meta name="ICBM" content="46.8128, 71.2354" />
+    
+    <!-- Enhanced Open Graph Meta Tags -->
+    <meta property="og:title" content="ZapAround - Your Smart Travel Companion" />
+    <meta property="og:description" content="Plan your trips with AI-assisted recommendations and discover the best places to visit or hangout with your friends." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zaparound.com" />
+    <meta property="og:image" content="https://zaparound.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ZapAround - Smart Travel Planning Platform" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:secure_url" content="https://zaparound.com/og-image.png" />
+    <meta property="og:site_name" content="ZapAround" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:updated_time" content="%BUILD_DATE%" />
+    
+    <!-- Additional Rich Media Meta Tags -->
+    <meta property="article:publisher" content="https://www.facebook.com/zaparound" />
+    <meta property="article:author" content="ZapAround Team" />
+    <meta property="article:section" content="Travel Technology" />
+    <meta property="article:tag" content="travel planning" />
+    <meta property="article:tag" content="AI travel" />
+    <meta property="article:tag" content="trip planner" />
+    
+    <!-- Enhanced Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ZapAround - Your Smart Travel Companion" />
+    <meta name="twitter:description" content="Plan your trips with AI-assisted recommendations and discover the best places to visit or hangout with your friends." />
+    <meta name="twitter:image" content="https://zaparound.com/og-image.png" />
+    <meta name="twitter:image:alt" content="ZapAround - Smart Travel Planning Platform" />
+    <meta name="twitter:site" content="@zaparound" />
+    <meta name="twitter:creator" content="@zaparound" />
+    <meta name="twitter:domain" content="zaparound.com" />
+    
+    <!-- LinkedIn-specific meta tags -->
+    <!-- Note: LinkedIn uses the same og:image:width and og:image:height tags as other platforms -->
+    
+    <!-- Apple-specific meta tags -->
+    <meta name="apple-mobile-web-app-title" content="ZapAround" />
+    <meta name="application-name" content="ZapAround" />
+    <meta name="msapplication-TileColor" content="#61936f" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- PWA assets -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    
+    <!-- Preconnect to external domains -->
+    <!-- Limit to max. 4 critical preconnects for optimal performance -->
+    <link rel="preconnect" href="https://ynvnzmkpifwteyuxondc.supabase.co" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://emrldtp.com" crossorigin />
+    <link rel="preconnect" href="https://sentry.avs.io" crossorigin />
+
+    <!-- Downgraded previous preconnects to lighter dns-prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//api.mapbox.com" />
+    <link rel="dns-prefetch" href="//events.mapbox.com" />
+    <link rel="dns-prefetch" href="//open.er-api.com" />
+    
+    <!-- Canonical link for brand homepage SEO -->
+    <link rel="canonical" href="https://zaparound.com/" />
+    
+    <!-- Static hreflang alternates for home (bots without JS) -->
+    <link rel="alternate" hrefLang="en" href="https://zaparound.com/en/" />
+    <link rel="alternate" hrefLang="fr" href="https://zaparound.com/fr/" />
+    <link rel="alternate" hrefLang="es" href="https://zaparound.com/es/" />
+    <link rel="alternate" hrefLang="x-default" href="https://zaparound.com/" />
+    
+    <!-- Canonical and Alternate Links are also handled dynamically by React SEO component -->
+    
+    <!-- Enhanced Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "ZapAround",
+      "alternateName": "ZapAround Travel Companion",
+      "url": "https://zaparound.com",
+      "telephone": "+1 (418) 478-5586",
+      "image": [
+        "https://zaparound.com/zaparound-uploads/transparentnoliner.webp",
+        "https://zaparound.com/zaparound-uploads/smalllogo.webp"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zaparound.com/zaparound-uploads/transparentnoliner.webp",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Your Smart Travel Companion. Plan your trips with AI-assisted recommendations and discover the best places to visit or hangout with your friends.",
+      "slogan": "Smart Travel Planning Made Easy",
+      "foundingDate": "2024",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CA",
+        "addressLocality": "Quebec",
+        "addressRegion": "QC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "46.8128",
+        "longitude": "71.2354"
+      },
+      "sameAs": [
+        "https://twitter.com/zaparound",
+        "https://www.facebook.com/zaparound",
+        "https://www.instagram.com/zaparound",
+        "https://www.linkedin.com/company/zaparound"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://zaparound.com/contact",
+        "availableLanguage": ["English", "French", "Spanish"]
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Worldwide"
+      },
+      "serviceType": ["Travel Planning", "Trip Recommendations", "Itinerary Creation", "Travel Discovery"],
+      "priceRange": "$$",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ZapAround Travel Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ZapTrip - Vacation Planning",
+              "description": "AI-powered vacation and trip planning service"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ZapOut - Hangout Planning",
+              "description": "Local activity and hangout recommendation service"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ZapRoad - Road Trip Planning",
+              "description": "Comprehensive road trip planning and routing service"
+            }
+          }
+        ]
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://zaparound.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Optimized Google Tag Manager -->
+    <script>
+      // Initialize dataLayer early
+      window.dataLayer = window.dataLayer || [];
+      
+      // Single GTM initialization with GA4
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M22ZJJ3L');
+      
+      // GA4 configuration (handled by GTM)
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NK9ZZDPQ7K', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+    </script>
+    
+    <!-- Critical CSS -->
+    <style>
+      /* Inline critical CSS */
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: hsl(var(--background));
+      }
+      .loading-spinner {
+        width: 48px;
+        height: 48px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      /* Homepage static styles */
+      .hero {
+        background: #1d1d1e;
+        color: #fff;
+        padding: 4rem 1rem 3rem 1rem;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: -1px;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        color: #e6f4ea;
+      }
+      .hero .cta-btn {
+        display: inline-block;
+        padding: 0.85rem 2.25rem;
+        border-radius: 999px;
+        background: #fff;
+        color: #61936f;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(97,147,111,0.08);
+        transition: background 0.2s, color 0.2s;
+      }
+      .hero .cta-btn:hover {
+        background: #e6f4ea;
+        color: #1d1d1e;
+      }
+      .features {
+        background: #fcfcfc;
+        padding: 3rem 1rem 2rem 1rem;
+        text-align: center;
+      }
+      .features h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #1d1d1e;
+      }
+      .features p {
+        color: #62626a;
+        margin-bottom: 2rem;
+      }
+      .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .feature-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(97,147,111,0.06);
+        padding: 1.5rem 1.25rem;
+        min-width: 220px;
+        max-width: 320px;
+        flex: 1 1 220px;
+        text-align: left;
+      }
+      .feature-card h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #61936f;
+        margin-bottom: 0.5rem;
+      }
+      .feature-card p {
+        color: #62626a;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      .stats {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      .stat {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1d1d1e;
+      }
+      .stat-label {
+        font-size: 1rem;
+        color: #62626a;
+      }
+      .how-it-works {
+        background: #f7faf9;
+        padding: 3rem 1rem 2rem 1rem;
+        text-align: center;
+      }
+      .how-it-works h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #1d1d1e;
+      }
+      .how-it-works p {
+        color: #62626a;
+        margin-bottom: 2rem;
+      }
+      .steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .step-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(97,147,111,0.06);
+        padding: 1.5rem 1.25rem;
+        min-width: 220px;
+        max-width: 320px;
+        flex: 1 1 220px;
+        text-align: left;
+      }
+      .step-card h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #61936f;
+        margin-bottom: 0.5rem;
+      }
+      .step-card p {
+        color: #62626a;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      .cta-section {
+        background: #fff;
+        padding: 3rem 1rem 2rem 1rem;
+        text-align: center;
+      }
+      .cta-section h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #1d1d1e;
+      }
+      .cta-section p {
+        color: #62626a;
+        margin-bottom: 2rem;
+      }
+      .cta-section .cta-btn {
+        background: linear-gradient(90deg,#61936f 0%,#72ba87 100%);
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.25rem;
+        padding: 0.85rem 2.25rem;
+        border-radius: 999px;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(97,147,111,0.08);
+        transition: background 0.2s, color 0.2s;
+      }
+      .cta-section .cta-btn:hover {
+        background: #fff;
+        color: #61936f;
+      }
+      @media (max-width: 900px) {
+        .features-list, .steps, .stats { flex-direction: column; gap: 1.5rem; }
+      }
+    </style>
+    
+    <title>ZapAround - Your Smart AI Travel Companion | Trip Planner & Vacation App</title>
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M22ZJJ3L"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root">
+      <!-- SEO-friendly static homepage for no-JS users -->
+      <noscript>
+        <!-- Updated static homepage (JS disabled) - Brand-focused for SEO -->
+        <header class="hero">
+          <h1>ZapAround - Discover and plan your next adventure</h1>
+          <p>ZapAround helps you search destinations, curate itineraries and book experiences effortlessly. Your smart travel companion for unforgettable journeys.</p>
+          <a href="/auth" class="cta-btn">Start planning with ZapAround</a>
+        </header>
+
+        <section class="features" style="background:#fcfcfc;">
+          <h2>Popular destinations</h2>
+          <div class="features-list">
+            <div class="feature-card">
+              <img src="/zaparound-uploads/background1.webp" alt="Paris" style="width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Paris</h3>
+            </div>
+            <div class="feature-card">
+              <img src="/zaparound-uploads/background2.webp" alt="Barcelona" style="width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Barcelona</h3>
+            </div>
+            <div class="feature-card">
+              <img src="/zaparound-uploads/background3.webp" alt="Tokyo" style="width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Tokyo</h3>
+            </div>
+            <div class="feature-card">
+              <img src="/zaparound-uploads/background4.webp" alt="New York" style="width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>New York</h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="features">
+          <h2>Why choose ZapAround?</h2>
+          <p>Smarter planning, local insights and flexible booking – all in one place.</p>
+          <div class="features-list">
+            <div class="feature-card">
+              <h3>AI-powered planning</h3>
+              <p>Itineraries tailored to your interests and budget.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Local insights</h3>
+              <p>Discover authentic experiences curated by locals.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Flexible booking</h3>
+              <p>Book with confidence thanks to free cancellation.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TripAdvisor-style categories -->
+        <section class="features" style="background:#fcfcfc;">
+          <h2>Explore our services</h2>
+          <div class="features-list" style="justify-content:center;gap:1.5rem;">
+            <a href="/hotels" class="feature-card" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+              <img src="/zaparound-uploads/hotel.webp" alt="Hotels" style="width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Hotels</h3>
+            </a>
+            <a href="/things-to-do" class="feature-card" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+              <img src="/zaparound-uploads/activities.webp" alt="Things to do" style="width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Things to do</h3>
+            </a>
+            <a href="/restaurants" class="feature-card" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+              <img src="/zaparound-uploads/restaurant.webp" alt="Restaurants" style="width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Restaurants</h3>
+            </a>
+            <a href="/flights" class="feature-card" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+              <img src="/zaparound-uploads/flight.webp" alt="Flights" style="width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Flights</h3>
+            </a>
+            <a href="/road-trips" class="feature-card" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+              <img src="/zaparound-uploads/roadtrip.webp" alt="Road trips" style="width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:0.75rem;" />
+              <h3>Road trips</h3>
+            </a>
+          </div>
+        </section>
+
+        <!-- Footer for no-JS users remains unchanged below -->
+        <footer style="margin-top:3rem;padding-top:2rem;border-top:1px solid #e5e7eb;text-align:left;font-size:0.875rem;color:var(--foreground);">
+          <div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;max-width:1100px;margin:0 auto;">
+            <div style="flex:1 1 200px;min-width:200px;">
+              <img src="/zaparound-uploads/noir_logo_ZapAround.webp" alt="ZapAround" style="height:32px;width:auto;margin-bottom:0.75rem;" />
+              <p>Your smart travel companion for effortless trip planning.</p>
+            </div>
+            <div style="flex:1 1 150px;min-width:150px;">
+              <strong style="display:block;margin-bottom:0.5rem;">Quick Links</strong>
+              <ul style="line-height:1.8;list-style:none;padding:0;margin:0;">
+                <li><a href="/about/" style="color:#61936f;text-decoration:none;">About</a></li>
+                <li><a href="/blog/" style="color:#61936f;text-decoration:none;">Blog</a></li>
+                <li><a href="/contact/" style="color:#61936f;text-decoration:none;">Contact</a></li>
+                <li><a href="/pricing/" style="color:#61936f;text-decoration:none;">Pricing</a></li>
+                <li><a href="/legal/" style="color:#61936f;text-decoration:none;">Legal</a></li>
+                <li><a href="/faq/" style="color:#61936f;text-decoration:none;">FAQ</a></li>
+                <li><a href="/currency-converter/" style="color:#61936f;text-decoration:none;">Currency Converter</a></li>
+              </ul>
+            </div>
+            <div style="flex:1 1 150px;min-width:150px;">
+              <strong style="display:block;margin-bottom:0.5rem;">Contact</strong>
+              <p style="margin:0 0 0.5rem 0;">support@zaparound.com</p>
+              <p style="margin:0;">hello@zaparound.com</p>
+            </div>
+          </div>
+          <p style="margin-top:2rem;text-align:center;">© 2025 ZapAround. All rights reserved | A division of <a href="https://www.by2friends.com/products/zaparound" style="color:#61936f;text-decoration:underline;">Distribution F.inc</a></p>
+        </footer>
+      </noscript>
+      <!-- Initial loading state (replaced by React) -->
+      <div class="loading">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    <!-- Main application script -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

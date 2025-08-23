@@ -1,0 +1,32 @@
+{
+  "description": "Your smart travel planning assistant. Connect with fellow travelers, share experiences, and discover hidden gems around the world.",
+  "quickLinks": "Quick Links",
+  "about": "About Us",
+  "pricing": "Pricing",
+  "contact": "Contact",
+  "legalTitle": "Legal",
+  "faq": "FAQ",
+  "currencyConverter": "Currency Converter",
+  "subscribeTitle": "Newsletter",
+  "subscribeText": "Subscribe to our newsletter for travel tips, updates, and exclusive offers.",
+  "enterEmail": "Enter your email",
+  "subscribe": "Subscribe",
+  "subscribeSuccess": "Successfully subscribed!",
+  "subscribeSuccessDesc": "Welcome to our newsletter! You'll start receiving updates soon.",
+  "subscribeError": "Failed to subscribe. Please try again later.",
+  "invalidEmail": "Please enter a valid email address",
+  "contactTitle": "Get in Touch",
+  "contactText": "Have questions or need assistance? We're here to help!",
+  "rights": "All rights reserved.",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+  "cookiePolicy": "Cookie Policy",
+  "gdprCompliance": "GDPR Compliance",
+  "socialMedia": {
+    "facebook": "Follow ZapAround on Facebook for travel updates and community",
+    "twitter": "Follow @By_ZapAround on X (Twitter) for travel news and updates",
+    "instagram": "Follow @by_zaparound on Instagram for travel photos and inspiration",
+    "youtube": "Follow ZapAround on YouTube for travel videos and tips",
+    "tiktok": "Follow @zaparound on TikTok for travel inspiration and short videos"
+  }
+} 

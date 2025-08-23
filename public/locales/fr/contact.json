@@ -1,0 +1,79 @@
+{
+  "title": "Contactez-nous",
+  "subtitle": "Entrez en contact avec notre équipe",
+  "form": {
+    "name": "Nom complet",
+    "email": "Adresse email",
+    "subject": "Sujet",
+    "message": "Message",
+    "phone": "Numéro de téléphone (facultatif)",
+    "placeholders": {
+      "name": "Entrez votre nom complet",
+      "email": "Entrez votre adresse email",
+      "subject": "De quoi s'agit-il ?",
+      "message": "Écrivez votre message ici...",
+      "phone": "Entrez votre numéro de téléphone"
+    }
+  },
+  "categories": {
+    "title": "Comment pouvons-nous vous aider ?",
+    "general": "Demande générale",
+    "support": "Support technique",
+    "booking": "Problèmes de réservation",
+    "feedback": "Retour d'expérience",
+    "partnership": "Partenariat commercial",
+    "other": "Autre"
+  },
+  "preferences": {
+    "title": "Préférences de contact",
+    "responseMethod": "Méthode de réponse préférée",
+    "methods": {
+      "email": "Email",
+      "phone": "Appel téléphonique",
+      "any": "Indifférent"
+    },
+    "timeframe": "Meilleur moment pour vous contacter",
+    "times": {
+      "morning": "Matin (9h-12h)",
+      "afternoon": "Après-midi (12h-17h)",
+      "evening": "Soir (17h-20h)",
+      "any": "N'importe quand"
+    }
+  },
+  "actions": {
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "clear": "Effacer le formulaire"
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Veuillez entrer une adresse email valide",
+    "invalidPhone": "Veuillez entrer un numéro de téléphone valide",
+    "messageTooShort": "Le message doit contenir au moins 10 caractères",
+    "messageTooLong": "Le message ne peut pas dépasser 1000 caractères"
+  },
+  "success": {
+    "title": "Message envoyé !",
+    "description": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais."
+  },
+  "error": {
+    "title": "Erreur",
+    "description": "Un problème est survenu lors de l'envoi de votre message. Veuillez réessayer.",
+    "network": "Erreur de réseau. Veuillez vérifier votre connexion internet."
+  },
+  "info": {
+    "title": "Autres moyens de nous contacter",
+    "response": "Nous répondons généralement dans les 24 heures",
+    "office": {
+      "title": "Heures d'ouverture",
+      "weekdays": "Lundi - Vendredi : 9h00 - 18h00",
+      "weekend": "Samedi : 10h00 - 14h00",
+      "timezone": "Notre fuseau horaire est UTC-5"
+    },
+    "emergency": {
+      "title": "Support d'urgence 24/7",
+      "description": "Pour une assistance voyage urgente uniquement",
+      "phone": "Téléphone d'urgence :"
+    }
+  }
+}

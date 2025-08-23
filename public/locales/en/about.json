@@ -1,0 +1,57 @@
+{
+  "title": "About ZapAround",
+  "subtitle": "We're revolutionizing the way people plan their travels with assistant-powered recommendations and real-time updates.",
+  "ourStory": {
+    "title": "Our Story",
+    "paragraph1": "ZapAround was born from the shared passion of two travel enthusiasts from Canada. After experiencing the frustrations of traditional travel planning, we decided to create a solution that would make the process more enjoyable and efficient.",
+    "paragraph2": "As avid travelers ourselves, we understand the challenges of coordinating trips, finding the best destinations, and staying on top of changing conditions. We've put our hearts into developing ZapAround, leveraging our combined experience in technology and travel to build a platform we truly believe in.",
+    "paragraph3": "Every feature in ZapAround has been carefully designed with travelers in mind, reflecting our commitment to creating a tool we would want to use ourselves. This isn't just a business for us—it's a labor of love, built by travelers, for travelers."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To make travel planning seamless and enjoyable, helping travelers discover the perfect destinations and create unforgettable experiences. We believe that planning should be part of the joy of travel, not a source of stress."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To become the world's most trusted travel companion, leveraging technology to enhance the joy of exploration and adventure. We see a future where every traveler has the tools they need to plan their perfect journey with confidence."
+  },
+  "values": {
+    "title": "Our Values",
+    "value1": {
+      "title": "Passion for Travel",
+      "description": "We're travelers first, developers second. Everything we build is inspired by our own journeys and experiences."
+    },
+    "value2": {
+      "title": "User-Centered Design",
+      "description": "We put travelers at the heart of every feature, focusing on what makes planning easier and more enjoyable."
+    },
+    "value3": {
+      "title": "Continuous Improvement",
+      "description": "We're constantly learning, iterating, and improving based on traveler feedback and industry trends."
+    },
+    "value4": {
+      "title": "Building Community",
+      "description": "We believe in the power of shared experiences and the wisdom of fellow travelers."
+    }
+  },
+  "whyChoose": {
+    "title": "Why Choose ZapAround?",
+    "feature1": {
+      "title": "Assistant-Powered Planning",
+      "description": "Get personalized recommendations based on your preferences and travel style."
+    },
+    "feature2": {
+      "title": "Real-Time Updates",
+      "description": "Stay informed with live weather updates and local recommendations."
+    },
+    "feature3": {
+      "title": "Community Driven",
+      "description": "Join a community of passionate travelers sharing their experiences."
+    }
+  },
+  "joinUs": {
+    "title": "Join Us On This Journey",
+    "description": "We're just getting started, and we're excited to have you along for the ride. Whether you're planning your next weekend getaway or a round-the-world adventure, ZapAround is here to make your travel dreams a reality.",
+    "cta": "Start Your Journey"
+  }
+}

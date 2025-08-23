@@ -1,0 +1,12 @@
+{
+  "title": "Language",
+  "english": "English",
+  "french": "French",
+  "spanish": "Spanish",
+  "changing": "Changing language...",
+  "changed": "Language changed",
+  "changedDescription": "The application language has been updated",
+  "error": "Error changing language",
+  "errorDescription": "Failed to change language. Please try again.",
+  "pleaseWait": "Please wait while we update the language"
+}

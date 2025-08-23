@@ -1,0 +1,197 @@
+{
+  "title": "Blog de Voyage",
+  "description": "Explorez des insights de voyage, des conseils et des histoires du monde entier",
+  "subtitle": "Découvrez des histoires de voyage, des conseils et de l'inspiration pour votre prochaine aventure",
+  "badge": "Histoires de Voyage",
+  "hero": {
+    "title": "Découvrez d'Incroyables Histoires de Voyage",
+    "subtitle": "Inspirez-vous d'expériences de voyage du monde entier"
+  },
+  "stats": {
+    "articles": "Articles",
+    "readers": "Lecteurs Mensuels",
+    "updated": "Mis à jour",
+    "weekly": "Hebdomadaire",
+    "categories": "Catégories"
+  },
+  "filters": {
+    "search": "Rechercher des blogs...",
+    "searchPlaceholder": "Rechercher par titre, contenu ou tags...",
+    "categories": "Catégories",
+    "allCategories": "Toutes les Catégories",
+    "tags": "Tags",
+    "noTags": "Aucun tag disponible",
+    "location": "Lieu",
+    "allLocations": "Tous les Lieux",
+    "dateRange": "Période",
+    "allTime": "Toute Période",
+    "lastWeek": "La Semaine Dernière",
+    "lastMonth": "Le Mois Dernier",
+    "lastYear": "L'Année Dernière",
+    "sortBy": "Trier par",
+    "newest": "Plus Récents",
+    "oldest": "Plus Anciens",
+    "popular": "Plus Populaires",
+    "trending": "Tendances",
+    "readingTime": "Temps de Lecture",
+    "clearFilters": "Effacer Tous les Filtres",
+    "applyFilters": "Appliquer les Filtres",
+    "filterBy": "Filtrer par",
+    "showingResults": "Affichage de {{count}} sur {{total}} résultats",
+    "noResults": "Aucun résultat trouvé",
+    "noResultsDescription": "Essayez d'ajuster vos filtres ou termes de recherche",
+    "advanced": "Filtres Avancés",
+    "resultsFound": "{{count}} résultats trouvés",
+    "filtered": "Résultats filtrés"
+  },
+  "viewModes": {
+    "title": "Mode d'Affichage",
+    "grid": "Vue Grille",
+    "list": "Vue Liste",
+    "minimal": "Vue Minimale"
+  },
+  "card": {
+    "readMore": "Lire Plus",
+    "readPost": "Lire l'Article Complet",
+    "minRead": "min de lecture",
+    "views": "vues",
+    "published": "Publié",
+    "updated": "Mis à jour",
+    "author": "par",
+    "category": "Catégorie",
+    "tags": "Tags",
+    "location": "Lieu",
+    "activities": "Activités",
+    "featured": "À la Une",
+    "trending": "Tendance",
+    "new": "Nouveau"
+  },
+  "widgets": {
+    "relatedPosts": "Articles Similaires",
+    "popularPosts": "Articles Populaires",
+    "recentPosts": "Articles Récents",
+    "categories": "Catégories",
+    "noRelated": "Aucun article similaire trouvé",
+    "noPopular": "Aucun article populaire disponible",
+    "noRecent": "Aucun article récent disponible",
+    "viewAll": "Voir Tout",
+    "loadMore": "Charger Plus",
+    "related": {
+      "title": "Articles Similaires"
+    },
+    "popular": {
+      "title": "Articles Populaires"
+    },
+    "recent": {
+      "title": "Articles Récents"
+    }
+  },
+  "detail": {
+    "backToList": "Retour au Blog",
+    "publishedOn": "Publié le",
+    "updatedOn": "Mis à jour le",
+    "createdOn": "Créé le",
+    "readingTime": "{{time}} min de lecture",
+    "sharePost": "Partager cet article",
+    "relatedPosts": "Vous pourriez aussi aimer"
+  },
+  "loading": {
+    "posts": "Chargement des articles...",
+    "filters": "Chargement des filtres...",
+    "categories": "Chargement des catégories...",
+    "search": "Recherche en cours...",
+    "more": "Chargement d'articles supplémentaires..."
+  },
+  "error": {
+    "title": "Erreur",
+    "loadingPosts": "Erreur lors du chargement des articles",
+    "loadingPost": "Erreur lors du chargement de l'article",
+    "searchFailed": "Échec de la recherche",
+    "networkError": "Erreur réseau",
+    "serverError": "Erreur serveur",
+    "tryAgain": "Réessayer",
+    "refresh": "Actualiser la Page",
+    "goBack": "Retour",
+    "description": "Nous rencontrons des difficultés pour charger le contenu. Veuillez réessayer plus tard.",
+    "refreshing": "Actualisation...",
+    "imageNotAvailable": "Image non disponible",
+    "notFound": "Article de blog non trouvé",
+    "notFoundDescription": "L'article de blog que vous recherchez n'existe pas ou a été supprimé."
+  },
+  "empty": {
+    "noPosts": "Aucun article de blog disponible",
+    "noPostsDescription": "Nous travaillons à créer un contenu de voyage incroyable. Revenez bientôt pour de nouveaux articles et conseils de voyage !",
+    "noResults": "Aucun article ne correspond à votre recherche",
+    "noResultsDescription": "Essayez d'ajuster vos termes de recherche ou filtres pour trouver ce que vous cherchez",
+    "noCategory": "Aucun article dans cette catégorie",
+    "noCategoryDescription": "Cette catégorie n'a pas encore d'articles. Parcourez d'autres catégories ou revenez plus tard."
+  },
+  "pagination": {
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page",
+    "of": "de",
+    "showing": "Affichage",
+    "to": "à",
+    "results": "résultats",
+    "ofTotal": "de {{total}} articles",
+    "loadMore": "Charger Plus d'Articles",
+    "showMore": "Afficher Plus"
+  },
+  "actions": {
+    "read": "Lire",
+    "share": "Partager",
+    "like": "Aimer",
+    "readMore": "Lire Plus",
+    "bookmark": "Marquer",
+    "comment": "Commenter",
+    "subscribe": "S'abonner"
+  },
+  "share": {
+    "title": "Partager cet article",
+    "description": "Copiez le lien ci-dessous pour partager cet article de blog avec d'autres",
+    "mobileText": "Salut, regarde cet article de blog incroyable sur {{site}} : {{title}}",
+    "shareVia": "Partager via",
+    "orCopyLink": "Ou copier le lien",
+    "copyLink": "Copier le Lien",
+    "copied": "Copié !",
+    "linkCopied": "Lien copié !",
+    "linkCopiedDescription": "Le lien a été copié dans votre presse-papiers",
+    "copyError": "Échec de la copie",
+    "copyErrorDescription": "Impossible de copier le lien. Veuillez réessayer."
+  },
+  "blog": {
+    "error": "Erreur",
+    "errorDescription": "Nous rencontrons des difficultés pour charger le contenu. Veuillez réessayer plus tard.",
+    "refreshing": "Actualisation...",
+    "tryAgain": "Réessayer",
+    "noBlogs": "Aucun article de blog disponible",
+    "noBlogsDescription": "Nous travaillons à créer un contenu de voyage incroyable. Revenez bientôt pour de nouveaux articles et conseils de voyage !",
+    "clearFilters": "Effacer les Filtres",
+    "featured": "Articles Vedettes",
+    "viewMode": "Mode d'Affichage",
+    "views": {
+      "grid": "Grille",
+      "list": "Liste",
+      "minimal": "Minimal"
+    },
+    "loading": "Chargement des articles...",
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant"
+    }
+  },
+  "category": {
+    "backToBlog": "Retour au Blog",
+    "travelArticles": "Articles de Voyage",
+    "articles": "articles",
+    "updatedRegularly": "Mis à jour régulièrement",
+    "viewInLanguage": "Voir en Langue",
+    "noArticlesFound": "Aucun Article Trouvé",
+    "noArticlesInCategory": "Aucun article trouvé dans la catégorie {{category}} pour le moment.",
+    "browseAllArticles": "Parcourir Tous les Articles",
+    "otherCategories": "Autres Catégories",
+    "categoryNotFound": "Catégorie non trouvée",
+    "loading": "Chargement de la catégorie..."
+  }
+}

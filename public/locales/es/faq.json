@@ -1,0 +1,113 @@
+{
+  "title": "Preguntas Frecuentes",
+  "subtitle": "Encuentra respuestas a las preguntas más comunes sobre las funciones, servicios y herramientas de planificación de viajes de ZapAround.",
+  "searchPlaceholder": "Buscar preguntas...",
+  "categories": {
+    "all": "Todas las preguntas",
+    "general": "General",
+    "features": "Funciones",
+    "technical": "Técnico"
+  },
+  "questions": {
+    "q1": {
+      "question": "¿Qué es ZapAround?",
+      "answer": "ZapAround es un asistente inteligente de planificación de viajes que te ayuda a descubrir, organizar y compartir tus experiencias de viaje. Combinamos recomendaciones impulsadas por IA con verdaderas opiniones de la comunidad para que la planificación sea fluida y agradable.",
+      "category": "general"
+    },
+    "q2": {
+      "question": "¿Cómo funciona ZapAround?",
+      "answer": "ZapAround funciona analizando tus preferencias de viaje y combinándolas con datos en tiempo real y aportes de la comunidad. Solo tienes que ingresar tu destino y preferencias, y te ayudaremos a crear itinerarios personalizados, descubrir joyas ocultas y conectarte con otros viajeros.",
+      "category": "general"
+    },
+    "q3": {
+      "question": "¿ZapAround está disponible en todo el mundo?",
+      "answer": "¡Sí! ZapAround está disponible a nivel global y admite la planificación de viajes para destinos en todo el mundo. Nuestra comunidad de viajeros contribuye con información desde todos los rincones del planeta.",
+      "category": "general"
+    },
+    "q4": {
+      "question": "¿Necesito crear una cuenta?",
+      "answer": "Puedes explorar algunas funciones sin una cuenta, pero al crear una <a href=\"/auth\" class=\"text-blue-600 underline\">cuenta gratuita</a> desbloqueas todo el potencial de ZapAround: guardar viajes, conectarte con otros viajeros y recibir recomendaciones personalizadas.",
+      "category": "technical"
+    },
+    "q5": {
+      "question": "¿Qué tan precisas son las recomendaciones?",
+      "answer": "Nuestras recomendaciones combinan análisis por IA con experiencias reales de viajeros, y se actualizan en tiempo real. Mejoramos constantemente nuestras sugerencias basándonos en los comentarios de los usuarios y en las condiciones cambiantes de viaje.",
+      "category": "features"
+    },
+    "q6": {
+      "question": "¿Puedo usar ZapAround para viajes en grupo?",
+      "answer": "¡Claro que sí! ZapAround cuenta con funciones especiales para la planificación de viajes en grupo. Puedes colaborar con amigos o familiares, compartir itinerarios y coordinar planes en tiempo real.",
+      "category": "features"
+    },
+    "q7": {
+      "question": "¿Qué hace diferente a ZapAround de otras apps de viaje?",
+      "answer": "ZapAround se distingue al combinar planificación con IA y aportes auténticos de la comunidad. Nos enfocamos en la personalización, actualizaciones en tiempo real y conexiones genuinas entre viajeros.",
+      "category": "general"
+    },
+    "q8": {
+      "question": "¿Mi información de viaje está segura?",
+      "answer": "Sí, nos tomamos muy en serio la seguridad de los datos. Toda tu información de viaje está cifrada y almacenada de forma segura. Nunca compartimos tus datos personales sin tu consentimiento explícito.",
+      "category": "technical"
+    },
+    "q9": {
+      "question": "¿Qué idiomas admite ZapAround?",
+      "answer": "ZapAround está disponible en inglés, francés y español. Puedes cambiar fácilmente de idioma desde la configuración de tu perfil, y todo el contenido (recomendaciones, descripciones, interfaz) se mostrará en el idioma que elijas.",
+      "category": "features"
+    },
+    "q10": {
+      "question": "¿Cómo funciona la función de traducción?",
+      "answer": "Nuestro sistema de traducción gestiona automáticamente todo el contenido en tu idioma preferido. Al cambiar de idioma, todos los textos –incluido el contenido generado por usuarios, las recomendaciones de viaje y los elementos de la interfaz– se traducen al instante.",
+      "category": "technical"
+    },
+    "q11": {
+      "question": "¿Puedo contribuir con traducciones o correcciones?",
+      "answer": "¡Sí! Agradecemos las contribuciones de la comunidad para mejorar nuestras traducciones. Si detectas errores o tienes sugerencias para una mejor traducción, puedes enviarlas mediante el formulario de comentarios en la configuración de tu perfil.",
+      "category": "technical"
+    },
+    "q12": {
+      "question": "¿Cómo restablezco mi contraseña?",
+      "answer": "Haz clic en el enlace <a href=\"/auth\" class=\"text-blue-600 underline\">¿Olvidaste tu contraseña?</a> en la página de inicio de sesión y sigue las instrucciones enviadas a tu correo electrónico registrado para restablecerla de forma segura.",
+      "category": "technical"
+    },
+    "q13": {
+      "question": "¿Cómo elimino mi cuenta de ZapAround?",
+      "answer": "Puedes eliminar permanentemente tu cuenta desde la página de <a href=\"/profile/account\" class=\"text-blue-600 underline\">Configuración de cuenta</a>. Ve a Perfil > Cuenta > Eliminar cuenta y sigue los pasos de confirmación. Esta acción es irreversible y elimina todos tus datos personales según el RGPD.",
+      "category": "technical"
+    },
+    "q14": {
+      "question": "¿Qué métodos de pago aceptan para las suscripciones?",
+      "answer": "Procesamos los pagos a través de nuestro socio Stripe, que cumple con PCI-DSS. Aceptamos tarjetas de crédito y débito, Apple Pay, Google Pay y otras opciones de pago locales disponibles en tu región.",
+      "category": "general"
+    },
+    "q15": {
+      "question": "¿ZapAround es gratis?",
+      "answer": "ZapAround ofrece un plan gratuito generoso que incluye funciones esenciales para la planificación de viajes. Para acceder a herramientas colaborativas avanzadas, recomendaciones ilimitadas con IA y soporte prioritario, puedes actualizarte a un plan de pago en cualquier momento.",
+      "category": "general"
+    },
+    "q16": {
+      "question": "¿Funciona ZapAround sin conexión?",
+      "answer": "Se necesita conexión a Internet para datos en tiempo real y búsquedas nuevas. Sin embargo, puedes acceder a tus viajes e itinerarios guardados sin conexión mediante el almacenamiento local del navegador o nuestra aplicación web progresiva (PWA).",
+      "category": "features"
+    },
+    "q17": {
+      "question": "¿Mi información de pago está segura?",
+      "answer": "Todos los datos de pago son procesados directamente por Stripe y nunca pasan por nuestros servidores. Las transacciones están cifradas de extremo a extremo y cumplimos con los estándares de seguridad más recientes (TLS 1.3, PCI DSS).",
+      "category": "technical"
+    },
+    "q18": {
+      "question": "¿Puedo exportar o compartir mi itinerario?",
+      "answer": "¡Por supuesto! Puedes exportar tus itinerarios en PDF, compartir un enlace público o invitar a colaboradores por correo electrónico directamente desde la página <a href=\"/trips\" class=\"text-blue-600 underline\">Detalles del viaje</a>.",
+      "category": "features"
+    },
+    "q19": {
+      "question": "¿Cómo contacto al soporte al cliente?",
+      "answer": "Puedes contactar con nuestro equipo de soporte 24/7 mediante el chat dentro de la app o escribiendo a <a href=\"mailto:support@zaparound.com\" class=\"text-blue-600 underline\">support@zaparound.com</a>. Normalmente respondemos en pocas horas.",
+      "category": "general"
+    },
+    "q20": {
+      "question": "¿Con qué frecuencia se actualizan los datos de viaje?",
+      "answer": "Los datos sobre vuelos, alojamientos y actividades se actualizan en tiempo real a través de nuestros socios de datos. Las reseñas y recomendaciones de la comunidad se sincronizan al instante tras pasar por moderación.",
+      "category": "features"
+    }
+  }
+}
