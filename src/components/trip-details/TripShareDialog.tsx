@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
-import { Check, Copy } from 'lucide-react';
+import { Share2 } from 'lucide-react';
+import { Share } from '@capacitor/share';
 
 interface TripShareDialogProps {
   open: boolean;
@@ -12,15 +13,20 @@ interface TripShareDialogProps {
 
 export const TripShareDialog: React.FC<TripShareDialogProps> = ({ open, onOpenChange, shareUrl }) => {
   const { t } = useTranslation('trip');
-  const [copied, setCopied] = useState(false);
+  const [sharing, setSharing] = useState(false);
 
-  const handleCopy = async () => {
+  const handleShare = async () => {
+    setSharing(true);
     try {
-      await navigator.clipboard.writeText(shareUrl);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      setCopied(false);
+      await Share.share({
+        title: 'ZapAround Trip',
+        text: 'Check out this amazing trip on ZapAround!',
+        url: shareUrl,
+      });
+    } catch (error) {
+      console.error('Error sharing trip:', error);
+    } finally {
+      setSharing(false);
     }
   };
 
@@ -48,11 +54,12 @@ export const TripShareDialog: React.FC<TripShareDialogProps> = ({ open, onOpenCh
             size="lg"
             variant="outline"
             className="w-full border-[#61936f] text-[#61936f] hover:bg-[#e6f4ec] flex items-center justify-center"
-            onClick={handleCopy}
+            onClick={handleShare}
+            disabled={sharing}
             aria-label={t('share.copyButton')}
           >
-            {copied ? <Check className="w-5 h-5 mr-2" /> : <Copy className="w-5 h-5 mr-2" />}
-            {copied ? t('share.copied') : t('share.copyButton')}
+            <Share2 className="w-5 h-5 mr-2" />
+            {sharing ? 'Sharing...' : t('share.copyButton')}
           </Button>
         </div>
       </DialogContent>

@@ -67,17 +67,17 @@ export function BlogCard({
 
   // Ensure image_url is absolute
   const absoluteImageUrl = blog.image_url
-    ? (blog.image_url.startsWith('http') ? blog.image_url : `${window.location.origin}${blog.image_url}`)
+    ? (blog.image_url.startsWith('http') ? blog.image_url : `https://zaparound.com/${blog.image_url}`)
     : null;
 
   // Share functionality
-  const currentUrl = window.location.origin + blogPath;
+  const currentUrl = 'https://zaparound.com/' + blogPath;
   
   const handleShare = async () => {
     // Check if we're on macOS or if navigator.share is available
     const isMacOS = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
     const hasNativeShare = navigator.share && !isMacOS;
-    const shareUrl = window.location.origin + blogPath;
+    const shareUrl = 'https://zaparound.com/' + blogPath;
     if (hasNativeShare) {
       try {
         const shareText = t('share.mobileText', { 
@@ -119,7 +119,7 @@ export function BlogCard({
 
   const handleCopyLink = async () => {
     try {
-      const shareUrl = window.location.origin + blogPath;
+      const shareUrl = 'https://zaparound.com/' + blogPath;
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
       toast({
@@ -315,7 +315,7 @@ export function BlogCard({
                 </p>
                 <div className="bg-gray-50 rounded-lg p-3 border">
                   <p className="text-xs text-gray-600 break-all font-mono">
-                    {window.location.origin + blogPath}
+                    {'https://zaparound.com/' + blogPath}
                   </p>
                 </div>
               </div>
@@ -664,7 +664,7 @@ export function BlogCard({
               </p>
               <div className="bg-gray-50 rounded-lg p-3 border">
                 <p className="text-xs text-gray-600 break-all font-mono">
-                  {window.location.origin + blogPath}
+                  {'https://zaparound.com/' + blogPath}
                 </p>
               </div>
             </div>

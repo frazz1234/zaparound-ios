@@ -132,10 +132,16 @@ export default function Contact() {
                   <Label htmlFor="name">{t("form.name")}</Label>
                   <Input
                     id="name"
+                    type="text"
+                    name="name"
+                    autoComplete="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder={t("form.placeholders.name")}
                     required
+                    spellCheck={false}
+                    autoCapitalize="words"
+                    autoCorrect="off"
                   />
                 </div>
 

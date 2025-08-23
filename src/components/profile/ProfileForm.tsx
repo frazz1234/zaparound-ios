@@ -212,10 +212,16 @@ export function ProfileForm({
           <Label htmlFor="firstName">{t('personal.firstName')}</Label>
           <Input
             id="firstName"
+            type="text"
+            name="given-name"
+            autoComplete="given-name"
             value={safeProfile?.first_name || ''}
             onChange={(e) => setEditedProfile({ ...editedProfile, first_name: e.target.value })}
             readOnly={!isEditing}
             className={cn(!isEditing && "bg-gray-50 text-gray-700")}
+            spellCheck={false}
+            autoCapitalize="words"
+            autoCorrect="off"
           />
         </div>
 
@@ -223,10 +229,16 @@ export function ProfileForm({
           <Label htmlFor="lastName">{t('personal.lastName')}</Label>
           <Input
             id="lastName"
+            type="text"
+            name="family-name"
+            autoComplete="family-name"
             value={safeProfile?.last_name || ''}
             onChange={(e) => setEditedProfile({ ...editedProfile, last_name: e.target.value })}
             readOnly={!isEditing}
             className={cn(!isEditing && "bg-gray-50 text-gray-700")}
+            spellCheck={false}
+            autoCapitalize="words"
+            autoCorrect="off"
           />
         </div>
 

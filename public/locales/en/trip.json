@@ -465,8 +465,8 @@
   },
   "share": {
     "modalTitle": "Share this trip",
-    "modalDescription": "Copy the link below and share it with your friends! Only ZapAround users can view the trip details.",
-    "copyButton": "Copy Link",
+    "modalDescription": "Share this trip with your friends! Only ZapAround users can view the trip details.",
+    "copyButton": "Share Trip",
     "copied": "Link copied! Now share it with your friends 🚀",
     "imageAlt": "Share your trip illustration",
     "shareLinkLabel": "Shareable Link",

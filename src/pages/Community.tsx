@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Share } from '@capacitor/share';
 import { LocationHeader } from '@/components/community/LocationHeader';
 import { GooglePlacesSearch } from '@/components/community/GooglePlacesSearch';
 import { LocationDisplay } from '@/components/community/LocationDisplay';
@@ -9,7 +10,7 @@ import { MediaUpload } from '@/components/community/MediaUpload';
 import { MediaDisplay } from '@/components/community/MediaDisplay';
 import { PostBlurOverlay } from '@/components/community/PostBlurOverlay';
 import { StarRating } from '@/components/ui/star-rating';
-import { MessageCircle, Users, MapPin, Compass, Heart, Share2, Map, CalendarClock, MoreVertical, Pencil, Trash2, Image as ImageIcon, Loader2, ChevronDown, Ban, AlertCircle, Shield, UserX, UserCheck, Reply, ExternalLink } from 'lucide-react';
+import { MessageCircle, Users, MapPin, Compass, Heart, Share2, Map, CalendarClock, MoreVertical, Pencil, Trash2, Image as ImageIcon, Loader2, ChevronDown, Ban, AlertCircle, Shield, UserX, UserCheck, Reply } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -897,7 +898,7 @@ const Community = () => {
   };
 
   const generateShareableUrl = (post) => {
-    const baseUrl = window.location.origin;
+    const baseUrl = 'https://zaparound.com';
     const postId = post.id;
     const locationSlug = post.location ? post.location.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') : '';
     const langPrefix = `/${i18n.language || 'en'}`;
@@ -920,42 +921,16 @@ const Community = () => {
     const placeLine = post.location ? `\n${post.location}` : '';
     const textPayload = `${sharePrefix}${quotedContentLine}${placeLine}\n${shareUrl}`;
 
-    // Check if native sharing is available
-    if (typeof navigator !== 'undefined' && navigator.share) {
-      const shareData: any = { 
-        title, 
+    try {
+      await Share.share({
+        title,
         text: textPayload,
-        url: shareUrl
-      };
-
-      // Try to attach image if available and supported
-      try {
-        if (post.media_urls && post.media_urls.length > 0) {
-          const firstImage = post.media_urls.find((media: any) => media.type === 'image');
-          if (firstImage && firstImage.url) {
-            const response = await fetch(firstImage.url);
-            const blob = await response.blob();
-            const extension = (blob.type && blob.type.split('/')[1]) || 'jpg';
-            const file = new File([blob], `zaparound-share.${extension}`, { type: blob.type || 'image/jpeg' });
-            
-            // Check if files can be shared
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-              shareData.files = [file];
-            }
-          }
-        }
-      } catch (error) {
-        // Continue without file attachment if it fails
-        console.log('File attachment failed, continuing with text-only share');
-      }
-
-      try {
-        await navigator.share(shareData);
-        return; // Successfully shared, exit function
-      } catch (error) {
-        // User cancelled or share failed, continue to fallback
-        console.log('Native share failed or was cancelled, using fallback');
-      }
+        url: shareUrl,
+      });
+      return; // Successfully shared, exit function
+    } catch (error) {
+      // User cancelled or share failed, continue to fallback
+      console.log('Native share failed or was cancelled, using fallback');
     }
 
     // Fallback to clipboard copy if native sharing is not available or failed
@@ -977,31 +952,6 @@ const Community = () => {
       toast({
         title: t('toast.linkCopied'),
         description: t('toast.postTextLinkCopied'),
-      });
-    }
-  };
-
-  const handleCopyLink = async (post) => {
-    const shareUrl = generateShareableUrl(post);
-    
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      toast({
-        title: t('toast.linkCopied'),
-        description: t('toast.postLinkCopied'),
-      });
-    } catch (error) {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = shareUrl;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      
-      toast({
-        title: t('toast.linkCopied'),
-        description: t('toast.postLinkCopied'),
       });
     }
   };
@@ -1469,34 +1419,15 @@ const Community = () => {
                               </div>
                             </div>
                             <div className="flex items-center gap-1">
-                              <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                  <Button
-                                    variant="ghost"
-                                    size="sm"
-                                    className="h-8 w-8 p-0 hover:bg-gray-100"
-                                    title={t('postActions.share')}
-                                  >
-                                    <Share2 className="h-4 w-4 text-blue-500" />
-                                  </Button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent align="end" className="w-48">
-                                  <DropdownMenuItem
-                                    onClick={() => handleShareWithDevice(post)}
-                                    className="cursor-pointer"
-                                  >
-                                    <Share2 className="h-4 w-4 mr-2" />
-                                    {t('postActions.shareWithDevice', 'Share with device')}
-                                  </DropdownMenuItem>
-                                  <DropdownMenuItem
-                                    onClick={() => handleCopyLink(post)}
-                                    className="cursor-pointer"
-                                  >
-                                    <ExternalLink className="h-4 w-4 mr-2" />
-                                    {t('postActions.copyLink', 'Copy link')}
-                                  </DropdownMenuItem>
-                                </DropdownMenuContent>
-                              </DropdownMenu>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                className="h-8 w-8 p-0 hover:bg-gray-100"
+                                title={t('postActions.share')}
+                                onClick={() => handleShareWithDevice(post)}
+                              >
+                                <Share2 className="h-4 w-4 text-blue-500" />
+                              </Button>
                               {(currentUser?.id === post.user_id || isAdmin) && (
                                 <DropdownMenu>
                                   <DropdownMenuTrigger asChild>

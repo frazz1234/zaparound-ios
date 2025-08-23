@@ -450,10 +450,10 @@ const TripDetails = () => {
 
   // Determine the correct share URL based on trip type
   const shareUrl = isZapOutPath 
-    ? `${window.location.origin}/zapout/${tripId}/share`
+    ? `https://zaparound.com/zapout/${tripId}/share`
     : isZapRoadPath 
-    ? `${window.location.origin}/zaproad/${tripId}/share`
-    : `${window.location.origin}/trips/${tripId}/share`;
+    ? `https://zaparound.com/zaproad/${tripId}/share`
+    : `https://zaparound.com/trips/${tripId}/share`;
 
   const [isShareable, setIsShareable] = useState(false);
   const [isZapOutShareable, setIsZapOutShareable] = useState(false);

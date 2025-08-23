@@ -118,7 +118,7 @@ class FlightDataPersistence {
    */
   extractSearchParamsFromUrl(url: string): FlightSearchData['searchParams'] | null {
     try {
-      const urlObj = new URL(url, window.location.origin);
+      const urlObj = new URL(url, 'https://zaparound.com');
       const params = urlObj.searchParams;
       
       const origin = params.get('origin');
@@ -155,7 +155,7 @@ class FlightDataPersistence {
    */
   getSearchIdFromUrl(url: string): string | null {
     try {
-      const urlObj = new URL(url, window.location.origin);
+      const urlObj = new URL(url, 'https://zaparound.com');
       return urlObj.searchParams.get('searchId');
     } catch (error) {
       console.error('Error getting search ID from URL:', error);

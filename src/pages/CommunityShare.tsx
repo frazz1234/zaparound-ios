@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Share } from '@capacitor/share';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -9,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Users, Heart, Share2, ArrowLeft, MapPin, ExternalLink, Calendar, Reply, Loader2 } from 'lucide-react';
+import { Users, Heart, Share2, ArrowLeft, MapPin, Calendar, Reply, Loader2 } from 'lucide-react';
 import { MediaDisplay } from '@/components/community/MediaDisplay';
 import { LocationDisplay } from '@/components/community/LocationDisplay';
 import { MediaUpload } from '@/components/community/MediaUpload';
@@ -53,8 +54,8 @@ import { useTranslation } from 'react-i18next';
       const imageUrl = post.media_urls?.[0]?.url || post.image_url || '/apple-touch-icon.png';
       const currentLang = window.location.pathname.split('/')[1] || 'en';
       const canonicalUrl = locationSlug 
-        ? `${window.location.origin}/${currentLang}/community/share/${post.id}/${locationSlug}`
-        : `${window.location.origin}/${currentLang}/community/share/${post.id}`;
+        ? `https://zaparound.com/${currentLang}/community/share/${post.id}/${locationSlug}`
+        : `https://zaparound.com/${currentLang}/community/share/${post.id}`;
       
       // Generate structured data for better SEO
       const structuredData = {
@@ -70,7 +71,7 @@ import { useTranslation } from 'react-i18next';
         "publisher": {
           "@type": "Organization",
           "name": "ZapAround",
-          "url": window.location.origin
+          "url": "https://zaparound.com"
         },
         "datePublished": post.created_at,
         "dateModified": post.updated_at || post.created_at,
@@ -378,8 +379,8 @@ import { useTranslation } from 'react-i18next';
     // Get language from URL parameters or fallback to navigator language
     const currentLang = window.location.pathname.split('/')[1] || (navigator.language || 'en').slice(0,2);
     const shareUrl = locationSlug 
-      ? `${window.location.origin}/${currentLang}/community/share/${post.id}/${locationSlug}`
-      : `${window.location.origin}/${currentLang}/community/share/${post.id}`;
+      ? `https://zaparound.com/${currentLang}/community/share/${post.id}/${locationSlug}`
+      : `https://zaparound.com/${currentLang}/community/share/${post.id}`;
     const title = 'ZapAround';
     const sharePrefix = t('share.checkFound', 'Check what I found on ZapAround');
     const contentSnippet = (post.content || '').trim();
@@ -388,92 +389,18 @@ import { useTranslation } from 'react-i18next';
     const placeLine = post.location ? `\n${post.location}` : '';
     const textPayload = `${sharePrefix}${quotedContentLine}${placeLine}\n${shareUrl}`;
 
-    // Check if native sharing is available
-    if (typeof navigator !== 'undefined' && navigator.share) {
-      const shareData: any = { 
-        title, 
+    try {
+      await Share.share({
+        title,
         text: textPayload,
-        url: shareUrl
-      };
-
-      // Try to attach image if available and supported
-      try {
-        if (post.media_urls && post.media_urls.length > 0) {
-          const firstImage = post.media_urls.find((media: any) => media.type === 'image');
-          if (firstImage && firstImage.url) {
-            const response = await fetch(firstImage.url);
-            const blob = await response.blob();
-            const extension = (blob.type && blob.type.split('/')[1]) || 'jpg';
-            const file = new File([blob], `zaparound-share.${extension}`, { type: blob.type || 'image/jpeg' });
-            
-            // Check if files can be shared
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-              shareData.files = [file];
-            }
-          }
-        }
-      } catch (error) {
-        // Continue without file attachment if it fails
-        console.log('File attachment failed, continuing with text-only share');
-      }
-
-      try {
-        await navigator.share(shareData);
-        return; // Successfully shared, exit function
-      } catch (error) {
-        // User cancelled or share failed, continue to fallback
-        console.log('Native share failed or was cancelled, using fallback');
-      }
-    }
-
-    // Fallback to clipboard copy if native sharing is not available or failed
-    try {
-      await navigator.clipboard.writeText(textPayload);
-      toast({
-        title: 'Link Copied!',
-        description: 'Post text and link have been copied to your clipboard.',
+        url: shareUrl,
       });
     } catch (error) {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = textPayload;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      
+      console.error('Error sharing with device:', error);
       toast({
-        title: 'Link Copied!',
-        description: 'Post text and link have been copied to your clipboard.',
-      });
-    }
-  };
-
-  const handleCopyLink = async () => {
-    // Get language from URL parameters or fallback to navigator language
-    const currentLang = window.location.pathname.split('/')[1] || (navigator.language || 'en').slice(0,2);
-    const shareUrl = locationSlug 
-      ? `${window.location.origin}/${currentLang}/community/share/${post.id}/${locationSlug}`
-      : `${window.location.origin}/${currentLang}/community/share/${post.id}`;
-    
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      toast({
-        title: 'Link Copied!',
-        description: 'Post link has been copied to your clipboard.',
-      });
-    } catch (error) {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = shareUrl;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      
-      toast({
-        title: 'Link Copied!',
-        description: 'Post link has been copied to your clipboard.',
+        title: 'Error',
+        description: 'Failed to share with device. Please try again.',
+        variant: 'destructive',
       });
     }
   };
@@ -638,34 +565,15 @@ import { useTranslation } from 'react-i18next';
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-8 w-8 p-0 hover:bg-gray-100"
-                        title="Share post"
-                      >
-                        <Share2 className="h-4 w-4 text-blue-500" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-48">
-                      <DropdownMenuItem
-                        onClick={handleShareWithDevice}
-                        className="cursor-pointer"
-                      >
-                        <Share2 className="h-4 w-4 mr-2" />
-                        {t('postActions.shareWithDevice', 'Share with device')}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onClick={handleCopyLink}
-                        className="cursor-pointer"
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        {t('postActions.copyLink', 'Copy link')}
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="h-8 w-8 p-0 hover:bg-gray-100"
+                    title="Share post"
+                    onClick={handleShareWithDevice}
+                  >
+                    <Share2 className="h-4 w-4 text-blue-500" />
+                  </Button>
                 </div>
               </div>
 
@@ -729,7 +637,7 @@ import { useTranslation } from 'react-i18next';
                   onClick={() => navigate('/community')}
                   className="flex items-center gap-2"
                 >
-                  <ExternalLink className="h-4 w-4" />
+                  <ArrowLeft className="h-4 w-4" />
                   {t('navigation.title')}
                 </Button>
               </div>

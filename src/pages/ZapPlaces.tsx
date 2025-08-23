@@ -353,7 +353,7 @@ const ZapPlaces = () => {
         await navigator.share({
           title: placeDetails.name,
           text: `Check out ${placeDetails.name} on ZapAround!`,
-          url: `${window.location.origin}${shareUrl}`,
+          url: `https://zaparound.com/${shareUrl}`,
         });
       } catch (err) {
         // Fallback to copying URL
@@ -366,7 +366,7 @@ const ZapPlaces = () => {
 
   const copyToClipboard = () => {
     const shareUrl = createPlaceUrl(placeId!, placeDetails?.name || '', language);
-    const fullUrl = `${window.location.origin}${shareUrl}`;
+          const fullUrl = `https://zaparound.com/${shareUrl}`;
     navigator.clipboard.writeText(fullUrl);
     toast({
       title: 'Link Copied',

@@ -1075,18 +1075,30 @@ export function FlightBooking() {
             <div>
               <label className="text-sm font-medium">First Name</label>
               <Input
+                type="text"
+                name="given-name"
+                autoComplete="given-name"
                 value={bookingFormData.given_name}
                 onChange={(e) => setBookingFormData({ ...bookingFormData, given_name: e.target.value })}
                 placeholder="Enter first name"
+                spellCheck={false}
+                autoCapitalize="words"
+                autoCorrect="off"
               />
             </div>
 
             <div>
               <label className="text-sm font-medium">Last Name</label>
               <Input
+                type="text"
+                name="family-name"
+                autoComplete="family-name"
                 value={bookingFormData.family_name}
                 onChange={(e) => setBookingFormData({ ...bookingFormData, family_name: e.target.value })}
                 placeholder="Enter last name"
+                spellCheck={false}
+                autoCapitalize="words"
+                autoCorrect="off"
               />
             </div>
 

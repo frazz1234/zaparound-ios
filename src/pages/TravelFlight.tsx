@@ -56,7 +56,7 @@ export default function TravelFlight() {
     const isDirectAccess = !previousLocation.current ||
       navType === 'reload' ||
       navType === 'back_forward' ||
-      (document.referrer && new URL(document.referrer).origin !== window.location.origin);
+      (document.referrer && new URL(document.referrer).origin !== 'https://zaparound.com');
 
     if (previousLocation.current && previousLocation.current !== currentPath) {
       console.log('Client-side navigation detected, forcing widget reinitialization');
@@ -198,7 +198,7 @@ export default function TravelFlight() {
 
           return {
             ...(window as any).TPWL_CONFIGURATION,
-            resultsURL: `${window.location.origin}/${i18n.language}/travel-flight`,
+            resultsURL: `https://zaparound.com/${i18n.language}/travel-flight`,
             ...(Object.keys(search).length > 0 ? { search } : {}),
           };
         };

@@ -438,8 +438,8 @@
   },
   "share": {
     "modalTitle": "Partager ce voyage",
-    "modalDescription": "Copiez le lien ci-dessous et partagez-le avec vos amis ! Seuls les utilisateurs de ZapAround peuvent voir les détails du voyage.",
-    "copyButton": "Copier le lien",
+    "modalDescription": "Partagez ce voyage avec vos amis ! Seuls les utilisateurs de ZapAround peuvent voir les détails du voyage.",
+    "copyButton": "Partager le Voyage",
     "copied": "Lien copié ! Partagez-le avec vos amis 🚀",
     "imageAlt": "Illustration de partage de voyage",
     "shareLinkLabel": "Lien partageable",

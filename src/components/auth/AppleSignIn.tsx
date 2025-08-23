@@ -15,7 +15,7 @@ export function AppleSignIn() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'apple',
         options: {
-          redirectTo: `${window.location.origin}/dashboard`,
+          redirectTo: `https://zaparound.com/dashboard`,
           queryParams: {
             isNewSignUp: 'true'
           }

@@ -421,12 +421,17 @@ export function SignupForm({
                   <Input
                     id="firstName"
                     type="text"
+                    name="given-name"
+                    autoComplete="given-name"
                     placeholder={t('signUp.firstNamePlaceholder')}
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     onBlur={() => markFieldAsTouched('firstName')}
                     required
                     className={shouldShowError('firstName') ? 'border-red-500' : ''}
+                    spellCheck={false}
+                    autoCapitalize="words"
+                    autoCorrect="off"
                   />
                   {shouldShowError('firstName') && (
                     <p className="text-sm text-red-500">{formErrors.firstName}</p>
@@ -438,12 +443,17 @@ export function SignupForm({
                   <Input
                     id="lastName"
                     type="text"
+                    name="family-name"
+                    autoComplete="family-name"
                     placeholder={t('signUp.lastNamePlaceholder')}
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     onBlur={() => markFieldAsTouched('lastName')}
                     required
                     className={shouldShowError('lastName') ? 'border-red-500' : ''}
+                    spellCheck={false}
+                    autoCapitalize="words"
+                    autoCorrect="off"
                   />
                   {shouldShowError('lastName') && (
                     <p className="text-sm text-red-500">{formErrors.lastName}</p>

@@ -435,8 +435,8 @@
   },
   "share": {
     "modalTyitle": "Compartir este viaje",
-    "modalDescription": "Copia el enlace y compártelo con tus amigos! Solo los usuarios de ZapAround pueden ver los detalles del viaje.",
-    "copyButton": "Copiar enlace",
+    "modalDescription": "Comparte este viaje con tus amigos! Solo los usuarios de ZapAround pueden ver los detalles del viaje.",
+    "copyButton": "Compartir Viaje",
     "copied": "¡Enlace copiado! Ahora compártelo con tus amigos 🚀",
     "imageAlt": "Ilustración de compartir tu viaje",
     "shareLinkLabel": "Enlace compartible",
