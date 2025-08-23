@@ -1,0 +1,46 @@
+{
+  "title": "Se désabonner de la newsletter",
+  "subtitle": "Nous sommes désolés de vous voir partir ! Aidez-nous à nous améliorer en partageant pourquoi vous vous désabonnez.",
+  "emailLabel": "Adresse e-mail",
+  "emailPlaceholder": "Entrez votre adresse e-mail",
+  "emailHelp": "Entrez l'adresse e-mail que vous souhaitez désabonner de notre newsletter",
+  "feedbackTitle": "Aidez-nous à nous améliorer (Requis)",
+  "feedbackSubtitle": "Vos commentaires nous aident à créer un meilleur contenu pour notre communauté. Veuillez sélectionner une raison de désabonnement.",
+  "reasons": {
+    "too_frequent": "Les e-mails sont trop fréquents",
+    "not_relevant": "Le contenu ne m'intéresse pas",
+    "never_signed_up": "Je ne me suis jamais inscrit à cela",
+    "poor_content": "Qualité du contenu médiocre",
+    "changed_interests": "Mes centres d'intérêt ont changé",
+    "other": "Autre raison"
+  },
+  "additionalFeedback": "Commentaires supplémentaires (Optionnel)",
+  "additionalFeedbackPlaceholder": "Dites-nous plus sur votre expérience ou comment nous pouvons nous améliorer...",
+  "reasonRequired": "Veuillez sélectionner une raison pour continuer",
+  "feedbackNotification": "Vos commentaires nous aident à nous améliorer ! Nous enverrons votre raison et vos commentaires à notre équipe pour améliorer notre newsletter pour tout le monde.",
+  "goodbyeEmailNotification": "Vous recevrez également un e-mail d'adieu avec des moyens de rester connecté avec ZapAround !",
+  "privacyNotice": {
+    "title": "Avis de confidentialité",
+    "description": "Se désabonner supprimera immédiatement votre e-mail de notre liste de newsletter. Votre compte et autres services ne sont pas affectés. Vous pouvez vous réabonner à tout moment depuis les paramètres de votre compte. Nous enverrons également une notification à notre équipe pour améliorer notre newsletter."
+  },
+  "unsubscribeButton": "Se désabonner de la newsletter",
+  "unsubscribing": "Désabonnement en cours...",
+  "visitWebsite": "Visiter ZapAround.com",
+  "updatePreferences": "Mettre à jour les préférences e-mail",
+  "preferencesNote": "Vous avez changé d'avis ? Vous pouvez toujours mettre à jour vos préférences.",
+  "success": {
+    "title": "Désabonnement réussi",
+    "subtitle": "Vous avez été retiré de notre liste de newsletter. Nous sommes désolés de vous voir partir !",
+    "allDone": "Terminé !",
+    "removedMessage": "a été retiré avec succès de notre liste de newsletter.",
+    "thankYou": "Merci pour vos commentaires !",
+    "feedbackMessage": "Vos commentaires nous aident à améliorer l'expérience de notre newsletter pour tout le monde. Bien que vous ne receviez plus nos newsletters, vous êtes toujours le bienvenu !",
+    "otherWays": "Autres façons de rester connecté",
+    "visitWebsite": "Visiter notre site web",
+    "visitWebsiteDesc": "Obtenir des conseils de voyage et des mises à jour",
+    "followSocial": "Suivre sur les réseaux sociaux",
+    "followSocialDesc": "Rester informé avec notre communauté"
+  },
+  "contactSupport": "Besoin d'aide ? Contactez-nous à",
+  "goBack": "Retour"
+}

@@ -1,0 +1,199 @@
+{
+  "navigation": {
+    "title": "Community"
+  },
+  "metaDescription": "Join the ZapAround community to connect with fellow travelers, share experiences, and discover amazing destinations.",
+  "title": "Welcome to the ZapAround Community",
+  "subtitle": "A place where travelers connect, share experiences, and inspire each other's journeys.",
+  "comingSoonTitle": "Coming Soon to Explorer Members",
+  "comingSoonDescription": "We're building an amazing community space where you can connect with fellow travelers, share tips, and plan adventures together.",
+  "notifyMe": "Notify Me When Available",
+  "features": {
+    "connect": {
+      "title": "Connect with Travelers",
+      "description": "Meet like-minded adventurers from around the world"
+    },
+    "share": {
+      "title": "Share Experiences",
+      "description": "Share your travel stories, tips, and hidden gems"
+    },
+    "discover": {
+      "title": "Discover Places",
+      "description": "Find new destinations through community recommendations"
+    },
+    "events": {
+      "title": "Join Events",
+      "description": "Participate in virtual and local travel meetups"
+    }
+  },
+  "stayTuned": "Stay Updated",
+  "betaAccess": "Join our waitlist to get early access when we launch!",
+  "emailPlaceholder": "Enter your email",
+  "joinWaitlist": "Join Waitlist",
+  "yourLocation": "Your Location",
+  "detectingLocation": "Detecting your location...",
+  "locationError": "Could not detect your location",
+  "locationPermissionError": "Please allow location access to see nearby events",
+  "locationNotSupported": "Location detection is not supported in your browser",
+  "retryLocation": "Retry",
+  "updateLocation": "Update Location",
+  "nearbyEvents": "Nearby Events",
+  "searchLocation": "Search for a location...",
+  "openNow": "Open Now",
+  "closed": "Closed",
+  "events": {
+    "loadingEvents": "Loading events...",
+    "noEventsFound": "No events found in your area",
+    "viewEvent": "View Event",
+    "free": "Free",
+    "paid": "Paid"
+  },
+  "postCreation": {
+    "title": "Create a Post",
+    "activityPlaceholder": "Share your activity experience...",
+    "destinationPlaceholder": "Share your destination story...",
+    "locationPlaceholder": "Add your location (optional)",
+    "postButton": "Post",
+    "posting": "Posting...",
+    "postSuccess": "Post created successfully!",
+    "postError": "Failed to create post. Please try again.",
+    "contentRequired": "Please add some content to your post.",
+    "loginRequired": "You must be logged in to create a post."
+  },
+  "postTypes": {
+    "activity": "Activity",
+    "destination": "Destination",
+    "feed": "Feed",
+    "activities": "Activities",
+    "destinations": "Destinations"
+  },
+  "rating": {
+    "rateExperience": "Rate your experience:",
+    "ratePost": "Rate this post:",
+    "star": "star",
+    "stars": "stars"
+  },
+  "nearbyPlaces": {
+    "title": "Nearby Activities",
+    "loading": "Loading nearby places...",
+    "noPlaces": "No activities found within 50km",
+    "enableLocation": "Enable Location",
+    "distance": "km away",
+    "checkBackLater": "Check back later for new activities"
+  },
+  "aroundTheWorld": "🌍 Around the World",
+  "travelStories": "Travel Stories",
+  "postActions": {
+    "share": "Share post",
+    "edit": "Edit",
+    "delete": "Delete",
+    "blockUser": "Block User",
+    "unblockUser": "Unblock User",
+    "report": "Report",
+    "deleteConfirm": "Are you sure you want to delete this post?",
+    "blockConfirm": "Are you sure you want to block this user?",
+    "unblockConfirm": "Are you sure you want to unblock this user?",
+    "reportConfirm": "Are you sure you want to report this post?"
+  },
+  "replies": {
+    "title": "Replies",
+    "placeholder": "Write a reply...",
+    "replyButton": "Reply",
+    "posting": "Posting...",
+    "noReplies": "No replies yet. Be the first to reply!",
+    "viewAll": "View All Comments",
+    "deleteReply": "Delete Reply",
+    "deleteReplyConfirm": "Are you sure you want to delete this reply?",
+    "replySuccess": "Reply posted successfully!",
+    "replyError": "Failed to post reply. Please try again.",
+    "contentRequired": "Please add some content to your reply.",
+    "loginRequired": "You must be logged in to reply."
+  },
+  "loading": {
+    "posts": "Loading posts...",
+    "morePosts": "Loading more posts...",
+    "replies": "Loading replies..."
+  },
+  "errors": {
+    "general": "Something went wrong. Please try again.",
+    "network": "Network error. Please check your connection.",
+    "unauthorized": "You are not authorized to perform this action.",
+    "notFound": "Post not found.",
+    "fetchBlockedUsers": "Failed to fetch blocked users list.",
+    "fetchPosts": "Failed to fetch posts. Please try again.",
+    "fetchReplies": "Failed to fetch replies. Please try again.",
+    "postFailed": "Failed to post. Please try again.",
+    "deletePostFailed": "Failed to delete post. Please try again.",
+    "postReplyFailed": "Failed to post reply. Please try again.",
+    "deleteReplyFailed": "Failed to delete reply. Please try again."
+  },
+  "toast": {
+    "error": "Error",
+    "success": "Success",
+    "uploadMediaFailed": "Failed to upload media. Please try again.",
+    "postContentEmpty": "Post content cannot be empty.",
+    "loginRequired": "You must be logged in to post.",
+    "postPublished": "Your post has been published.",
+    "loginRequiredLike": "You must be logged in to like posts.",
+    "updateLikeFailed": "Failed to update like. Please try again.",
+    "postUpdated": "Post updated successfully.",
+    "updatePostFailed": "Failed to update post. Please try again.",
+    "postDeleted": "Post deleted successfully.",
+    "userBlocked": "User blocked successfully.",
+    "blockUserFailed": "Failed to block user. Please try again.",
+    "userUnblocked": "User unblocked successfully.",
+    "unblockUserFailed": "Failed to unblock user. Please try again.",
+    "replyPosted": "Your reply has been posted.",
+    "replyDeleted": "Reply deleted successfully.",
+    "replyContentEmpty": "Reply content cannot be empty.",
+    "loginRequiredReply": "You must be logged in to reply.",
+    "postTextLinkCopied": "Post text and link have been copied to your clipboard.",
+    "postLinkCopied": "Post link has been copied to your clipboard.",
+    "linkCopied": "Link Copied!",
+    "newPost": "New Post",
+    "editPost": "Edit Post"
+  },
+  "user": {
+    "anonymous": "Anonymous User",
+    "blocked": "Blocked User",
+    "admin": "Admin"
+  },
+  "media": {
+    "uploadError": "Failed to upload media. Please try again.",
+    "invalidFile": "Invalid file type. Please select an image or video.",
+    "fileTooLarge": "File is too large. Please select a smaller file.",
+    "addPhotosVideos": "Add Photos & Videos",
+    "image": "IMAGE",
+    "video": "VIDEO",
+    "moreFiles": "+{{count}} more",
+    "filesSelected": "{{count}} of {{max}} files selected",
+    "maxFilesExceeded": "You can only upload up to {{max}} files.",
+    "invalidFileType": "{{filename}} is not a valid image or video file.",
+    "fileTooLargeImage": "{{filename}} is too large. Maximum size is 10MB.",
+    "fileTooLargeVideo": "{{filename}} is too large. Maximum size is 50MB."
+  },
+  "share": {
+    "title": "Share Post",
+    "copied": "Link copied to clipboard!",
+    "error": "Failed to share post. Please try again.",
+    "checkFound": "Check what I found on ZapAround"
+  },
+  "infiniteScroll": {
+    "loadingMore": "Loading more posts...",
+    "noMorePosts": "No more posts to load"
+  },
+  "postBlur": {
+    "title": "Connect to Create Posts",
+    "description": "Join our community to share your travel stories, connect with fellow travelers, and create amazing posts.",
+    "connect": "Connect",
+    "signup": "Sign Up"
+  },
+  "communityShare": {
+    "readyToExplore": "Ready to explore {{location}}?",
+    "readyToJoin": "Ready to join the community?",
+    "discoverMore": "Discover more amazing places and connect with travelers on ZapAround!",
+    "shareStories": "Share your own travel stories and connect with fellow travelers!",
+    "exploreCommunity": "Explore Community",
+    "startPlanning": "Start Planning"
+  }
+}

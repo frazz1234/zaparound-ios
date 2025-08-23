@@ -1,0 +1,10 @@
+{
+  "appId": "com.zaparound.app",
+  "appName": "ZapAround",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

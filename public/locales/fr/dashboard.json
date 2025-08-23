@@ -1,0 +1,58 @@
+{
+  "welcome": "Bienvenue",
+  "planAdventure": "Planifiez votre prochaine aventure",
+  "filter": {
+    "location": "Filtrer par lieu",
+    "date": "Filtrer par date",
+    "activity": "Filtrer par activité",
+    "tripType": "Filtrer par type de voyage",
+    "sort": "Trier par",
+    "newest": "Plus récent d'abord",
+    "oldest": "Plus ancien d'abord",
+    "apply": "Appliquer les filtres",
+    "clear": "Effacer les filtres",
+    "noResults": "Aucun voyage ne correspond à vos filtres",
+    "allLocations": "Tous les lieux",
+    "allCategories": "Toutes les catégories",
+    "allTripTypes": "Tous les types de voyage"
+  },
+  "trip": {
+    "empty": {
+      "welcome": "Bienvenue sur ZapAround {{name}} !",
+      "noneYet": "Vous n'avez pas encore de voyages. Créez votre premier voyage !",
+      "createFirst": "Créer votre premier voyage",
+      "description": "Commencez à planifier votre prochaine aventure avec ZapAround"
+    },
+    "filter": {
+      "noResults": "Aucun voyage ne correspond à vos filtres actuels."
+    },
+    "creation": {
+      "success": "Voyage créé avec succès",
+      "successRefresh": "Votre nouveau voyage a été ajouté à votre tableau de bord."
+    },
+    "deletion": {
+      "success": "Voyage supprimé avec succès",
+      "successMessage": "Le voyage a été supprimé de votre tableau de bord.",
+      "confirm": "Supprimer le voyage",
+      "confirmQuestion": "Êtes-vous sûr de vouloir supprimer ce voyage ?",
+      "confirmDescription": "Cette action ne peut pas être annulée.",
+      "cancel": "Annuler",
+      "deleting": "Suppression en cours..."
+    },
+    "card": {
+      "processing": "Traitement du voyage...",
+      "viewDetails": "Voir les détails",
+      "dates": "Dates",
+      "to": "au",
+      "location": "Lieu",
+      "locationUnknown": "Lieu non spécifié"
+    }
+  },
+  "clearFilters": "Effacer tous les filtres",
+  "success": "Succès",
+  "paymentSuccess": "Paiement traité avec succès",
+  "loading": "Chargement des voyages...",
+  "freeTrip": {
+    "viewYourTrip": "Voir votre voyage gratuit"
+  }
+} 

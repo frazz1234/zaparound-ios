@@ -1,0 +1,12 @@
+{
+  "title": "Idioma",
+  "english": "English",
+  "french": "Francais",
+  "spanish": "Español",
+  "changing": "Cambiando idioma...",
+  "changed": "Idioma cambiado",
+  "changedDescription": "El idioma de la aplicación ha sido actualizado",
+  "error": "Error al cambiar el idioma",
+  "errorDescription": "No se pudo cambiar el idioma. Por favor, inténtelo de nuevo.",
+  "pleaseWait": "Por favor, espere mientras actualizamos el idioma"
+}

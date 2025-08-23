@@ -1,0 +1,46 @@
+{
+  "title": "Cancelar suscripción al boletín",
+  "subtitle": "¡Lamentamos que te vayas! Ayúdanos a mejorar compartiendo por qué cancelas tu suscripción.",
+  "emailLabel": "Dirección de correo electrónico",
+  "emailPlaceholder": "Ingresa tu dirección de correo electrónico",
+  "emailHelp": "Ingresa la dirección de correo electrónico que deseas cancelar de nuestro boletín",
+  "feedbackTitle": "Ayúdanos a mejorar (Requerido)",
+  "feedbackSubtitle": "Tus comentarios nos ayudan a crear mejor contenido para nuestra comunidad. Por favor selecciona una razón para cancelar tu suscripción.",
+  "reasons": {
+    "too_frequent": "Los correos son demasiado frecuentes",
+    "not_relevant": "El contenido no es relevante para mí",
+    "never_signed_up": "Nunca me suscribí a esto",
+    "poor_content": "Calidad del contenido deficiente",
+    "changed_interests": "Mis intereses han cambiado",
+    "other": "Otra razón"
+  },
+  "additionalFeedback": "Comentarios adicionales (Opcional)",
+  "additionalFeedbackPlaceholder": "Cuéntanos más sobre tu experiencia o cómo podemos mejorar...",
+  "reasonRequired": "Por favor selecciona una razón para continuar",
+  "feedbackNotification": "¡Tus comentarios nos ayudan a mejorar! Enviaremos tu razón y comentarios a nuestro equipo para hacer nuestro boletín mejor para todos.",
+  "goodbyeEmailNotification": "¡También recibirás un correo de despedida con formas de mantenerte conectado con ZapAround!",
+  "privacyNotice": {
+    "title": "Aviso de privacidad",
+    "description": "Cancelar la suscripción eliminará inmediatamente tu correo electrónico de nuestra lista de boletines. Tu cuenta y otros servicios no se ven afectados. Puedes volver a suscribirte en cualquier momento desde la configuración de tu cuenta. También enviaremos una notificación a nuestro equipo para ayudar a mejorar nuestro boletín."
+  },
+  "unsubscribeButton": "Cancelar suscripción al boletín",
+  "unsubscribing": "Cancelando suscripción...",
+  "visitWebsite": "Visitar ZapAround.com",
+  "updatePreferences": "Actualizar preferencias de correo electrónico",
+  "preferencesNote": "¿Cambiaste de opinión? Siempre puedes actualizar tus preferencias.",
+  "success": {
+    "title": "Suscripción cancelada exitosamente",
+    "subtitle": "Has sido eliminado de nuestra lista de boletines. ¡Lamentamos que te vayas!",
+    "allDone": "¡Todo listo!",
+    "removedMessage": "ha sido eliminado exitosamente de nuestra lista de boletines.",
+    "thankYou": "¡Gracias por tus comentarios!",
+    "feedbackMessage": "Tus comentarios nos ayudan a mejorar la experiencia de nuestro boletín para todos. Aunque ya no recibirás nuestros boletines, ¡siempre eres bienvenido de vuelta!",
+    "otherWays": "Otras formas de mantenerse conectado",
+    "visitWebsite": "Visitar nuestro sitio web",
+    "visitWebsiteDesc": "Obtener consejos de viaje y actualizaciones",
+    "followSocial": "Seguir en redes sociales",
+    "followSocialDesc": "Mantenerse actualizado con nuestra comunidad"
+  },
+  "contactSupport": "¿Necesitas ayuda? Contáctanos en",
+  "goBack": "Volver"
+}

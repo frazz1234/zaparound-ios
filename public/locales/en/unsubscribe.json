@@ -1,0 +1,46 @@
+{
+  "title": "Newsletter Unsubscribe",
+  "subtitle": "We're sorry to see you go! Help us improve by sharing why you're unsubscribing.",
+  "emailLabel": "Email Address",
+  "emailPlaceholder": "Enter your email address",
+  "emailHelp": "Enter the email address you want to unsubscribe from our newsletter",
+  "feedbackTitle": "Help us improve (Required)",
+  "feedbackSubtitle": "Your feedback helps us create better content for our community. Please select a reason for unsubscribing.",
+  "reasons": {
+    "too_frequent": "Emails are too frequent",
+    "not_relevant": "Content is not relevant to me",
+    "never_signed_up": "I never signed up for this",
+    "poor_content": "Poor content quality",
+    "changed_interests": "My interests have changed",
+    "other": "Other reason"
+  },
+  "additionalFeedback": "Additional Comments (Optional)",
+  "additionalFeedbackPlaceholder": "Tell us more about your experience or how we can improve...",
+  "reasonRequired": "Please select a reason to continue",
+  "feedbackNotification": "Your feedback helps us improve! We'll send your reason and comments to our team to make our newsletter better for everyone.",
+  "goodbyeEmailNotification": "You'll also receive a goodbye email with ways to stay connected with ZapAround!",
+  "privacyNotice": {
+    "title": "Privacy Notice",
+    "description": "Unsubscribing will remove your email from our newsletter list immediately. Your account and other services remain unaffected. You can resubscribe anytime from your account settings. We'll also send a notification to our team to help improve our newsletter."
+  },
+  "unsubscribeButton": "Unsubscribe from Newsletter",
+  "unsubscribing": "Unsubscribing...",
+  "visitWebsite": "Visit ZapAround.com",
+  "updatePreferences": "Update Email Preferences",
+  "preferencesNote": "Changed your mind? You can always update your preferences instead.",
+  "success": {
+    "title": "Successfully Unsubscribed",
+    "subtitle": "You have been removed from our newsletter list. We're sorry to see you go!",
+    "allDone": "All Done!",
+    "removedMessage": "has been successfully removed from our newsletter list.",
+    "thankYou": "Thank you for your feedback!",
+    "feedbackMessage": "Your input helps us improve our newsletter experience for everyone. While you won't receive our newsletters anymore, you're always welcome back!",
+    "otherWays": "Other Ways to Stay Connected",
+    "visitWebsite": "Visit Our Website",
+    "visitWebsiteDesc": "Get travel tips and updates",
+    "followSocial": "Follow on Social",
+    "followSocialDesc": "Stay updated with our community"
+  },
+  "contactSupport": "Need help? Contact us at",
+  "goBack": "Go Back"
+}

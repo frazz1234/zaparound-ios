@@ -1,0 +1,11 @@
+{
+  "interests": {
+    "title": "What interests you?",
+    "maxSelectionsReached": "Maximum selections reached",
+    "maxSelectionsDescription": "You can select up to {{max}} interests",
+    "noSelections": "No interests selected",
+    "selectAtLeastOne": "Please select at least one interest to continue",
+    "selectionCount": "Selected {{selected}} of {{max}} interests",
+    "continueOnly": "Continue"
+  }
+} 
