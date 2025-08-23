@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { supabase } from '@/integrations/supabase/client';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
-import { geolocationService } from '@/services/geolocationService';
+
 
 interface PlaceSuggestion {
   place_id: string;
@@ -95,18 +95,33 @@ export const GooglePlacesSearch: React.FC<GooglePlacesSearchProps> = ({
   }, []);
 
   const getCurrentLocation = async () => {
+    if (!navigator.geolocation) {
+      toast({
+        title: 'Location Not Supported',
+        description: 'Geolocation is not supported by your browser.',
+        variant: 'destructive',
+      });
+      return null;
+    }
+
     setIsGettingLocation(true);
     
     try {
-      const location = await geolocationService.getCurrentPosition();
-      
-      const locationObj = {
-        lat: location.latitude,
-        lng: location.longitude
+      const position = await new Promise<GeolocationPosition>((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject, {
+          enableHighAccuracy: false, // Faster, less battery usage
+          timeout: 5000, // Shorter timeout
+          maximumAge: 300000 // Accept location up to 5 minutes old
+        });
+      });
+
+      const location = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
       };
-      
-      setUserLocation(locationObj);
-      return locationObj;
+
+      setUserLocation(location);
+      return location;
     } catch (error) {
       console.error('Error getting location:', error);
       toast({

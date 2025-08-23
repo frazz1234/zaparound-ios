@@ -1,0 +1,32 @@
+# Cursor Rules for ZapAround iOS Project
+
+## Core Principle: Use Existing Tools, Don't Over-Engineer
+
+**STOP over-reacting and creating custom solutions for everything. Use the tools and components that already exist.**
+
+### When Working with Capacitor:
+- Capacitor plugins are designed to work out-of-the-box
+- Don't create custom hooks or components unless absolutely necessary
+- The plugin configuration in `capacitor.config.ts` is usually sufficient
+- Let the native functionality handle the work
+
+### General Development Rules:
+- **First**: Check if a tool/component already exists
+- **Second**: Use existing solutions before creating new ones
+- **Third**: Only create custom code when there's a genuine gap that existing tools can't fill
+- **Fourth**: Prefer configuration over custom implementation
+
+### Examples of What NOT to Do:
+- ❌ Creating custom hooks for built-in Capacitor functionality
+- ❌ Building custom components when existing UI components work
+- ❌ Over-engineering simple features
+- ❌ Reinventing wheels that already exist
+
+### Examples of What TO Do:
+- ✅ Use Capacitor plugin configuration
+- ✅ Leverage existing UI component libraries
+- ✅ Configure rather than code when possible
+- ✅ Keep solutions simple and direct
+
+### Remember:
+"Use existing tools and components rather than over-engineering solutions."
