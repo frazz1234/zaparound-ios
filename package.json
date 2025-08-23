@@ -23,6 +23,18 @@
     "e2e:install": "playwright install --with-deps"
   },
   "dependencies": {
+    "@capacitor/app": "^7.0.2",
+    "@capacitor/camera": "^7.0.2",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/device": "^7.0.2",
+    "@capacitor/geolocation": "^7.1.5",
+    "@capacitor/haptics": "^7.0.2",
+    "@capacitor/ios": "^7.4.3",
+    "@capacitor/keyboard": "^7.0.2",
+    "@capacitor/network": "^7.0.2",
+    "@capacitor/preferences": "^7.0.2",
+    "@capacitor/status-bar": "^7.0.2",
     "@duffel/components": "^3.10.0",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
     "@hookform/resolvers": "^3.10.0",
