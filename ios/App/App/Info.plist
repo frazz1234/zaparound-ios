@@ -51,5 +51,13 @@
 	<string>ZapAround needs access to your location to show nearby places, suggest travel destinations, and provide location-based services.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>ZapAround needs access to your location to show nearby places, suggest travel destinations, and provide location-based services.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>ZapAround needs access to your camera to take photos for your trips and experiences.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>ZapAround needs access to your photo library to select photos for your trips and experiences.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>ZapAround needs access to save photos to your photo library.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>ZapAround needs access to your microphone to record audio for your trips and experiences.</string>
 </dict>
 </plist>

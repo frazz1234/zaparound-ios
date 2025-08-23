@@ -8,6 +8,11 @@ const config: CapacitorConfig = {
     Geolocation: {
       permissions: ['location']
     },
+    Camera: {
+      ios: {
+        permissions: ['camera', 'photo-library', 'photo-library-add']
+      }
+    },
     SplashScreen: {
       launchShowDuration: 3000,
       launchAutoHide: true,
