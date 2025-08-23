@@ -315,7 +315,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => ({
     VitePWA({
       injectRegister: 'inline', // inline SW registration to remove additional network request
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png', 'sitemap.xml', 'sitemap-news.xml'],
+              includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: 'ZapAround',
         short_name: 'ZapAround',

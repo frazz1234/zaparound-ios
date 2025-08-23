@@ -9,12 +9,6 @@ interface LanguageRouterProps {
 
 // Paths that should not be redirected with language prefix
 const EXCLUDED_PATHS = [
-  '/sitemap.xml',
-  '/sitemap-news.xml',
-  '/sitemap-pages.xml',
-  '/sitemap-posts.xml',
-  '/sitemap-index.xml',
-  '/robots.txt',
   '/manifest.json',
   '/favicon.ico',
   '/api/',

@@ -3,7 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, Outlet, useParams } from "react-router-dom";
 import { useState, useEffect, Suspense, lazy } from "react";
 import { supabase } from "./integrations/supabase/client";
-import { Footer } from "./components/Footer";
+
 import { Navigation } from "./components/Navigation";
 import { HelmetProvider } from 'react-helmet-async';
 import { cn } from "@/lib/utils";
@@ -103,7 +103,7 @@ function RouteChangeTracker() {
   return null;
 }
 
-// Layout component to handle footer visibility
+// Layout component
 interface LayoutProps {
   children: React.ReactNode;
   session: any;
@@ -111,9 +111,6 @@ interface LayoutProps {
 
 function Layout({ children, session }: LayoutProps) {
   const location = useLocation();
-  const shouldHideFooter = location.pathname.endsWith('/map-dashboard') || 
-                          location.pathname.endsWith('/create-trip') || 
-                          location.pathname.includes('/unsubscribe');
   const shouldHideNav = location.pathname.includes('/unsubscribe');
   const isCreateTripPage = location.pathname.endsWith('/create-trip');
   
@@ -127,7 +124,6 @@ function Layout({ children, session }: LayoutProps) {
         <div className="flex-grow">
           {children}
         </div>
-        {!shouldHideFooter && <Footer />}
       </div>
     </InAppBrowserProvider>
   );
