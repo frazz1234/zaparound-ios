@@ -194,15 +194,17 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
         {/* Only show home button when not on homepage */}
         {!isHomePage && (
           <Link to="/" reloadDocument className="flex flex-col items-center flex-1 py-2" aria-label={t('home')}>
-            <img 
-              src="/zaparound-uploads/smalllogo.webp"
-              srcSet="/zaparound-uploads/smalllogo.webp 1x, /zaparound-uploads/smalllogo.webp 2x"
-              width="28"
-              height="28"
-              alt="ZapAround Logo"
-              loading="lazy"
-              className="w-7 h-7 object-contain"
-            />
+            <div className="w-11 h-11 flex items-center justify-center">
+              <img 
+                src="/zaparound-uploads/smalllogo.webp"
+                srcSet="/zaparound-uploads/smalllogo.webp 1x, /zaparound-uploads/smalllogo.webp 2x"
+                width="28"
+                height="28"
+                alt="ZapAround Logo"
+                loading="lazy"
+                className="w-7 h-7 object-contain"
+              />
+            </div>
             <span className="text-[11px] mt-0.5 text-[#62626a]">{t('home')}</span>
           </Link>
         )}
@@ -210,7 +212,9 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
         <Popover>
           <PopoverTrigger asChild>
             <button className="flex flex-col items-center flex-1 py-2" aria-label={zapbookingT('menu.title')}>
-              <Plane className="w-6 h-6 text-[#62626a]" />
+              <div className="w-11 h-11 flex items-center justify-center">
+                <Plane className="w-6 h-6 text-[#62626a]" />
+              </div>
               <span className="text-[11px] mt-0.5 text-[#62626a]">{zapbookingT('menu.title')}</span>
             </button>
           </PopoverTrigger>
@@ -229,15 +233,21 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
         </Popover>
         
         <Link to={`/${i18n.language}/auth`} className="flex flex-col items-center flex-1 py-2" aria-label={t('signIn')}>
-          <LogIn className={`w-6 h-6 ${isActive('/auth') ? 'text-[#61936f]' : 'text-[#62626a]'}`} />
+          <div className="w-11 h-11 flex items-center justify-center">
+            <LogIn className={`w-6 h-6 ${isActive('/auth') ? 'text-[#61936f]' : 'text-[#62626a]'}`} />
+          </div>
           <span className="text-[11px] mt-0.5 text-[#62626a]">{t('signIn')}</span>
         </Link>
         <Link to={`/${i18n.language}/community`} className="flex flex-col items-center flex-1 py-2" aria-label={t('community')}>
-          <Users className={`w-6 h-6 ${isActive('/community') ? 'text-[#61936f]' : 'text-[#62626a]'}`} />
+          <div className="w-11 h-11 flex items-center justify-center">
+            <Users className={`w-6 h-6 ${isActive('/community') ? 'text-[#61936f]' : 'text-[#62626a]'}`} />
+          </div>
           <span className="text-[11px] mt-0.5 text-[#62626a]">{t('community')}</span>
         </Link>
         <div className="flex flex-col items-center flex-1 py-2">
-          <LanguageSelector variant="ghost" className="h-8 w-8" />
+          <div className="w-11 h-11 flex items-center justify-center">
+            <LanguageSelector variant="ghost" className="h-6 w-6" />
+          </div>
           <span className="text-[11px] mt-0.5 text-[#62626a]">{t('language')}</span>
         </div>
       </nav>
@@ -258,7 +268,9 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
             className="flex flex-col items-center flex-1 py-2"
             aria-label={zapbookingT('menu.title')}
           >
-            <Plane className="w-6 h-6 text-[#61936f]" />
+            <div className="w-11 h-11 flex items-center justify-center">
+              <Plane className="w-6 h-6 text-[#61936f]" />
+            </div>
             <span className="text-[11px] mt-0.5 text-[#62626a]">{zapbookingT('menu.title')}</span>
           </button>
         </PopoverTrigger>
@@ -279,16 +291,18 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
       {/* ZapBoard Dropdown */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="flex flex-col items-center flex-1 py-2" aria-label="ZapBoard">
-            <Home className="w-6 h-6 text-[#61936f]" />
+          <button className="flex flex-col items-center flex-1 py-2 focus:outline-none focus:ring-0 focus:ring-offset-0" aria-label="ZapBoard">
+            <div className="w-11 h-11 flex items-center justify-center">
+              <Home className="w-6 h-6 text-[#61936f]" />
+            </div>
             <span className="text-[11px] mt-0.5 text-[#62626a]">ZapBoard</span>
           </button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="center" className="w-56">
+        <DropdownMenuContent align="center" className="w-56 focus:outline-none focus:ring-0">
           <DropdownMenuItem asChild>
             <Link 
               to={`/${i18n.language}/dashboard`}
-              className="flex items-center gap-3 p-4 w-full min-h-[48px] hover:bg-[#f3f3f3] rounded-md"
+              className="flex items-center gap-3 p-4 w-full min-h-[48px] hover:bg-[#f3f3f3] rounded-md focus:outline-none focus:ring-0"
             >
               <Home className="w-5 h-5 text-[#62626a]" />
               <span className="text-base font-medium">{t('zapboard')}</span>
@@ -297,7 +311,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
           <DropdownMenuItem asChild>
             <Link 
               to={`/${i18n.language}/map-dashboard`}
-              className="flex items-center gap-3 p-4 w-full text-left min-h-[48px] hover:bg-[#f3f3f3] rounded-md"
+              className="flex items-center gap-3 p-4 w-full text-left min-h-[48px] hover:bg-[#f3f3f3] rounded-md focus:outline-none focus:ring-0"
             >
               <Globe className="w-5 h-5 text-[#62626a]" />
               <span className="text-base font-medium">{t('mapView') || 'ZapMap'}</span>
@@ -320,7 +334,9 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
         className="flex flex-col items-center flex-1 py-2" 
         aria-label={t('community')}
       >
-        <Users className={`w-6 h-6 ${isActive('/community') ? 'text-[#61936f]' : 'text-[#61936f]'}`} />
+        <div className="w-11 h-11 flex items-center justify-center">
+          <Users className={`w-6 h-6 ${isActive('/community') ? 'text-[#61936f]' : 'text-[#61936f]'}`} />
+        </div>
         <span className="text-[11px] mt-0.5 text-[#62626a]">{t('community')}</span>
       </Link>
 
@@ -333,10 +349,9 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
       }}>
         <PopoverTrigger asChild>
           <button className="flex flex-col items-center flex-1 py-2" aria-label="Menu">
-            <div className="w-7 h-7 rounded-full overflow-hidden border-2 border-[#61936f]/20">
+            <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-[#61936f]/20">
               <UserAvatar url={avatarUrl} size="sm" className="w-full h-full" />
             </div>
-            <span className="text-[11px] mt-0.5 text-[#62626a]">Menu</span>
           </button>
         </PopoverTrigger>
         <PopoverContent className="w-60 z-[100]" align="center">

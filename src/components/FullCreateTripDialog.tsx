@@ -85,11 +85,11 @@ export function FullCreateTripDialog({ session, buttonVariant = "default" }: Ful
     <>
       <Dialog open={open} onOpenChange={setOpen}>
         {buttonVariant === "mobile" ? (
-          <button className="flex flex-col items-center" onClick={handleCreateTrip}>
-            <div className="relative">
-              <PlusCircle className="w-8 h-8 text-primary" />
-            </div>
-            <span className="text-xs mt-1">{t('form.createZap')}</span>
+          <button 
+            className="relative flex items-center justify-center w-14 h-14 bg-gradient-to-r from-[#10B981] to-[#059669] text-white rounded-full shadow-2xl hover:from-[#059669] hover:to-[#047857] hover:scale-105 transition-all duration-300 -mt-7 z-10 border-4 border-white"
+            onClick={handleCreateTrip}
+          >
+            <PlusCircle className="w-7 h-7 text-white" />
           </button>
         ) : (
           <Button
