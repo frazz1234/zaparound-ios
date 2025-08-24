@@ -380,7 +380,10 @@ const LoadingOverlay = () => {
 
         {/* Return to Dashboard Button */}
         <button
-          onClick={() => window.location.href = '/dashboard'}
+          onClick={() => {
+            const currentLang = window.location.pathname.split('/')[1] || 'en';
+            window.location.href = `/${currentLang}/dashboard`;
+          }}
           className="mt-8 px-6 py-3 rounded-lg font-semibold text-white bg-[#61936f] hover:bg-[#1d1d1e] transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#61936f] focus:ring-offset-2"
         >
           {t('loading.returnToDashboard')}
@@ -1586,13 +1589,14 @@ const TripDetails = () => {
             onClick={() => {
               // Check if user came from map dashboard
               const previousPage = localStorage.getItem('tripDetailsPreviousPage');
+              const currentLang = lang || 'en';
               if (previousPage === 'mapDashboard') {
                 // Clear the storage and navigate to map dashboard
                 localStorage.removeItem('tripDetailsPreviousPage');
-                navigate('/map-dashboard');
+                navigate(`/${currentLang}/map-dashboard`);
               } else {
                 // Default behavior - go to regular dashboard
-                navigate('/dashboard');
+                navigate(`/${currentLang}/dashboard`);
               }
             }}
             className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"

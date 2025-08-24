@@ -20,6 +20,11 @@ export function FloatingActionMenu({ session, className }: FloatingActionMenuPro
   const { t: tTrip } = useTranslation('trip');
   const navigate = useNavigate();
 
+  // Debug: Log state changes
+  useEffect(() => {
+    console.log('FloatingActionMenu: showCreateTrip state changed to:', showCreateTrip);
+  }, [showCreateTrip]);
+
   // Handle escape key to close menu
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -55,6 +60,7 @@ export function FloatingActionMenu({ session, className }: FloatingActionMenuPro
   const handleZapAction = async () => {
     await triggerHaptics();
     setIsOpen(false);
+    console.log('FloatingActionMenu: Setting showCreateTrip to true');
     setShowCreateTrip(true);
   };
 
@@ -303,7 +309,10 @@ export function FloatingActionMenu({ session, className }: FloatingActionMenuPro
       <FullCreateTripDialog 
         session={session}
         buttonVariant="hidden"
-        onClose={() => setShowCreateTrip(false)}
+        onClose={() => {
+          console.log('FloatingActionMenu: FullCreateTripDialog onClose called');
+          setShowCreateTrip(false);
+        }}
         isOpen={showCreateTrip}
       />
     </>

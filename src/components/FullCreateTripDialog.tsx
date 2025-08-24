@@ -53,6 +53,7 @@ export function FullCreateTripDialog({ session, buttonVariant = "default", onClo
   // Sync external isOpen prop with internal open state
   useEffect(() => {
     if (isOpen !== undefined) {
+      console.log('FullCreateTripDialog: isOpen prop changed to:', isOpen);
       setOpen(isOpen);
     }
   }, [isOpen]);
