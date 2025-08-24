@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Star, Search, Plane } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { FeaturedDestinationDTO } from '@/services/featuredDestinationsService';
+import { CachedImage } from '@/components/OptimizedImage';
 
 interface FeaturedDestinationsPuzzleProps {
   featured: FeaturedDestinationDTO[] | null;
@@ -197,16 +198,12 @@ export const FeaturedDestinationsPuzzle: React.FC<FeaturedDestinationsPuzzleProp
                   >
                       <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-0 bg-white h-full">
                         <div className="relative">
-                          <img 
+                          <CachedImage 
                             src={cityImagePath(row)} 
                             alt={row.translation_name}
                             className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                            loading="lazy"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.onerror = null;
-                              target.src = row.fallback_image_url || '/zaparound-uploads/background1.webp';
-                            }}
+                            fallback={row.fallback_image_url || '/zaparound-uploads/background1.webp'}
+                            enableCache={true}
                           />
                           {row.translation_badge && (
                             <Badge className="absolute top-4 left-4 bg-[#61936f] text-white">

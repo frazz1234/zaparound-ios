@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { CachedImage } from '@/components/OptimizedImage';
 
 interface EventbriteEvent {
   id: string;
@@ -142,10 +143,12 @@ export function EventCarousel({ events, isLoading, loadingText, noEventsText }: 
                   <div className="relative rounded-lg overflow-hidden">
                     <div className="relative aspect-[16/9] sm:aspect-[4/3] overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 z-10 opacity-60 group-hover:opacity-80 transition-opacity" />
-                      <img
+                      <CachedImage
                         src={event.imageUrl || '/placeholder-event.jpg'}
                         alt={event.name}
                         className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+                        fallback="/placeholder-event.jpg"
+                        enableCache={true}
                       />
                       
                       <div className="absolute inset-0 z-20 p-1.5 sm:p-2 flex flex-col justify-between">

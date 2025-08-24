@@ -34,6 +34,7 @@ import { airports, Airport, getAirportsByCity } from '@/utils/airportData';
 import { fetchFeaturedDestinations, FeaturedDestinationDTO } from '@/services/featuredDestinationsService';
 import { motion, useInView, useAnimation, animate } from 'framer-motion';
 import { FeaturedDestinationsPuzzle } from '@/components/home/FeaturedDestinationsPuzzle';
+import { useHomepageImagePreloader } from '@/hooks/useImagePreloader';
 
 interface FeaturedDestination {
   id: number;
@@ -72,6 +73,9 @@ const Index: React.FC<IndexProps> = ({ session }) => {
 
   // State to track if we're in the activity-time step for darker background
   const [isActivityTimeStep, setIsActivityTimeStep] = useState(false);
+  
+  // Preload homepage images for better UX
+  const { isPreloading: isPreloadingImages, progress: imagePreloadProgress } = useHomepageImagePreloader();
 
   // Function to scroll to activity selection
   const scrollToActivitySelection = () => {
