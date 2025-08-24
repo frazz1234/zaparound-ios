@@ -14,10 +14,12 @@ import { supabase } from '@/integrations/supabase/client';
 
 interface FullCreateTripDialogProps {
   session: any;
-  buttonVariant?: "default" | "mobile";
+  buttonVariant?: "default" | "mobile" | "hidden";
+  onClose?: () => void;
+  isOpen?: boolean;
 }
 
-export function FullCreateTripDialog({ session, buttonVariant = "default" }: FullCreateTripDialogProps) {
+export function FullCreateTripDialog({ session, buttonVariant = "default", onClose, isOpen }: FullCreateTripDialogProps) {
   const [open, setOpen] = React.useState(false);
   const [showFreeTripDialog, setShowFreeTripDialog] = useState(false);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
@@ -47,6 +49,13 @@ export function FullCreateTripDialog({ session, buttonVariant = "default" }: Ful
       window.removeEventListener('orientationchange', handleResize);
     };
   }, []);
+
+  // Sync external isOpen prop with internal open state
+  useEffect(() => {
+    if (isOpen !== undefined) {
+      setOpen(isOpen);
+    }
+  }, [isOpen]);
 
   const handleCreateTrip = async () => {
     if (!session) {
@@ -83,7 +92,12 @@ export function FullCreateTripDialog({ session, buttonVariant = "default" }: Ful
 
   return (
     <>
-      <Dialog open={open} onOpenChange={setOpen}>
+      <Dialog open={open} onOpenChange={(newOpen) => {
+        setOpen(newOpen);
+        if (!newOpen && onClose) {
+          onClose();
+        }
+      }}>
         {buttonVariant === "mobile" ? (
           <button 
             className="relative flex items-center justify-center w-14 h-14 bg-gradient-to-r from-[#10B981] to-[#059669] text-white rounded-full shadow-2xl hover:from-[#059669] hover:to-[#047857] hover:scale-105 transition-all duration-300 -mt-7 z-10 border-4 border-white"
@@ -91,7 +105,7 @@ export function FullCreateTripDialog({ session, buttonVariant = "default" }: Ful
           >
             <PlusCircle className="w-7 h-7 text-white" />
           </button>
-        ) : (
+        ) : buttonVariant === "default" ? (
           <Button
             onClick={handleCreateTrip}
             className={cn(
@@ -103,7 +117,7 @@ export function FullCreateTripDialog({ session, buttonVariant = "default" }: Ful
               {t('form.createZap')}
             </span>
           </Button>
-        )}
+        ) : null}
         <DialogContent 
           className={cn(
             // Base styles
@@ -140,7 +154,12 @@ export function FullCreateTripDialog({ session, buttonVariant = "default" }: Ful
             // Adjust padding in landscape mode
             isLandscape && "p-2 sm:p-3"
           )}>
-            <CreateTrip session={session} onTripCreated={() => setOpen(false)} />
+            <CreateTrip session={session} onTripCreated={() => {
+              setOpen(false);
+              if (onClose) {
+                onClose();
+              }
+            }} />
           </div>
 
           {/* Close button - adjusted for better touch targets */}
@@ -160,7 +179,12 @@ export function FullCreateTripDialog({ session, buttonVariant = "default" }: Ful
               // Safe area adjustments
               "safe-top safe-right"
             )}
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              setOpen(false);
+              if (onClose) {
+                onClose();
+              }
+            }}
           >
             <X className="h-4 w-4 sm:h-5 sm:w-5" />
             <span className="sr-only">Close</span>

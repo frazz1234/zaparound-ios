@@ -30,8 +30,9 @@ import {
 const LazyUpgradePopup = lazy(() => import('@/components/UpgradePopup').then(m => ({ default: m.UpgradePopup })));
 const LazyZapBookingPopup = lazy(() => import('@/components/ZapBookingPopup').then(m => ({ default: m.ZapBookingPopup })));
 
-// Lazy-load heavy Create Trip dialog only when user taps the button
+// Lazy-load components
 const LazyFullCreateTripDialog = lazy(() => import('@/components/FullCreateTripDialog').then(module => ({ default: module.FullCreateTripDialog })));
+const LazyFloatingActionMenu = lazy(() => import('@/components/FloatingActionMenu').then(module => ({ default: module.FloatingActionMenu })));
 
 interface MobileNavigationProps {
   session: any;
@@ -323,11 +324,10 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
         </DropdownMenuContent>
       </DropdownMenu>
 
-      {/* Create Trip Dialog – deferred load to minimise initial JS */}
+      {/* Floating Action Menu – deferred load to minimise initial JS */}
       <Suspense fallback={null}>
-        <LazyFullCreateTripDialog 
+        <LazyFloatingActionMenu 
           session={session}
-          buttonVariant="mobile"
         />
       </Suspense>
 

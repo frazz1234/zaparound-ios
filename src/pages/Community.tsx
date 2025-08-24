@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Share } from '@capacitor/share';
 import { LocationHeader } from '@/components/community/LocationHeader';
@@ -39,6 +39,7 @@ const POSTS_PER_PAGE = 15;
 const Community = () => {
   const { t, i18n } = useTranslation('community');
   const navigate = useNavigate();
+  const routerLocation = useLocation();
   const language = i18n.language;
   const locale = LOCALE_MAP[language] || 'en_US';
   
@@ -129,6 +130,21 @@ const Community = () => {
   useEffect(() => {
     fetchPosts();
   }, [activeTab]);
+
+  // Handle navigation state to focus on post creator
+  useEffect(() => {
+    if (routerLocation.state?.focusPostCreator) {
+      setTimeout(() => {
+        scrollToPostCreator();
+      }, 500); // Small delay to ensure page is loaded
+      
+      // Clear the state to prevent re-triggering
+      navigate(routerLocation.pathname, { 
+        state: { ...routerLocation.state, focusPostCreator: false }, 
+        replace: true 
+      });
+    }
+  }, [routerLocation.state, navigate, routerLocation.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
