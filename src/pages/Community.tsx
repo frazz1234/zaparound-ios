@@ -1315,7 +1315,7 @@ const Community = () => {
                   {isFeedPickerSticky && (
                     <div className="sm:hidden">
                       <div className="fixed right-4 z-[60]"
-                           style={{ bottom: 'calc(6rem + env(safe-area-inset-bottom))' }}>
+                           style={{ bottom: 'calc(6.5rem + env(safe-area-inset-bottom))' }}>
                         <Button
                           onClick={scrollToPostCreator}
                           disabled={isUploading}

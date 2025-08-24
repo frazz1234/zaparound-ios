@@ -48,6 +48,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
   const { userRole, isAdmin, refreshRole } = useUserRole();
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+  const [username, setUsername] = useState<string | null>(null);
   const [isUpgradePopupOpen, setIsUpgradePopupOpen] = useState(false);
   const [isBusinessUser, setIsBusinessUser] = useState(false);
   const [isZapBookingPopupOpen, setIsZapBookingPopupOpen] = useState(false);
@@ -66,7 +67,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
     try {
       const { data, error } = await supabase
         .from('profiles')
-        .select('avatar_url')
+        .select('avatar_url, username')
         .eq('id', userId)
         .single();
 
@@ -80,6 +81,8 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
       } else {
         setAvatarUrl(null);
       }
+      
+      setUsername(data?.username || null);
     } catch (error) {
       console.error('Error fetching profile:', error);
     }
@@ -352,6 +355,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
             <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-[#61936f]/20">
               <UserAvatar url={avatarUrl} size="sm" className="w-full h-full" />
             </div>
+            <span className="text-[11px] mt-0.5 text-[#62626a]">{username || t('menu')}</span>
           </button>
         </PopoverTrigger>
         <PopoverContent className="w-60 z-[100]" align="center">
@@ -362,7 +366,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
               onClick={() => setIsDashboardOpen(false)}
             >
               <UserAvatar url={avatarUrl} size="sm" />
-              <span className="text-sm">{t('profile')}</span>
+              <span className="text-sm">{username || t('profile')}</span>
             </Link>
             <Link 
               to={`/${i18n.language}/blog`}
