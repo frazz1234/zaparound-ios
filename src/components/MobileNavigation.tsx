@@ -214,18 +214,16 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
               <span className="text-[11px] mt-0.5 text-[#62626a]">{zapbookingT('menu.title')}</span>
             </button>
           </PopoverTrigger>
-          <PopoverContent className="w-60" align="center">
+          <PopoverContent className="w-64" align="center">
             <div className="grid gap-2">
               <Link 
                 to={`/${i18n.language}/travel-flight`}
                 reloadDocument
-                className="flex items-center gap-2 p-3 hover:bg-[#f3f3f3] rounded-md"
+                className="flex items-center gap-3 p-4 hover:bg-[#f3f3f3] rounded-md min-h-[48px]"
               >
                 <Plane className="w-5 h-5 text-[#62626a]" />
-                <span className="text-sm">{zapbookingT('menu.flights')}</span>
+                <span className="text-base font-medium">{zapbookingT('menu.flights')}</span>
               </Link>
-            
-              
             </div>
           </PopoverContent>
         </Popover>
@@ -239,7 +237,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
           <span className="text-[11px] mt-0.5 text-[#62626a]">{t('community')}</span>
         </Link>
         <div className="flex flex-col items-center flex-1 py-2">
-          <LanguageSelector variant="ghost" className="h-7 w-7" />
+          <LanguageSelector variant="ghost" className="h-8 w-8" />
           <span className="text-[11px] mt-0.5 text-[#62626a]">{t('language')}</span>
         </div>
       </nav>
@@ -260,24 +258,53 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
             className="flex flex-col items-center flex-1 py-2"
             aria-label={zapbookingT('menu.title')}
           >
-            <Calendar className="w-6 h-6 text-[#61936f]" />
+            <Plane className="w-6 h-6 text-[#61936f]" />
             <span className="text-[11px] mt-0.5 text-[#62626a]">{zapbookingT('menu.title')}</span>
           </button>
         </PopoverTrigger>
-        <PopoverContent className="w-60" align="center">
+        <PopoverContent className="w-64" align="center">
           <div className="grid gap-2">
             <Link 
               to={`/${i18n.language}/travel-flight`}
               reloadDocument
-              className="flex items-center gap-2 p-3 hover:bg-[#f3f3f3] rounded-md"
+              className="flex items-center gap-3 p-4 hover:bg-[#f3f3f3] rounded-md min-h-[48px]"
             >
               <Plane className="w-5 h-5 text-[#62626a]" />
-              <span className="text-sm">{zapbookingT('menu.flights')}</span>
+              <span className="text-base font-medium">{zapbookingT('menu.flights')}</span>
             </Link>
-            
           </div>
         </PopoverContent>
       </Popover>
+
+      {/* ZapBoard Dropdown */}
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <button className="flex flex-col items-center flex-1 py-2" aria-label="ZapBoard">
+            <Home className="w-6 h-6 text-[#61936f]" />
+            <span className="text-[11px] mt-0.5 text-[#62626a]">ZapBoard</span>
+          </button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="center" className="w-56">
+          <DropdownMenuItem asChild>
+            <Link 
+              to={`/${i18n.language}/dashboard`}
+              className="flex items-center gap-3 p-4 w-full min-h-[48px] hover:bg-[#f3f3f3] rounded-md"
+            >
+              <Home className="w-5 h-5 text-[#62626a]" />
+              <span className="text-base font-medium">{t('zapboard')}</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link 
+              to={`/${i18n.language}/map-dashboard`}
+              className="flex items-center gap-3 p-4 w-full text-left min-h-[48px] hover:bg-[#f3f3f3] rounded-md"
+            >
+              <Globe className="w-5 h-5 text-[#62626a]" />
+              <span className="text-base font-medium">{t('mapView') || 'ZapMap'}</span>
+            </Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
 
       {/* Create Trip Dialog – deferred load to minimise initial JS */}
       <Suspense fallback={null}>
@@ -287,27 +314,31 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
         />
       </Suspense>
 
-              {/* Home or ZapMenu */}
-        <Popover open={isDashboardOpen} onOpenChange={(open) => {
-          setIsDashboardOpen(open);
-          if (!open) {
-            setIsLanguageExpanded(false);
-          }
-        }}>
-          <PopoverTrigger asChild>
-            <button className="flex flex-col items-center flex-1 py-2" aria-label="ZapMenu">
-              <img 
-                src="/zaparound-uploads/smalllogo.webp"
-                srcSet="/zaparound-uploads/smalllogo.webp 1x, /zaparound-uploads/smalllogo.webp 2x"
-                width="28"
-                height="28"
-                alt="ZapAround Logo"
-                loading="lazy"
-                className="w-7 h-7 object-contain"
-              />
-              <span className="text-[11px] mt-0.5 text-[#62626a]">ZapMenu</span>
-            </button>
-          </PopoverTrigger>
+      {/* Community */}
+      <Link 
+        to={`/${i18n.language}/community`} 
+        className="flex flex-col items-center flex-1 py-2" 
+        aria-label={t('community')}
+      >
+        <Users className={`w-6 h-6 ${isActive('/community') ? 'text-[#61936f]' : 'text-[#61936f]'}`} />
+        <span className="text-[11px] mt-0.5 text-[#62626a]">{t('community')}</span>
+      </Link>
+
+      {/* User Avatar Menu */}
+      <Popover open={isDashboardOpen} onOpenChange={(open) => {
+        setIsDashboardOpen(open);
+        if (!open) {
+          setIsLanguageExpanded(false);
+        }
+      }}>
+        <PopoverTrigger asChild>
+          <button className="flex flex-col items-center flex-1 py-2" aria-label="Menu">
+            <div className="w-7 h-7 rounded-full overflow-hidden border-2 border-[#61936f]/20">
+              <UserAvatar url={avatarUrl} size="sm" className="w-full h-full" />
+            </div>
+            <span className="text-[11px] mt-0.5 text-[#62626a]">Menu</span>
+          </button>
+        </PopoverTrigger>
         <PopoverContent className="w-60 z-[100]" align="center">
           <div className="grid gap-2">
             <Link 
@@ -326,35 +357,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
               <FileText className="w-5 h-5 text-[#62626a]" />
               <span className="text-sm">{t('blog')}</span>
             </Link>
-            <div className="h-px bg-gray-200 my-1" />
-            <Link 
-              to={`/${i18n.language}/dashboard`}
-              className="flex items-center gap-2 p-3 hover:bg-[#f3f3f3] rounded-md w-full text-left"
-              onClick={() => setIsDashboardOpen(false)}
-            >
-              <Home className="w-5 h-5 text-[#62626a]" />
-              <span className="text-sm">{t('zapboard')}</span>
-            </Link>
-
-            <button 
-              className="flex items-center gap-2 p-3 hover:bg-[#f3f3f3] rounded-md w-full text-left"
-              onClick={(e) => {
-                e.preventDefault();
-                navigate('/map-dashboard');
-                setIsDashboardOpen(false);
-              }}
-            >
-              <Globe className="w-5 h-5 text-[#62626a]" />
-              <span className="text-sm">{t('mapView') || 'Map View'}</span>
-            </button>
-            <Link 
-              to={`/${i18n.language}/community`}
-              className="flex items-center gap-2 p-3 hover:bg-[#f3f3f3] rounded-md"
-              onClick={() => setIsDashboardOpen(false)}
-            >
-              <Users className="w-5 h-5 text-[#62626a]" />
-              <span className="text-sm">{t('community')}</span>
-            </Link>
+            
             {/* Business Dashboard - Only show for business users */}
             {isBusinessUser && (
               <>
@@ -373,6 +376,7 @@ export function MobileNavigation({ session, onSignOut }: MobileNavigationProps) 
                 </a>
               </>
             )}
+            
             {/* Tools Section */}
             <div className="h-px bg-gray-200 my-1" />
             <Link 
