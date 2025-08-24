@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { cn } from '@/lib/utils';
-import { imageCache, getCachedImage, cacheImage } from '@/utils/imageCache';
 
 interface OptimizedImageProps {
   src: string;
@@ -21,7 +20,6 @@ interface OptimizedImageProps {
   avif?: boolean;
   responsive?: boolean;
   aspectRatio?: number;
-  enableCache?: boolean;
 }
 
 export function OptimizedImage({
@@ -43,38 +41,12 @@ export function OptimizedImage({
   avif = false,
   responsive = true,
   aspectRatio,
-  enableCache = true,
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
-  const [cachedSrc, setCachedSrc] = useState<string | null>(null);
-  const [isLoadingFromCache, setIsLoadingFromCache] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
-
-  // Check cache first
-  useEffect(() => {
-    if (!enableCache || !src) return;
-    
-    const checkCache = async () => {
-      try {
-        setIsLoadingFromCache(true);
-        const cached = await getCachedImage(src);
-        if (cached) {
-          setCachedSrc(cached);
-          // If we have a cached image, show it immediately
-          setIsLoaded(true);
-        }
-      } catch (error) {
-        console.warn('Failed to check image cache:', error);
-      } finally {
-        setIsLoadingFromCache(false);
-      }
-    };
-
-    checkCache();
-  }, [src, enableCache]);
 
   // Generate optimized image URLs
   const generateImageUrls = useCallback(() => {
@@ -83,7 +55,7 @@ export function OptimizedImage({
     
     // Add optimization parameters
     if (width) url.searchParams.set('w', width.toString());
-    if (height) url.searchParams.set('height', height.toString());
+    if (height) url.searchParams.set('h', height.toString());
     if (quality) url.searchParams.set('q', quality.toString());
     
     const urls: { [key: string]: string } = {
@@ -94,7 +66,7 @@ export function OptimizedImage({
     if (webp) {
       const webpUrl = new URL(baseUrl);
       if (width) webpUrl.searchParams.set('w', width.toString());
-      if (height) webpUrl.searchParams.set('height', height.toString());
+      if (height) webpUrl.searchParams.set('h', height.toString());
       if (quality) webpUrl.searchParams.set('q', quality.toString());
       webpUrl.searchParams.set('fm', 'webp');
       urls.webp = webpUrl.toString();
@@ -104,7 +76,7 @@ export function OptimizedImage({
     if (avif) {
       const avifUrl = new URL(baseUrl);
       if (width) avifUrl.searchParams.set('w', width.toString());
-      if (height) avifUrl.searchParams.set('height', height.toString());
+      if (height) avifUrl.searchParams.set('h', height.toString());
       if (quality) avifUrl.searchParams.set('q', quality.toString());
       avifUrl.searchParams.set('fm', 'avif');
       urls.avif = avifUrl.toString();
@@ -141,31 +113,10 @@ export function OptimizedImage({
   }, [priority]);
 
   // Handle image load
-  const handleLoad = useCallback(async () => {
+  const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
-    
-    // Cache the image if caching is enabled
-    if (enableCache && imgRef.current && !cachedSrc) {
-      try {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        if (ctx) {
-          canvas.width = imgRef.current.naturalWidth;
-          canvas.height = imgRef.current.naturalHeight;
-          ctx.drawImage(imgRef.current, 0, 0);
-          
-          canvas.toBlob(async (blob) => {
-            if (blob) {
-              await cacheImage(src, blob);
-            }
-          }, 'image/jpeg', 0.8);
-        }
-      } catch (error) {
-        console.warn('Failed to cache image:', error);
-      }
-    }
-  }, [onLoad, enableCache, src, cachedSrc]);
+  }, [onLoad]);
 
   // Handle image error
   const handleError = useCallback(() => {
@@ -204,29 +155,13 @@ export function OptimizedImage({
   };
 
   // Image styles
-  const imageStyle: React.CSSStyleDeclaration = {
+  const imageStyle: React.CSSProperties = {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
     transition: 'opacity 0.3s ease-in-out',
     opacity: isLoaded ? 1 : 0,
   };
-
-  // If we have a cached image, show it immediately
-  if (cachedSrc && isLoaded) {
-    return (
-      <div className={cn('relative', className)} style={containerStyle}>
-        <img
-          src={cachedSrc}
-          alt={alt}
-          width={width}
-          height={height}
-          className="w-full h-full object-cover"
-          style={imageStyle}
-        />
-      </div>
-    );
-  }
 
   return (
     <div className={cn('relative', className)} style={containerStyle}>
@@ -312,9 +247,4 @@ export const HeroImage: React.FC<OptimizedImageProps> = (props) => {
 // Export a lazy image component for below-the-fold images
 export const LazyImage: React.FC<OptimizedImageProps> = (props) => {
   return <OptimizedImage {...props} loading="lazy" />;
-};
-
-// Export a cached image component for frequently used images
-export const CachedImage: React.FC<OptimizedImageProps> = (props) => {
-  return <OptimizedImage {...props} enableCache={true} priority={true} />;
 }; 

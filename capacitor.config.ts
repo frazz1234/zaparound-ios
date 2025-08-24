@@ -34,12 +34,6 @@ const config: CapacitorConfig = {
       resize: 'body',
       style: 'DEFAULT',
       resizeOnFullScreen: true
-    },
-    Preferences: {
-      ios: {
-        // Enable persistent storage for image caching
-        persistent: true
-      }
     }
   }
 };

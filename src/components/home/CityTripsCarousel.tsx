@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { CachedImage } from '@/components/OptimizedImage';
 
 // Define the city trip type
 export interface CityTrip {
@@ -90,14 +89,19 @@ const CityTripsCarousel: React.FC<CityTripsCarouselProps> = ({
                 >
                   <Link to={`/search?city=${encodeURIComponent(city.name)}`} className="block h-full">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <CachedImage
+                      <img
                         src={getCityImageUrl(city)}
                         alt={t('home.cityImage', { city: city.name })}
                         className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                        loading="lazy"
                         width="800"
                         height="600"
-                        fallback="/zaparound-uploads/defaultimage.png"
-                        enableCache={true}
+                        onError={(e) => {
+                          // If the image fails to load, fall back to default image
+                          const target = e.target as HTMLImageElement;
+                          target.onerror = null; // Prevent infinite loop
+                          target.src = '/zaparound-uploads/defaultimage.png';
+                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 p-4 text-white">

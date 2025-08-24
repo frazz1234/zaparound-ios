@@ -12,7 +12,6 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Calendar, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { CachedImage } from '@/components/OptimizedImage';
 
 interface TripData {
   id: string;
@@ -395,12 +394,19 @@ export function LatestTripsCarousel() {
                     <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 z-10 opacity-60 group-hover:opacity-80 transition-opacity" />
-                        <CachedImage
+                        <img
                           src={getImageForTrip(trip, index)}
                           alt={trip.title}
                           className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
-                          fallback="/zaparound-uploads/defaultimage.png"
-                          enableCache={true}
+                          loading="lazy"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            const currentSrc = target.src;
+                            target.onerror = null; // Prevent infinite loop
+                            
+                            // Fall back to default image
+                            target.src = '/zaparound-uploads/defaultimage.png';
+                          }}
                         />
                         
                         <div className="absolute inset-0 z-20 p-3 flex flex-col justify-between">
